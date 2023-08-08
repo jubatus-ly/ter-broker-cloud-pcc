@@ -1,0 +1,2 @@
+*.txt filter=lfs diff=lfs merge=lfs -text
+Fichiers_Salwa_SOUAF/Broker_New_Model_SOUAF/out.txt filter=lfs diff=lfs merge=lfs -text

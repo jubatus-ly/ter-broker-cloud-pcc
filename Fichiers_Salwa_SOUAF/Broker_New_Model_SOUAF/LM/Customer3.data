@@ -1,0 +1,5305 @@
+data;param nbcomp := 7; 
+set Comp := CustomerCmp3-1 
+CustomerCmp3-4 
+CustomerCmp3-5 
+CustomerCmp3-3 
+CustomerCmp3-7 
+CustomerCmp3-2 
+CustomerCmp3-6 
+; 
+set Alone := CustomerCmp3-4 
+; 
+set Flow := CustomerCmp3-3 CustomerCmp3-5 
+CustomerCmp3-1 CustomerCmp3-2 
+CustomerCmp3-2 CustomerCmp3-6 
+CustomerCmp3-7 CustomerCmp3-6 
+; 
+set Concur := CustomerCmp3-1 CustomerCmp3-3 
+CustomerCmp3-3 CustomerCmp3-6 
+; 
+param nbinstances := 10 ; 
+param nbp := 4; 
+set P := Google 
+Amz 
+Alibaba 
+Azure 
+; 
+param nbti := Google 89 
+Amz 94 
+Alibaba 372 
+Azure 29 
+; 
+set idti [Google,1] := Gg.c4.2xlarge; 
+set idti [Google,2] := Gg.c4.2xlarge; 
+set idti [Google,3] := Gg.c4.4xlarge; 
+set idti [Google,4] := Gg.c4.4xlarge; 
+set idti [Google,5] := Gg.c4.4xlarge; 
+set idti [Google,6] := Gg.c4.xlarge; 
+set idti [Google,7] := Gg.c4.xlarge; 
+set idti [Google,8] := Gg.c4.xlarge; 
+set idti [Google,9] := Gg.c5.2xlarge; 
+set idti [Google,10] := Gg.c5.2xlarge; 
+set idti [Google,11] := Gg.c5.2xlarge; 
+set idti [Google,12] := Gg.c5.2xlarge; 
+set idti [Google,13] := Gg.c5.2xlarge; 
+set idti [Google,14] := Gg.c5.2xlarge; 
+set idti [Google,15] := Gg.c5.2xlarge; 
+set idti [Google,16] := Gg.c5.4xlarge; 
+set idti [Google,17] := Gg.c5.4xlarge; 
+set idti [Google,18] := Gg.c5.4xlarge; 
+set idti [Google,19] := Gg.c5.4xlarge; 
+set idti [Google,20] := Gg.c5.4xlarge; 
+set idti [Google,21] := Gg.c5.4xlarge; 
+set idti [Google,22] := Gg.c5.4xlarge; 
+set idti [Google,23] := Gg.c5.6xlarge; 
+set idti [Google,24] := Gg.c5.6xlarge; 
+set idti [Google,25] := Gg.c5.6xlarge; 
+set idti [Google,26] := Gg.c5.6xlarge; 
+set idti [Google,27] := Gg.c5.6xlarge; 
+set idti [Google,28] := Gg.c5.6xlarge; 
+set idti [Google,29] := Gg.c5.6xlarge; 
+set idti [Google,30] := Gg.c5.xlarge; 
+set idti [Google,31] := Gg.c5.xlarge; 
+set idti [Google,32] := Gg.c5.xlarge; 
+set idti [Google,33] := Gg.c5.xlarge; 
+set idti [Google,34] := Gg.c5.xlarge; 
+set idti [Google,35] := Gg.c5.xlarge; 
+set idti [Google,36] := Gg.c5.xlarge; 
+set idti [Google,37] := Gg.c6.2xlarge; 
+set idti [Google,38] := Gg.c6.2xlarge; 
+set idti [Google,39] := Gg.c6.2xlarge; 
+set idti [Google,40] := Gg.c6.2xlarge; 
+set idti [Google,41] := Gg.c6.2xlarge; 
+set idti [Google,42] := Gg.c6.2xlarge; 
+set idti [Google,43] := Gg.c6.4xlarge; 
+set idti [Google,44] := Gg.c6.4xlarge; 
+set idti [Google,45] := Gg.c6.4xlarge; 
+set idti [Google,46] := Gg.c6.4xlarge; 
+set idti [Google,47] := Gg.c6.4xlarge; 
+set idti [Google,48] := Gg.c6.4xlarge; 
+set idti [Google,49] := Gg.c6.6xlarge; 
+set idti [Google,50] := Gg.c6.6xlarge; 
+set idti [Google,51] := Gg.c6.6xlarge; 
+set idti [Google,52] := Gg.c6.6xlarge; 
+set idti [Google,53] := Gg.c6.6xlarge; 
+set idti [Google,54] := Gg.c6.6xlarge; 
+set idti [Google,55] := Gg.c6.xlarge; 
+set idti [Google,56] := Gg.c6.xlarge; 
+set idti [Google,57] := Gg.c6.xlarge; 
+set idti [Google,58] := Gg.c6.xlarge; 
+set idti [Google,59] := Gg.c6.xlarge; 
+set idti [Google,60] := Gg.c6.xlarge; 
+set idti [Google,61] := Gg.ce4.xlarge; 
+set idti [Google,62] := Gg.ce4.xlarge; 
+set idti [Google,63] := Gg.ce4.xlarge; 
+set idti [Google,64] := Gg.cm4.2xlarge; 
+set idti [Google,65] := Gg.cm4.2xlarge; 
+set idti [Google,66] := Gg.cm4.2xlarge; 
+set idti [Google,67] := Gg.cm4.xlarge; 
+set idti [Google,68] := Gg.cm4.xlarge; 
+set idti [Google,69] := Gg.cm4.xlarge; 
+set idti [Google,70] := Gg.d1.2xlarge; 
+set idti [Google,71] := Gg.d1.2xlarge; 
+set idti [Google,72] := Gg.d1.2xlarge; 
+set idti [Google,73] := Gg.d1.2xlarge; 
+set idti [Google,74] := Gg.d1.2xlarge; 
+set idti [Google,75] := Gg.d1ne.2xlarge; 
+set idti [Google,76] := Gg.d1ne.2xlarge; 
+set idti [Google,77] := Gg.d1ne.2xlarge; 
+set idti [Google,78] := Gg.d1ne.2xlarge; 
+set idti [Google,79] := Gg.d1ne.2xlarge; 
+set idti [Google,80] := Gg.d1ne.2xlarge; 
+set idti [Google,81] := Gg.e3.large; 
+set idti [Google,82] := Gg.e3.large; 
+set idti [Google,83] := Gg.g5.2xlarge; 
+set idti [Google,84] := Gg.g5.2xlarge; 
+set idti [Google,85] := Gg.g5.2xlarge; 
+set idti [Google,86] := Gg.g5.2xlarge; 
+set idti [Google,87] := Gg.g5.2xlarge; 
+set idti [Google,88] := Gg.g5.2xlarge; 
+set idti [Google,89] := Gg.g5.2xlarge; 
+set idti [Amz,1] := m5.2xlarge; 
+set idti [Amz,2] := m5.2xlarge; 
+set idti [Amz,3] := m5.2xlarge; 
+set idti [Amz,4] := m5.2xlarge; 
+set idti [Amz,5] := m5.2xlarge; 
+set idti [Amz,6] := m5.2xlarge; 
+set idti [Amz,7] := m5.2xlarge; 
+set idti [Amz,8] := m5.2xlarge; 
+set idti [Amz,9] := m5.2xlarge; 
+set idti [Amz,10] := m5.2xlarge; 
+set idti [Amz,11] := m5.2xlarge; 
+set idti [Amz,12] := m5.xlarge; 
+set idti [Amz,13] := m5.xlarge; 
+set idti [Amz,14] := m5.xlarge; 
+set idti [Amz,15] := m5.xlarge; 
+set idti [Amz,16] := m5.xlarge; 
+set idti [Amz,17] := m5.xlarge; 
+set idti [Amz,18] := m5.xlarge; 
+set idti [Amz,19] := m5.xlarge; 
+set idti [Amz,20] := m5.xlarge; 
+set idti [Amz,21] := m5.xlarge; 
+set idti [Amz,22] := m5.xlarge; 
+set idti [Amz,23] := m5a.2xlarge; 
+set idti [Amz,24] := m5a.2xlarge; 
+set idti [Amz,25] := m5a.2xlarge; 
+set idti [Amz,26] := m5a.2xlarge; 
+set idti [Amz,27] := m5a.2xlarge; 
+set idti [Amz,28] := m5a.2xlarge; 
+set idti [Amz,29] := m5a.2xlarge; 
+set idti [Amz,30] := m5a.2xlarge; 
+set idti [Amz,31] := m5a.xlarge; 
+set idti [Amz,32] := m5a.xlarge; 
+set idti [Amz,33] := m5a.xlarge; 
+set idti [Amz,34] := m5a.xlarge; 
+set idti [Amz,35] := m5a.xlarge; 
+set idti [Amz,36] := m5a.xlarge; 
+set idti [Amz,37] := m5a.xlarge; 
+set idti [Amz,38] := m5a.xlarge; 
+set idti [Amz,39] := m5ad.2xlarge; 
+set idti [Amz,40] := m5ad.2xlarge; 
+set idti [Amz,41] := m5ad.2xlarge; 
+set idti [Amz,42] := m5ad.2xlarge; 
+set idti [Amz,43] := m5ad.2xlarge; 
+set idti [Amz,44] := m5ad.2xlarge; 
+set idti [Amz,45] := m5ad.2xlarge; 
+set idti [Amz,46] := m5ad.2xlarge; 
+set idti [Amz,47] := m5ad.xlarge; 
+set idti [Amz,48] := m5ad.xlarge; 
+set idti [Amz,49] := m5ad.xlarge; 
+set idti [Amz,50] := m5ad.xlarge; 
+set idti [Amz,51] := m5ad.xlarge; 
+set idti [Amz,52] := m5ad.xlarge; 
+set idti [Amz,53] := m5ad.xlarge; 
+set idti [Amz,54] := m5ad.xlarge; 
+set idti [Amz,55] := m5d.2xlarge; 
+set idti [Amz,56] := m5d.2xlarge; 
+set idti [Amz,57] := m5d.2xlarge; 
+set idti [Amz,58] := m5d.2xlarge; 
+set idti [Amz,59] := m5d.2xlarge; 
+set idti [Amz,60] := m5d.2xlarge; 
+set idti [Amz,61] := m5d.2xlarge; 
+set idti [Amz,62] := m5d.2xlarge; 
+set idti [Amz,63] := m5d.2xlarge; 
+set idti [Amz,64] := m5d.2xlarge; 
+set idti [Amz,65] := m5d.2xlarge; 
+set idti [Amz,66] := m5d.2xlarge; 
+set idti [Amz,67] := m5d.xlarge; 
+set idti [Amz,68] := m5d.xlarge; 
+set idti [Amz,69] := m5d.xlarge; 
+set idti [Amz,70] := m5d.xlarge; 
+set idti [Amz,71] := m5d.xlarge; 
+set idti [Amz,72] := m5d.xlarge; 
+set idti [Amz,73] := m5d.xlarge; 
+set idti [Amz,74] := m5d.xlarge; 
+set idti [Amz,75] := m5d.xlarge; 
+set idti [Amz,76] := m5d.xlarge; 
+set idti [Amz,77] := m5d.xlarge; 
+set idti [Amz,78] := m5d.xlarge; 
+set idti [Amz,79] := m5dn.2xlarge; 
+set idti [Amz,80] := m5dn.2xlarge; 
+set idti [Amz,81] := m5dn.2xlarge; 
+set idti [Amz,82] := m5dn.2xlarge; 
+set idti [Amz,83] := m5dn.xlarge; 
+set idti [Amz,84] := m5dn.xlarge; 
+set idti [Amz,85] := m5dn.xlarge; 
+set idti [Amz,86] := m5dn.xlarge; 
+set idti [Amz,87] := m5n.2xlarge; 
+set idti [Amz,88] := m5n.2xlarge; 
+set idti [Amz,89] := m5n.2xlarge; 
+set idti [Amz,90] := m5n.2xlarge; 
+set idti [Amz,91] := m5n.xlarge; 
+set idti [Amz,92] := m5n.xlarge; 
+set idti [Amz,93] := m5n.xlarge; 
+set idti [Amz,94] := m5n.xlarge; 
+set idti [Alibaba,1] := ecs.c4.2xlarge; 
+set idti [Alibaba,2] := ecs.c4.2xlarge; 
+set idti [Alibaba,3] := ecs.c4.4xlarge; 
+set idti [Alibaba,4] := ecs.c4.4xlarge; 
+set idti [Alibaba,5] := ecs.c4.4xlarge; 
+set idti [Alibaba,6] := ecs.c4.xlarge; 
+set idti [Alibaba,7] := ecs.c4.xlarge; 
+set idti [Alibaba,8] := ecs.c4.xlarge; 
+set idti [Alibaba,9] := ecs.c5.2xlarge; 
+set idti [Alibaba,10] := ecs.c5.2xlarge; 
+set idti [Alibaba,11] := ecs.c5.2xlarge; 
+set idti [Alibaba,12] := ecs.c5.2xlarge; 
+set idti [Alibaba,13] := ecs.c5.2xlarge; 
+set idti [Alibaba,14] := ecs.c5.2xlarge; 
+set idti [Alibaba,15] := ecs.c5.2xlarge; 
+set idti [Alibaba,16] := ecs.c5.4xlarge; 
+set idti [Alibaba,17] := ecs.c5.4xlarge; 
+set idti [Alibaba,18] := ecs.c5.4xlarge; 
+set idti [Alibaba,19] := ecs.c5.4xlarge; 
+set idti [Alibaba,20] := ecs.c5.4xlarge; 
+set idti [Alibaba,21] := ecs.c5.4xlarge; 
+set idti [Alibaba,22] := ecs.c5.4xlarge; 
+set idti [Alibaba,23] := ecs.c5.6xlarge; 
+set idti [Alibaba,24] := ecs.c5.6xlarge; 
+set idti [Alibaba,25] := ecs.c5.6xlarge; 
+set idti [Alibaba,26] := ecs.c5.6xlarge; 
+set idti [Alibaba,27] := ecs.c5.6xlarge; 
+set idti [Alibaba,28] := ecs.c5.6xlarge; 
+set idti [Alibaba,29] := ecs.c5.6xlarge; 
+set idti [Alibaba,30] := ecs.c5.xlarge; 
+set idti [Alibaba,31] := ecs.c5.xlarge; 
+set idti [Alibaba,32] := ecs.c5.xlarge; 
+set idti [Alibaba,33] := ecs.c5.xlarge; 
+set idti [Alibaba,34] := ecs.c5.xlarge; 
+set idti [Alibaba,35] := ecs.c5.xlarge; 
+set idti [Alibaba,36] := ecs.c5.xlarge; 
+set idti [Alibaba,37] := ecs.c6.2xlarge; 
+set idti [Alibaba,38] := ecs.c6.2xlarge; 
+set idti [Alibaba,39] := ecs.c6.2xlarge; 
+set idti [Alibaba,40] := ecs.c6.2xlarge; 
+set idti [Alibaba,41] := ecs.c6.2xlarge; 
+set idti [Alibaba,42] := ecs.c6.2xlarge; 
+set idti [Alibaba,43] := ecs.c6.4xlarge; 
+set idti [Alibaba,44] := ecs.c6.4xlarge; 
+set idti [Alibaba,45] := ecs.c6.4xlarge; 
+set idti [Alibaba,46] := ecs.c6.4xlarge; 
+set idti [Alibaba,47] := ecs.c6.4xlarge; 
+set idti [Alibaba,48] := ecs.c6.4xlarge; 
+set idti [Alibaba,49] := ecs.c6.6xlarge; 
+set idti [Alibaba,50] := ecs.c6.6xlarge; 
+set idti [Alibaba,51] := ecs.c6.6xlarge; 
+set idti [Alibaba,52] := ecs.c6.6xlarge; 
+set idti [Alibaba,53] := ecs.c6.6xlarge; 
+set idti [Alibaba,54] := ecs.c6.6xlarge; 
+set idti [Alibaba,55] := ecs.c6.xlarge; 
+set idti [Alibaba,56] := ecs.c6.xlarge; 
+set idti [Alibaba,57] := ecs.c6.xlarge; 
+set idti [Alibaba,58] := ecs.c6.xlarge; 
+set idti [Alibaba,59] := ecs.c6.xlarge; 
+set idti [Alibaba,60] := ecs.c6.xlarge; 
+set idti [Alibaba,61] := ecs.ce4.xlarge; 
+set idti [Alibaba,62] := ecs.ce4.xlarge; 
+set idti [Alibaba,63] := ecs.ce4.xlarge; 
+set idti [Alibaba,64] := ecs.cm4.2xlarge; 
+set idti [Alibaba,65] := ecs.cm4.2xlarge; 
+set idti [Alibaba,66] := ecs.cm4.2xlarge; 
+set idti [Alibaba,67] := ecs.cm4.xlarge; 
+set idti [Alibaba,68] := ecs.cm4.xlarge; 
+set idti [Alibaba,69] := ecs.cm4.xlarge; 
+set idti [Alibaba,70] := ecs.d1.2xlarge; 
+set idti [Alibaba,71] := ecs.d1.2xlarge; 
+set idti [Alibaba,72] := ecs.d1.2xlarge; 
+set idti [Alibaba,73] := ecs.d1.2xlarge; 
+set idti [Alibaba,74] := ecs.d1.2xlarge; 
+set idti [Alibaba,75] := ecs.d1ne.2xlarge; 
+set idti [Alibaba,76] := ecs.d1ne.2xlarge; 
+set idti [Alibaba,77] := ecs.d1ne.2xlarge; 
+set idti [Alibaba,78] := ecs.d1ne.2xlarge; 
+set idti [Alibaba,79] := ecs.d1ne.2xlarge; 
+set idti [Alibaba,80] := ecs.d1ne.2xlarge; 
+set idti [Alibaba,81] := ecs.e3.large; 
+set idti [Alibaba,82] := ecs.e3.large; 
+set idti [Alibaba,83] := ecs.g5.2xlarge; 
+set idti [Alibaba,84] := ecs.g5.2xlarge; 
+set idti [Alibaba,85] := ecs.g5.2xlarge; 
+set idti [Alibaba,86] := ecs.g5.2xlarge; 
+set idti [Alibaba,87] := ecs.g5.2xlarge; 
+set idti [Alibaba,88] := ecs.g5.2xlarge; 
+set idti [Alibaba,89] := ecs.g5.2xlarge; 
+set idti [Alibaba,90] := ecs.g5.xlarge; 
+set idti [Alibaba,91] := ecs.g5.xlarge; 
+set idti [Alibaba,92] := ecs.g5.xlarge; 
+set idti [Alibaba,93] := ecs.g5.xlarge; 
+set idti [Alibaba,94] := ecs.g5.xlarge; 
+set idti [Alibaba,95] := ecs.g5.xlarge; 
+set idti [Alibaba,96] := ecs.g5.xlarge; 
+set idti [Alibaba,97] := ecs.g6.2xlarge; 
+set idti [Alibaba,98] := ecs.g6.2xlarge; 
+set idti [Alibaba,99] := ecs.g6.2xlarge; 
+set idti [Alibaba,100] := ecs.g6.2xlarge; 
+set idti [Alibaba,101] := ecs.g6.2xlarge; 
+set idti [Alibaba,102] := ecs.g6.2xlarge; 
+set idti [Alibaba,103] := ecs.g6.xlarge; 
+set idti [Alibaba,104] := ecs.g6.xlarge; 
+set idti [Alibaba,105] := ecs.g6.xlarge; 
+set idti [Alibaba,106] := ecs.g6.xlarge; 
+set idti [Alibaba,107] := ecs.g6.xlarge; 
+set idti [Alibaba,108] := ecs.g6.xlarge; 
+set idti [Alibaba,109] := ecs.ga1.4xlarge; 
+set idti [Alibaba,110] := ecs.gn5-c4g1.xlarge; 
+set idti [Alibaba,111] := ecs.gn5-c4g1.xlarge; 
+set idti [Alibaba,112] := ecs.gn5-c4g1.xlarge; 
+set idti [Alibaba,113] := ecs.gn5-c4g1.xlarge; 
+set idti [Alibaba,114] := ecs.gn5-c4g1.xlarge; 
+set idti [Alibaba,115] := ecs.gn6v-c8g1.2xlarge; 
+set idti [Alibaba,116] := ecs.gn6v-c8g1.2xlarge; 
+set idti [Alibaba,117] := ecs.hfc5.2xlarge; 
+set idti [Alibaba,118] := ecs.hfc5.2xlarge; 
+set idti [Alibaba,119] := ecs.hfc5.2xlarge; 
+set idti [Alibaba,120] := ecs.hfc5.2xlarge; 
+set idti [Alibaba,121] := ecs.hfc5.2xlarge; 
+set idti [Alibaba,122] := ecs.hfc5.2xlarge; 
+set idti [Alibaba,123] := ecs.hfc5.2xlarge; 
+set idti [Alibaba,124] := ecs.hfc5.4xlarge; 
+set idti [Alibaba,125] := ecs.hfc5.4xlarge; 
+set idti [Alibaba,126] := ecs.hfc5.4xlarge; 
+set idti [Alibaba,127] := ecs.hfc5.4xlarge; 
+set idti [Alibaba,128] := ecs.hfc5.4xlarge; 
+set idti [Alibaba,129] := ecs.hfc5.4xlarge; 
+set idti [Alibaba,130] := ecs.hfc5.4xlarge; 
+set idti [Alibaba,131] := ecs.hfc5.6xlarge; 
+set idti [Alibaba,132] := ecs.hfc5.6xlarge; 
+set idti [Alibaba,133] := ecs.hfc5.6xlarge; 
+set idti [Alibaba,134] := ecs.hfc5.6xlarge; 
+set idti [Alibaba,135] := ecs.hfc5.6xlarge; 
+set idti [Alibaba,136] := ecs.hfc5.6xlarge; 
+set idti [Alibaba,137] := ecs.hfc5.6xlarge; 
+set idti [Alibaba,138] := ecs.hfc5.xlarge; 
+set idti [Alibaba,139] := ecs.hfc5.xlarge; 
+set idti [Alibaba,140] := ecs.hfc5.xlarge; 
+set idti [Alibaba,141] := ecs.hfc5.xlarge; 
+set idti [Alibaba,142] := ecs.hfc5.xlarge; 
+set idti [Alibaba,143] := ecs.hfc5.xlarge; 
+set idti [Alibaba,144] := ecs.hfc5.xlarge; 
+set idti [Alibaba,145] := ecs.hfg5.2xlarge; 
+set idti [Alibaba,146] := ecs.hfg5.2xlarge; 
+set idti [Alibaba,147] := ecs.hfg5.2xlarge; 
+set idti [Alibaba,148] := ecs.hfg5.2xlarge; 
+set idti [Alibaba,149] := ecs.hfg5.2xlarge; 
+set idti [Alibaba,150] := ecs.hfg5.2xlarge; 
+set idti [Alibaba,151] := ecs.hfg5.2xlarge; 
+set idti [Alibaba,152] := ecs.hfg5.xlarge; 
+set idti [Alibaba,153] := ecs.hfg5.xlarge; 
+set idti [Alibaba,154] := ecs.hfg5.xlarge; 
+set idti [Alibaba,155] := ecs.hfg5.xlarge; 
+set idti [Alibaba,156] := ecs.hfg5.xlarge; 
+set idti [Alibaba,157] := ecs.hfg5.xlarge; 
+set idti [Alibaba,158] := ecs.hfg5.xlarge; 
+set idti [Alibaba,159] := ecs.i1.2xlarge; 
+set idti [Alibaba,160] := ecs.i1.2xlarge; 
+set idti [Alibaba,161] := ecs.i1.2xlarge; 
+set idti [Alibaba,162] := ecs.i1.2xlarge; 
+set idti [Alibaba,163] := ecs.i1.2xlarge; 
+set idti [Alibaba,164] := ecs.i1.xlarge; 
+set idti [Alibaba,165] := ecs.i1.xlarge; 
+set idti [Alibaba,166] := ecs.i1.xlarge; 
+set idti [Alibaba,167] := ecs.i1.xlarge; 
+set idti [Alibaba,168] := ecs.i1.xlarge; 
+set idti [Alibaba,169] := ecs.i2.xlarge; 
+set idti [Alibaba,170] := ecs.i2.xlarge; 
+set idti [Alibaba,171] := ecs.i2.xlarge; 
+set idti [Alibaba,172] := ecs.i2.xlarge; 
+set idti [Alibaba,173] := ecs.i2.xlarge; 
+set idti [Alibaba,174] := ecs.i2.xlarge; 
+set idti [Alibaba,175] := ecs.i2.xlarge; 
+set idti [Alibaba,176] := ecs.ic5.2xlarge; 
+set idti [Alibaba,177] := ecs.ic5.2xlarge; 
+set idti [Alibaba,178] := ecs.ic5.2xlarge; 
+set idti [Alibaba,179] := ecs.ic5.2xlarge; 
+set idti [Alibaba,180] := ecs.ic5.2xlarge; 
+set idti [Alibaba,181] := ecs.ic5.2xlarge; 
+set idti [Alibaba,182] := ecs.ic5.2xlarge; 
+set idti [Alibaba,183] := ecs.ic5.4xlarge; 
+set idti [Alibaba,184] := ecs.ic5.4xlarge; 
+set idti [Alibaba,185] := ecs.ic5.4xlarge; 
+set idti [Alibaba,186] := ecs.ic5.4xlarge; 
+set idti [Alibaba,187] := ecs.ic5.4xlarge; 
+set idti [Alibaba,188] := ecs.ic5.4xlarge; 
+set idti [Alibaba,189] := ecs.ic5.4xlarge; 
+set idti [Alibaba,190] := ecs.ic5.xlarge; 
+set idti [Alibaba,191] := ecs.ic5.xlarge; 
+set idti [Alibaba,192] := ecs.ic5.xlarge; 
+set idti [Alibaba,193] := ecs.ic5.xlarge; 
+set idti [Alibaba,194] := ecs.ic5.xlarge; 
+set idti [Alibaba,195] := ecs.ic5.xlarge; 
+set idti [Alibaba,196] := ecs.ic5.xlarge; 
+set idti [Alibaba,197] := ecs.mn4.2xlarge; 
+set idti [Alibaba,198] := ecs.mn4.2xlarge; 
+set idti [Alibaba,199] := ecs.mn4.2xlarge; 
+set idti [Alibaba,200] := ecs.mn4.2xlarge; 
+set idti [Alibaba,201] := ecs.mn4.2xlarge; 
+set idti [Alibaba,202] := ecs.mn4.xlarge; 
+set idti [Alibaba,203] := ecs.mn4.xlarge; 
+set idti [Alibaba,204] := ecs.mn4.xlarge; 
+set idti [Alibaba,205] := ecs.mn4.xlarge; 
+set idti [Alibaba,206] := ecs.mn4.xlarge; 
+set idti [Alibaba,207] := ecs.n1.3xlarge; 
+set idti [Alibaba,208] := ecs.n1.3xlarge; 
+set idti [Alibaba,209] := ecs.n1.large; 
+set idti [Alibaba,210] := ecs.n1.large; 
+set idti [Alibaba,211] := ecs.n1.xlarge; 
+set idti [Alibaba,212] := ecs.n1.xlarge; 
+set idti [Alibaba,213] := ecs.n2.large; 
+set idti [Alibaba,214] := ecs.n2.large; 
+set idti [Alibaba,215] := ecs.n2.xlarge; 
+set idti [Alibaba,216] := ecs.n2.xlarge; 
+set idti [Alibaba,217] := ecs.n4.2xlarge; 
+set idti [Alibaba,218] := ecs.n4.2xlarge; 
+set idti [Alibaba,219] := ecs.n4.2xlarge; 
+set idti [Alibaba,220] := ecs.n4.2xlarge; 
+set idti [Alibaba,221] := ecs.n4.2xlarge; 
+set idti [Alibaba,222] := ecs.n4.4xlarge; 
+set idti [Alibaba,223] := ecs.n4.4xlarge; 
+set idti [Alibaba,224] := ecs.n4.4xlarge; 
+set idti [Alibaba,225] := ecs.n4.4xlarge; 
+set idti [Alibaba,226] := ecs.n4.4xlarge; 
+set idti [Alibaba,227] := ecs.n4.xlarge; 
+set idti [Alibaba,228] := ecs.n4.xlarge; 
+set idti [Alibaba,229] := ecs.n4.xlarge; 
+set idti [Alibaba,230] := ecs.n4.xlarge; 
+set idti [Alibaba,231] := ecs.n4.xlarge; 
+set idti [Alibaba,232] := ecs.r5.xlarge; 
+set idti [Alibaba,233] := ecs.r5.xlarge; 
+set idti [Alibaba,234] := ecs.r5.xlarge; 
+set idti [Alibaba,235] := ecs.r5.xlarge; 
+set idti [Alibaba,236] := ecs.r5.xlarge; 
+set idti [Alibaba,237] := ecs.r5.xlarge; 
+set idti [Alibaba,238] := ecs.r5.xlarge; 
+set idti [Alibaba,239] := ecs.r6.xlarge; 
+set idti [Alibaba,240] := ecs.r6.xlarge; 
+set idti [Alibaba,241] := ecs.r6.xlarge; 
+set idti [Alibaba,242] := ecs.r6.xlarge; 
+set idti [Alibaba,243] := ecs.r6.xlarge; 
+set idti [Alibaba,244] := ecs.r6.xlarge; 
+set idti [Alibaba,245] := ecs.se1.xlarge; 
+set idti [Alibaba,246] := ecs.se1.xlarge; 
+set idti [Alibaba,247] := ecs.se1.xlarge; 
+set idti [Alibaba,248] := ecs.se1.xlarge; 
+set idti [Alibaba,249] := ecs.se1.xlarge; 
+set idti [Alibaba,250] := ecs.se1ne.xlarge; 
+set idti [Alibaba,251] := ecs.se1ne.xlarge; 
+set idti [Alibaba,252] := ecs.se1ne.xlarge; 
+set idti [Alibaba,253] := ecs.se1ne.xlarge; 
+set idti [Alibaba,254] := ecs.se1ne.xlarge; 
+set idti [Alibaba,255] := ecs.sn1.3xlarge; 
+set idti [Alibaba,256] := ecs.sn1.3xlarge; 
+set idti [Alibaba,257] := ecs.sn1.3xlarge; 
+set idti [Alibaba,258] := ecs.sn1.3xlarge; 
+set idti [Alibaba,259] := ecs.sn1.3xlarge; 
+set idti [Alibaba,260] := ecs.sn1.large; 
+set idti [Alibaba,261] := ecs.sn1.large; 
+set idti [Alibaba,262] := ecs.sn1.large; 
+set idti [Alibaba,263] := ecs.sn1.large; 
+set idti [Alibaba,264] := ecs.sn1.large; 
+set idti [Alibaba,265] := ecs.sn1.xlarge; 
+set idti [Alibaba,266] := ecs.sn1.xlarge; 
+set idti [Alibaba,267] := ecs.sn1.xlarge; 
+set idti [Alibaba,268] := ecs.sn1.xlarge; 
+set idti [Alibaba,269] := ecs.sn1.xlarge; 
+set idti [Alibaba,270] := ecs.sn1ne.2xlarge; 
+set idti [Alibaba,271] := ecs.sn1ne.2xlarge; 
+set idti [Alibaba,272] := ecs.sn1ne.2xlarge; 
+set idti [Alibaba,273] := ecs.sn1ne.2xlarge; 
+set idti [Alibaba,274] := ecs.sn1ne.2xlarge; 
+set idti [Alibaba,275] := ecs.sn1ne.4xlarge; 
+set idti [Alibaba,276] := ecs.sn1ne.4xlarge; 
+set idti [Alibaba,277] := ecs.sn1ne.4xlarge; 
+set idti [Alibaba,278] := ecs.sn1ne.4xlarge; 
+set idti [Alibaba,279] := ecs.sn1ne.4xlarge; 
+set idti [Alibaba,280] := ecs.sn1ne.6xlarge; 
+set idti [Alibaba,281] := ecs.sn1ne.6xlarge; 
+set idti [Alibaba,282] := ecs.sn1ne.6xlarge; 
+set idti [Alibaba,283] := ecs.sn1ne.6xlarge; 
+set idti [Alibaba,284] := ecs.sn1ne.6xlarge; 
+set idti [Alibaba,285] := ecs.sn1ne.xlarge; 
+set idti [Alibaba,286] := ecs.sn1ne.xlarge; 
+set idti [Alibaba,287] := ecs.sn1ne.xlarge; 
+set idti [Alibaba,288] := ecs.sn1ne.xlarge; 
+set idti [Alibaba,289] := ecs.sn2.large; 
+set idti [Alibaba,290] := ecs.sn2.large; 
+set idti [Alibaba,291] := ecs.sn2.large; 
+set idti [Alibaba,292] := ecs.sn2.large; 
+set idti [Alibaba,293] := ecs.sn2.large; 
+set idti [Alibaba,294] := ecs.sn2.xlarge; 
+set idti [Alibaba,295] := ecs.sn2.xlarge; 
+set idti [Alibaba,296] := ecs.sn2.xlarge; 
+set idti [Alibaba,297] := ecs.sn2.xlarge; 
+set idti [Alibaba,298] := ecs.sn2.xlarge; 
+set idti [Alibaba,299] := ecs.sn2ne.2xlarge; 
+set idti [Alibaba,300] := ecs.sn2ne.2xlarge; 
+set idti [Alibaba,301] := ecs.sn2ne.2xlarge; 
+set idti [Alibaba,302] := ecs.sn2ne.2xlarge; 
+set idti [Alibaba,303] := ecs.sn2ne.2xlarge; 
+set idti [Alibaba,304] := ecs.sn2ne.xlarge; 
+set idti [Alibaba,305] := ecs.sn2ne.xlarge; 
+set idti [Alibaba,306] := ecs.sn2ne.xlarge; 
+set idti [Alibaba,307] := ecs.sn2ne.xlarge; 
+set idti [Alibaba,308] := ecs.sn2ne.xlarge; 
+set idti [Alibaba,309] := ecs.t5-c1m1.2xlarge; 
+set idti [Alibaba,310] := ecs.t5-c1m1.2xlarge; 
+set idti [Alibaba,311] := ecs.t5-c1m1.2xlarge; 
+set idti [Alibaba,312] := ecs.t5-c1m1.2xlarge; 
+set idti [Alibaba,313] := ecs.t5-c1m1.2xlarge; 
+set idti [Alibaba,314] := ecs.t5-c1m1.2xlarge; 
+set idti [Alibaba,315] := ecs.t5-c1m1.2xlarge; 
+set idti [Alibaba,316] := ecs.t5-c1m1.4xlarge; 
+set idti [Alibaba,317] := ecs.t5-c1m1.4xlarge; 
+set idti [Alibaba,318] := ecs.t5-c1m1.4xlarge; 
+set idti [Alibaba,319] := ecs.t5-c1m1.4xlarge; 
+set idti [Alibaba,320] := ecs.t5-c1m1.4xlarge; 
+set idti [Alibaba,321] := ecs.t5-c1m1.4xlarge; 
+set idti [Alibaba,322] := ecs.t5-c1m1.4xlarge; 
+set idti [Alibaba,323] := ecs.t5-c1m1.xlarge; 
+set idti [Alibaba,324] := ecs.t5-c1m1.xlarge; 
+set idti [Alibaba,325] := ecs.t5-c1m1.xlarge; 
+set idti [Alibaba,326] := ecs.t5-c1m1.xlarge; 
+set idti [Alibaba,327] := ecs.t5-c1m1.xlarge; 
+set idti [Alibaba,328] := ecs.t5-c1m1.xlarge; 
+set idti [Alibaba,329] := ecs.t5-c1m1.xlarge; 
+set idti [Alibaba,330] := ecs.t5-c1m2.2xlarge; 
+set idti [Alibaba,331] := ecs.t5-c1m2.2xlarge; 
+set idti [Alibaba,332] := ecs.t5-c1m2.2xlarge; 
+set idti [Alibaba,333] := ecs.t5-c1m2.2xlarge; 
+set idti [Alibaba,334] := ecs.t5-c1m2.2xlarge; 
+set idti [Alibaba,335] := ecs.t5-c1m2.2xlarge; 
+set idti [Alibaba,336] := ecs.t5-c1m2.2xlarge; 
+set idti [Alibaba,337] := ecs.t5-c1m2.4xlarge; 
+set idti [Alibaba,338] := ecs.t5-c1m2.4xlarge; 
+set idti [Alibaba,339] := ecs.t5-c1m2.4xlarge; 
+set idti [Alibaba,340] := ecs.t5-c1m2.4xlarge; 
+set idti [Alibaba,341] := ecs.t5-c1m2.4xlarge; 
+set idti [Alibaba,342] := ecs.t5-c1m2.4xlarge; 
+set idti [Alibaba,343] := ecs.t5-c1m2.4xlarge; 
+set idti [Alibaba,344] := ecs.t5-c1m2.xlarge; 
+set idti [Alibaba,345] := ecs.t5-c1m2.xlarge; 
+set idti [Alibaba,346] := ecs.t5-c1m2.xlarge; 
+set idti [Alibaba,347] := ecs.t5-c1m2.xlarge; 
+set idti [Alibaba,348] := ecs.t5-c1m2.xlarge; 
+set idti [Alibaba,349] := ecs.t5-c1m2.xlarge; 
+set idti [Alibaba,350] := ecs.t5-c1m2.xlarge; 
+set idti [Alibaba,351] := ecs.t5-c1m4.2xlarge; 
+set idti [Alibaba,352] := ecs.t5-c1m4.2xlarge; 
+set idti [Alibaba,353] := ecs.t5-c1m4.2xlarge; 
+set idti [Alibaba,354] := ecs.t5-c1m4.2xlarge; 
+set idti [Alibaba,355] := ecs.t5-c1m4.2xlarge; 
+set idti [Alibaba,356] := ecs.t5-c1m4.2xlarge; 
+set idti [Alibaba,357] := ecs.t5-c1m4.2xlarge; 
+set idti [Alibaba,358] := ecs.t5-c1m4.xlarge; 
+set idti [Alibaba,359] := ecs.t5-c1m4.xlarge; 
+set idti [Alibaba,360] := ecs.t5-c1m4.xlarge; 
+set idti [Alibaba,361] := ecs.t5-c1m4.xlarge; 
+set idti [Alibaba,362] := ecs.t5-c1m4.xlarge; 
+set idti [Alibaba,363] := ecs.t5-c1m4.xlarge; 
+set idti [Alibaba,364] := ecs.t5-c1m4.xlarge; 
+set idti [Alibaba,365] := ecs.t6-c1m4.2xlarge; 
+set idti [Alibaba,366] := ecs.t6-c1m4.2xlarge; 
+set idti [Alibaba,367] := ecs.t6-c1m4.2xlarge; 
+set idti [Alibaba,368] := ecs.t6-c1m4.2xlarge; 
+set idti [Alibaba,369] := ecs.t6-c1m4.xlarge; 
+set idti [Alibaba,370] := ecs.t6-c1m4.xlarge; 
+set idti [Alibaba,371] := ecs.t6-c1m4.xlarge; 
+set idti [Alibaba,372] := ecs.t6-c1m4.xlarge; 
+set idti [Azure,1] := B4MS; 
+set idti [Azure,2] := B4MS; 
+set idti [Azure,3] := B4MS; 
+set idti [Azure,4] := B4MS; 
+set idti [Azure,5] := B4MS; 
+set idti [Azure,6] := B8MS; 
+set idti [Azure,7] := B8MS; 
+set idti [Azure,8] := B8MS; 
+set idti [Azure,9] := B8MS; 
+set idti [Azure,10] := B8MS; 
+set idti [Azure,11] := B8MS; 
+set idti [Azure,12] := F16Sv2; 
+set idti [Azure,13] := F16Sv2; 
+set idti [Azure,14] := F16Sv2; 
+set idti [Azure,15] := F16Sv2; 
+set idti [Azure,16] := F16Sv2; 
+set idti [Azure,17] := F16Sv2; 
+set idti [Azure,18] := F4Sv2; 
+set idti [Azure,19] := F4Sv2; 
+set idti [Azure,20] := F4Sv2; 
+set idti [Azure,21] := F4Sv2; 
+set idti [Azure,22] := F4Sv2; 
+set idti [Azure,23] := F4Sv2; 
+set idti [Azure,24] := F8Sv2; 
+set idti [Azure,25] := F8Sv2; 
+set idti [Azure,26] := F8Sv2; 
+set idti [Azure,27] := F8Sv2; 
+set idti [Azure,28] := F8Sv2; 
+set idti [Azure,29] := F8Sv2; 
+param InstancesPrices := Google 1 0.48 
+Google 2 0.82 
+Google 3 0.88 
+Google 4 0.96 
+Google 5 1.64 
+Google 6 0.22 
+Google 7 0.24 
+Google 8 0.41 
+Google 9 0.323 
+Google 10 0.334 
+Google 11 0.308 
+Google 12 0.38 
+Google 13 0.653 
+Google 14 0.664 
+Google 15 0.608 
+Google 16 0.646 
+Google 17 0.667 
+Google 18 0.616 
+Google 19 0.76 
+Google 20 1.296 
+Google 21 1.327 
+Google 22 1.216 
+Google 23 0.969 
+Google 24 1.0 
+Google 25 0.924 
+Google 26 1.14 
+Google 27 1.949 
+Google 28 1.99 
+Google 29 1.814 
+Google 30 0.162 
+Google 31 0.167 
+Google 32 0.154 
+Google 33 0.19 
+Google 34 0.322 
+Google 35 0.337 
+Google 36 0.304 
+Google 37 0.344 
+Google 38 0.36 
+Google 39 0.304 
+Google 40 0.304 
+Google 41 0.674 
+Google 42 0.69 
+Google 43 0.688 
+Google 44 0.72 
+Google 45 0.608 
+Google 46 0.608 
+Google 47 1.348 
+Google 48 1.38 
+Google 49 1.032 
+Google 50 1.08 
+Google 51 0.912 
+Google 52 0.912 
+Google 53 2.012 
+Google 54 2.06 
+Google 55 0.172 
+Google 56 0.18 
+Google 57 0.152 
+Google 58 0.152 
+Google 59 0.332 
+Google 60 0.34 
+Google 61 0.379 
+Google 62 0.351 
+Google 63 0.599 
+Google 64 0.57 
+Google 65 0.55 
+Google 66 1.0 
+Google 67 0.28 
+Google 68 0.27 
+Google 69 0.5 
+Google 70 0.762 
+Google 71 0.639 
+Google 72 0.777 
+Google 73 0.922 
+Google 74 0.819 
+Google 75 0.801 
+Google 76 0.801 
+Google 77 0.671 
+Google 78 1.201 
+Google 79 1.201 
+Google 80 1.081 
+Google 81 0.263 
+Google 82 0.343 
+Google 83 0.46 
+Google 84 0.444 
+Google 85 0.384 
+Google 86 0.424 
+Google 87 0.83 
+Google 88 0.804 
+Google 89 0.754 
+Amz 1 0.428 
+Amz 2 0.46 
+Amz 3 0.428 
+Amz 4 0.444 
+Amz 5 0.448 
+Amz 6 0.448 
+Amz 7 0.408 
+Amz 8 0.471 
+Amz 9 0.612 
+Amz 10 0.384 
+Amz 11 0.384 
+Amz 12 0.254 
+Amz 13 0.214 
+Amz 14 0.23 
+Amz 15 0.214 
+Amz 16 0.222 
+Amz 17 0.224 
+Amz 18 0.224 
+Amz 19 0.204 
+Amz 20 0.235 
+Amz 21 0.306 
+Amz 22 0.192 
+Amz 23 0.384 
+Amz 24 0.416 
+Amz 25 0.384 
+Amz 26 0.4 
+Amz 27 0.404 
+Amz 28 0.552 
+Amz 29 0.344 
+Amz 30 0.344 
+Amz 31 0.192 
+Amz 32 0.208 
+Amz 33 0.192 
+Amz 34 0.2 
+Amz 35 0.202 
+Amz 36 0.276 
+Amz 37 0.172 
+Amz 38 0.172 
+Amz 39 0.46 
+Amz 40 0.5 
+Amz 41 0.46 
+Amz 42 0.48 
+Amz 43 0.484 
+Amz 44 0.66 
+Amz 45 0.412 
+Amz 46 0.412 
+Amz 47 0.23 
+Amz 48 0.25 
+Amz 49 0.23 
+Amz 50 0.24 
+Amz 51 0.242 
+Amz 52 0.33 
+Amz 53 0.206 
+Amz 54 0.206 
+Amz 55 0.6 
+Amz 56 0.504 
+Amz 57 0.544 
+Amz 58 0.504 
+Amz 59 0.524 
+Amz 60 0.528 
+Amz 61 0.528 
+Amz 62 0.48 
+Amz 63 0.554 
+Amz 64 0.72 
+Amz 65 0.452 
+Amz 66 0.452 
+Amz 67 0.3 
+Amz 68 0.252 
+Amz 69 0.272 
+Amz 70 0.252 
+Amz 71 0.262 
+Amz 72 0.264 
+Amz 73 0.264 
+Amz 74 0.24 
+Amz 75 0.277 
+Amz 76 0.36 
+Amz 77 0.226 
+Amz 78 0.226 
+Amz 79 0.648 
+Amz 80 0.608 
+Amz 81 0.544 
+Amz 82 0.544 
+Amz 83 0.324 
+Amz 84 0.304 
+Amz 85 0.272 
+Amz 86 0.272 
+Amz 87 0.564 
+Amz 88 0.532 
+Amz 89 0.476 
+Amz 90 0.476 
+Amz 91 0.282 
+Amz 92 0.266 
+Amz 93 0.238 
+Amz 94 0.238 
+Alibaba 1 0.48 
+Alibaba 2 0.82 
+Alibaba 3 0.88 
+Alibaba 4 0.96 
+Alibaba 5 1.64 
+Alibaba 6 0.22 
+Alibaba 7 0.24 
+Alibaba 8 0.41 
+Alibaba 9 0.323 
+Alibaba 10 0.334 
+Alibaba 11 0.308 
+Alibaba 12 0.38 
+Alibaba 13 0.653 
+Alibaba 14 0.664 
+Alibaba 15 0.608 
+Alibaba 16 0.646 
+Alibaba 17 0.667 
+Alibaba 18 0.616 
+Alibaba 19 0.76 
+Alibaba 20 1.296 
+Alibaba 21 1.327 
+Alibaba 22 1.216 
+Alibaba 23 0.969 
+Alibaba 24 1.0 
+Alibaba 25 0.924 
+Alibaba 26 1.14 
+Alibaba 27 1.949 
+Alibaba 28 1.99 
+Alibaba 29 1.814 
+Alibaba 30 0.162 
+Alibaba 31 0.167 
+Alibaba 32 0.154 
+Alibaba 33 0.19 
+Alibaba 34 0.322 
+Alibaba 35 0.337 
+Alibaba 36 0.304 
+Alibaba 37 0.344 
+Alibaba 38 0.36 
+Alibaba 39 0.304 
+Alibaba 40 0.304 
+Alibaba 41 0.674 
+Alibaba 42 0.69 
+Alibaba 43 0.688 
+Alibaba 44 0.72 
+Alibaba 45 0.608 
+Alibaba 46 0.608 
+Alibaba 47 1.348 
+Alibaba 48 1.38 
+Alibaba 49 1.032 
+Alibaba 50 1.08 
+Alibaba 51 0.912 
+Alibaba 52 0.912 
+Alibaba 53 2.012 
+Alibaba 54 2.06 
+Alibaba 55 0.172 
+Alibaba 56 0.18 
+Alibaba 57 0.152 
+Alibaba 58 0.152 
+Alibaba 59 0.332 
+Alibaba 60 0.34 
+Alibaba 61 0.379 
+Alibaba 62 0.351 
+Alibaba 63 0.599 
+Alibaba 64 0.57 
+Alibaba 65 0.55 
+Alibaba 66 1.0 
+Alibaba 67 0.28 
+Alibaba 68 0.27 
+Alibaba 69 0.5 
+Alibaba 70 0.762 
+Alibaba 71 0.639 
+Alibaba 72 0.777 
+Alibaba 73 0.922 
+Alibaba 74 0.819 
+Alibaba 75 0.801 
+Alibaba 76 0.801 
+Alibaba 77 0.671 
+Alibaba 78 1.201 
+Alibaba 79 1.201 
+Alibaba 80 1.081 
+Alibaba 81 0.263 
+Alibaba 82 0.343 
+Alibaba 83 0.46 
+Alibaba 84 0.444 
+Alibaba 85 0.384 
+Alibaba 86 0.424 
+Alibaba 87 0.83 
+Alibaba 88 0.804 
+Alibaba 89 0.754 
+Alibaba 90 0.23 
+Alibaba 91 0.222 
+Alibaba 92 0.192 
+Alibaba 93 0.212 
+Alibaba 94 0.41 
+Alibaba 95 0.402 
+Alibaba 96 0.372 
+Alibaba 97 0.448 
+Alibaba 98 0.432 
+Alibaba 99 0.372 
+Alibaba 100 0.372 
+Alibaba 101 0.808 
+Alibaba 102 0.792 
+Alibaba 103 0.224 
+Alibaba 104 0.216 
+Alibaba 105 0.186 
+Alibaba 106 0.186 
+Alibaba 107 0.404 
+Alibaba 108 0.396 
+Alibaba 109 1.113 
+Alibaba 110 1.613 
+Alibaba 111 1.55 
+Alibaba 112 1.706 
+Alibaba 113 1.783 
+Alibaba 114 2.02 
+Alibaba 115 2.699 
+Alibaba 116 3.179 
+Alibaba 117 0.388 
+Alibaba 118 0.399 
+Alibaba 119 0.368 
+Alibaba 120 0.456 
+Alibaba 121 0.758 
+Alibaba 122 0.769 
+Alibaba 123 0.728 
+Alibaba 124 0.775 
+Alibaba 125 0.798 
+Alibaba 126 0.736 
+Alibaba 127 0.912 
+Alibaba 128 1.515 
+Alibaba 129 1.538 
+Alibaba 130 1.456 
+Alibaba 131 1.162 
+Alibaba 132 1.197 
+Alibaba 133 1.104 
+Alibaba 134 1.368 
+Alibaba 135 2.272 
+Alibaba 136 2.307 
+Alibaba 137 2.184 
+Alibaba 138 0.194 
+Alibaba 139 0.2 
+Alibaba 140 0.184 
+Alibaba 141 0.228 
+Alibaba 142 0.374 
+Alibaba 143 0.38 
+Alibaba 144 0.364 
+Alibaba 145 0.476 
+Alibaba 146 0.496 
+Alibaba 147 0.417 
+Alibaba 148 0.52 
+Alibaba 149 0.866 
+Alibaba 150 0.876 
+Alibaba 151 0.797 
+Alibaba 152 0.238 
+Alibaba 153 0.248 
+Alibaba 154 0.209 
+Alibaba 155 0.26 
+Alibaba 156 0.428 
+Alibaba 157 0.438 
+Alibaba 158 0.399 
+Alibaba 159 0.531 
+Alibaba 160 0.453 
+Alibaba 161 0.495 
+Alibaba 162 0.871 
+Alibaba 163 0.773 
+Alibaba 164 0.265 
+Alibaba 165 0.226 
+Alibaba 166 0.247 
+Alibaba 167 0.435 
+Alibaba 168 0.386 
+Alibaba 169 0.354 
+Alibaba 170 0.35 
+Alibaba 171 0.296 
+Alibaba 172 0.326 
+Alibaba 173 0.534 
+Alibaba 174 0.53 
+Alibaba 175 0.476 
+Alibaba 176 0.307 
+Alibaba 177 0.317 
+Alibaba 178 0.292 
+Alibaba 179 0.364 
+Alibaba 180 0.617 
+Alibaba 181 0.627 
+Alibaba 182 0.572 
+Alibaba 183 0.614 
+Alibaba 184 0.634 
+Alibaba 185 0.584 
+Alibaba 186 0.728 
+Alibaba 187 1.244 
+Alibaba 188 1.254 
+Alibaba 189 1.154 
+Alibaba 190 0.154 
+Alibaba 191 0.159 
+Alibaba 192 0.146 
+Alibaba 193 0.182 
+Alibaba 194 0.314 
+Alibaba 195 0.319 
+Alibaba 196 0.286 
+Alibaba 197 0.475 
+Alibaba 198 0.353 
+Alibaba 199 0.463 
+Alibaba 200 0.835 
+Alibaba 201 0.613 
+Alibaba 202 0.237 
+Alibaba 203 0.176 
+Alibaba 204 0.231 
+Alibaba 205 0.417 
+Alibaba 206 0.306 
+Alibaba 207 0.64 
+Alibaba 208 0.79 
+Alibaba 209 0.16 
+Alibaba 210 0.2 
+Alibaba 211 0.32 
+Alibaba 212 0.39 
+Alibaba 213 0.167 
+Alibaba 214 0.267 
+Alibaba 215 0.336 
+Alibaba 216 0.546 
+Alibaba 217 0.345 
+Alibaba 218 0.336 
+Alibaba 219 0.423 
+Alibaba 220 0.655 
+Alibaba 221 0.456 
+Alibaba 222 0.69 
+Alibaba 223 0.672 
+Alibaba 224 0.846 
+Alibaba 225 1.31 
+Alibaba 226 0.912 
+Alibaba 227 0.173 
+Alibaba 228 0.168 
+Alibaba 229 0.211 
+Alibaba 230 0.333 
+Alibaba 231 0.228 
+Alibaba 232 0.276 
+Alibaba 233 0.271 
+Alibaba 234 0.252 
+Alibaba 235 0.266 
+Alibaba 236 0.506 
+Alibaba 237 0.501 
+Alibaba 238 0.432 
+Alibaba 239 0.294 
+Alibaba 240 0.288 
+Alibaba 241 0.244 
+Alibaba 242 0.244 
+Alibaba 243 0.474 
+Alibaba 244 0.468 
+Alibaba 245 0.316 
+Alibaba 246 0.263 
+Alibaba 247 0.293 
+Alibaba 248 0.496 
+Alibaba 249 0.443 
+Alibaba 250 0.331 
+Alibaba 251 0.276 
+Alibaba 252 0.307 
+Alibaba 253 0.521 
+Alibaba 254 0.466 
+Alibaba 255 0.772 
+Alibaba 256 0.676 
+Alibaba 257 0.847 
+Alibaba 258 1.402 
+Alibaba 259 1.306 
+Alibaba 260 0.192 
+Alibaba 261 0.169 
+Alibaba 262 0.211 
+Alibaba 263 0.352 
+Alibaba 264 0.329 
+Alibaba 265 0.385 
+Alibaba 266 0.338 
+Alibaba 267 0.423 
+Alibaba 268 0.695 
+Alibaba 269 0.648 
+Alibaba 270 0.404 
+Alibaba 271 0.354 
+Alibaba 272 0.444 
+Alibaba 273 0.734 
+Alibaba 274 0.684 
+Alibaba 275 0.81 
+Alibaba 276 0.709 
+Alibaba 277 0.889 
+Alibaba 278 1.47 
+Alibaba 279 1.369 
+Alibaba 280 1.2 
+Alibaba 281 1.068 
+Alibaba 282 1.32 
+Alibaba 283 2.2 
+Alibaba 284 2.048 
+Alibaba 285 0.201 
+Alibaba 286 0.177 
+Alibaba 287 0.371 
+Alibaba 288 0.337 
+Alibaba 289 0.237 
+Alibaba 290 0.198 
+Alibaba 291 0.231 
+Alibaba 292 0.417 
+Alibaba 293 0.378 
+Alibaba 294 0.475 
+Alibaba 295 0.396 
+Alibaba 296 0.463 
+Alibaba 297 0.835 
+Alibaba 298 0.756 
+Alibaba 299 0.498 
+Alibaba 300 0.415 
+Alibaba 301 0.486 
+Alibaba 302 0.878 
+Alibaba 303 0.795 
+Alibaba 304 0.248 
+Alibaba 305 0.207 
+Alibaba 306 0.242 
+Alibaba 307 0.438 
+Alibaba 308 0.397 
+Alibaba 309 0.125 
+Alibaba 310 0.125 
+Alibaba 311 0.11 
+Alibaba 312 0.13 
+Alibaba 313 0.165 
+Alibaba 314 0.165 
+Alibaba 315 0.15 
+Alibaba 316 0.249 
+Alibaba 317 0.249 
+Alibaba 318 0.22 
+Alibaba 319 0.26 
+Alibaba 320 0.339 
+Alibaba 321 0.339 
+Alibaba 322 0.3 
+Alibaba 323 0.063 
+Alibaba 324 0.063 
+Alibaba 325 0.055 
+Alibaba 326 0.065 
+Alibaba 327 0.083 
+Alibaba 328 0.083 
+Alibaba 329 0.075 
+Alibaba 330 0.172 
+Alibaba 331 0.172 
+Alibaba 332 0.152 
+Alibaba 333 0.18 
+Alibaba 334 0.232 
+Alibaba 335 0.232 
+Alibaba 336 0.212 
+Alibaba 337 0.344 
+Alibaba 338 0.344 
+Alibaba 339 0.304 
+Alibaba 340 0.36 
+Alibaba 341 0.464 
+Alibaba 342 0.464 
+Alibaba 343 0.414 
+Alibaba 344 0.086 
+Alibaba 345 0.086 
+Alibaba 346 0.076 
+Alibaba 347 0.09 
+Alibaba 348 0.116 
+Alibaba 349 0.116 
+Alibaba 350 0.106 
+Alibaba 351 0.28 
+Alibaba 352 0.28 
+Alibaba 353 0.24 
+Alibaba 354 0.28 
+Alibaba 355 0.36 
+Alibaba 356 0.36 
+Alibaba 357 0.32 
+Alibaba 358 0.14 
+Alibaba 359 0.14 
+Alibaba 360 0.12 
+Alibaba 361 0.14 
+Alibaba 362 0.18 
+Alibaba 363 0.18 
+Alibaba 364 0.16 
+Alibaba 365 0.331 
+Alibaba 366 0.326 
+Alibaba 367 0.461 
+Alibaba 368 0.456 
+Alibaba 369 0.166 
+Alibaba 370 0.163 
+Alibaba 371 0.226 
+Alibaba 372 0.223 
+Azure 1 0.0929 
+Azure 2 0.0822 
+Azure 3 0.1117 
+Azure 4 0.0929 
+Azure 5 0.0822 
+Azure 6 0.2233 
+Azure 7 0.1857 
+Azure 8 0.1643 
+Azure 9 0.2233 
+Azure 10 0.1857 
+Azure 11 0.1643 
+Azure 12 0.3837 
+Azure 13 0.4043 
+Azure 14 0.3373 
+Azure 15 0.3837 
+Azure 16 0.4043 
+Azure 17 0.3373 
+Azure 18 0.0959 
+Azure 19 0.1011 
+Azure 20 0.0844 
+Azure 21 0.0959 
+Azure 22 0.1011 
+Azure 23 0.0844 
+Azure 24 0.1918 
+Azure 25 0.2021 
+Azure 26 0.1686 
+Azure 27 0.1918 
+Azure 28 0.2021 
+Azure 29 0.1686 
+; 
+ param VPC := Amz 0.005
+             Google 0.004
+             Alibaba 0.005
+             Azure 0.004;
+
+
+/* pricing here are per amount of data transfered transfered */
+param VPT := Amz 0.05
+             Google 0.05
+             Alibaba 0.05
+             Azure 0.05;
+
+param CEL := 6;
+param CIL := 3; 
+param Alpha:= 
+[CustomerCmp3-1,Google,1] := 0 
+[CustomerCmp3-1,Google,2] := 0 
+[CustomerCmp3-1,Google,3] := 0 
+[CustomerCmp3-1,Google,4] := 0 
+[CustomerCmp3-1,Google,5] := 0 
+[CustomerCmp3-1,Google,6] := 0 
+[CustomerCmp3-1,Google,7] := 0 
+[CustomerCmp3-1,Google,8] := 0 
+[CustomerCmp3-1,Google,9] := 1 
+[CustomerCmp3-1,Google,10] := 1 
+[CustomerCmp3-1,Google,11] := 0 
+[CustomerCmp3-1,Google,12] := 0 
+[CustomerCmp3-1,Google,13] := 0 
+[CustomerCmp3-1,Google,14] := 0 
+[CustomerCmp3-1,Google,15] := 0 
+[CustomerCmp3-1,Google,16] := 0 
+[CustomerCmp3-1,Google,17] := 0 
+[CustomerCmp3-1,Google,18] := 0 
+[CustomerCmp3-1,Google,19] := 0 
+[CustomerCmp3-1,Google,20] := 0 
+[CustomerCmp3-1,Google,21] := 0 
+[CustomerCmp3-1,Google,22] := 0 
+[CustomerCmp3-1,Google,23] := 0 
+[CustomerCmp3-1,Google,24] := 0 
+[CustomerCmp3-1,Google,25] := 0 
+[CustomerCmp3-1,Google,26] := 0 
+[CustomerCmp3-1,Google,27] := 0 
+[CustomerCmp3-1,Google,28] := 0 
+[CustomerCmp3-1,Google,29] := 0 
+[CustomerCmp3-1,Google,30] := 0 
+[CustomerCmp3-1,Google,31] := 0 
+[CustomerCmp3-1,Google,32] := 0 
+[CustomerCmp3-1,Google,33] := 0 
+[CustomerCmp3-1,Google,34] := 0 
+[CustomerCmp3-1,Google,35] := 0 
+[CustomerCmp3-1,Google,36] := 0 
+[CustomerCmp3-1,Google,37] := 1 
+[CustomerCmp3-1,Google,38] := 1 
+[CustomerCmp3-1,Google,39] := 0 
+[CustomerCmp3-1,Google,40] := 0 
+[CustomerCmp3-1,Google,41] := 0 
+[CustomerCmp3-1,Google,42] := 0 
+[CustomerCmp3-1,Google,43] := 0 
+[CustomerCmp3-1,Google,44] := 0 
+[CustomerCmp3-1,Google,45] := 0 
+[CustomerCmp3-1,Google,46] := 0 
+[CustomerCmp3-1,Google,47] := 0 
+[CustomerCmp3-1,Google,48] := 0 
+[CustomerCmp3-1,Google,49] := 0 
+[CustomerCmp3-1,Google,50] := 0 
+[CustomerCmp3-1,Google,51] := 0 
+[CustomerCmp3-1,Google,52] := 0 
+[CustomerCmp3-1,Google,53] := 0 
+[CustomerCmp3-1,Google,54] := 0 
+[CustomerCmp3-1,Google,55] := 0 
+[CustomerCmp3-1,Google,56] := 0 
+[CustomerCmp3-1,Google,57] := 0 
+[CustomerCmp3-1,Google,58] := 0 
+[CustomerCmp3-1,Google,59] := 0 
+[CustomerCmp3-1,Google,60] := 0 
+[CustomerCmp3-1,Google,61] := 0 
+[CustomerCmp3-1,Google,62] := 0 
+[CustomerCmp3-1,Google,63] := 0 
+[CustomerCmp3-1,Google,64] := 0 
+[CustomerCmp3-1,Google,65] := 0 
+[CustomerCmp3-1,Google,66] := 0 
+[CustomerCmp3-1,Google,67] := 0 
+[CustomerCmp3-1,Google,68] := 0 
+[CustomerCmp3-1,Google,69] := 0 
+[CustomerCmp3-1,Google,70] := 0 
+[CustomerCmp3-1,Google,71] := 0 
+[CustomerCmp3-1,Google,72] := 0 
+[CustomerCmp3-1,Google,73] := 0 
+[CustomerCmp3-1,Google,74] := 0 
+[CustomerCmp3-1,Google,75] := 0 
+[CustomerCmp3-1,Google,76] := 0 
+[CustomerCmp3-1,Google,77] := 0 
+[CustomerCmp3-1,Google,78] := 0 
+[CustomerCmp3-1,Google,79] := 0 
+[CustomerCmp3-1,Google,80] := 0 
+[CustomerCmp3-1,Google,81] := 0 
+[CustomerCmp3-1,Google,82] := 0 
+[CustomerCmp3-1,Google,83] := 0 
+[CustomerCmp3-1,Google,84] := 0 
+[CustomerCmp3-1,Google,85] := 0 
+[CustomerCmp3-1,Google,86] := 0 
+[CustomerCmp3-1,Google,87] := 0 
+[CustomerCmp3-1,Google,88] := 0 
+[CustomerCmp3-1,Google,89] := 0 
+[CustomerCmp3-1,Amz,1] := 0 
+[CustomerCmp3-1,Amz,2] := 0 
+[CustomerCmp3-1,Amz,3] := 0 
+[CustomerCmp3-1,Amz,4] := 0 
+[CustomerCmp3-1,Amz,5] := 0 
+[CustomerCmp3-1,Amz,6] := 0 
+[CustomerCmp3-1,Amz,7] := 0 
+[CustomerCmp3-1,Amz,8] := 0 
+[CustomerCmp3-1,Amz,9] := 0 
+[CustomerCmp3-1,Amz,10] := 0 
+[CustomerCmp3-1,Amz,11] := 0 
+[CustomerCmp3-1,Amz,12] := 0 
+[CustomerCmp3-1,Amz,13] := 0 
+[CustomerCmp3-1,Amz,14] := 0 
+[CustomerCmp3-1,Amz,15] := 0 
+[CustomerCmp3-1,Amz,16] := 0 
+[CustomerCmp3-1,Amz,17] := 0 
+[CustomerCmp3-1,Amz,18] := 0 
+[CustomerCmp3-1,Amz,19] := 0 
+[CustomerCmp3-1,Amz,20] := 0 
+[CustomerCmp3-1,Amz,21] := 0 
+[CustomerCmp3-1,Amz,22] := 0 
+[CustomerCmp3-1,Amz,23] := 0 
+[CustomerCmp3-1,Amz,24] := 0 
+[CustomerCmp3-1,Amz,25] := 0 
+[CustomerCmp3-1,Amz,26] := 0 
+[CustomerCmp3-1,Amz,27] := 0 
+[CustomerCmp3-1,Amz,28] := 0 
+[CustomerCmp3-1,Amz,29] := 0 
+[CustomerCmp3-1,Amz,30] := 0 
+[CustomerCmp3-1,Amz,31] := 0 
+[CustomerCmp3-1,Amz,32] := 0 
+[CustomerCmp3-1,Amz,33] := 0 
+[CustomerCmp3-1,Amz,34] := 0 
+[CustomerCmp3-1,Amz,35] := 0 
+[CustomerCmp3-1,Amz,36] := 0 
+[CustomerCmp3-1,Amz,37] := 0 
+[CustomerCmp3-1,Amz,38] := 0 
+[CustomerCmp3-1,Amz,39] := 0 
+[CustomerCmp3-1,Amz,40] := 0 
+[CustomerCmp3-1,Amz,41] := 0 
+[CustomerCmp3-1,Amz,42] := 0 
+[CustomerCmp3-1,Amz,43] := 0 
+[CustomerCmp3-1,Amz,44] := 0 
+[CustomerCmp3-1,Amz,45] := 0 
+[CustomerCmp3-1,Amz,46] := 0 
+[CustomerCmp3-1,Amz,47] := 0 
+[CustomerCmp3-1,Amz,48] := 0 
+[CustomerCmp3-1,Amz,49] := 0 
+[CustomerCmp3-1,Amz,50] := 0 
+[CustomerCmp3-1,Amz,51] := 0 
+[CustomerCmp3-1,Amz,52] := 0 
+[CustomerCmp3-1,Amz,53] := 0 
+[CustomerCmp3-1,Amz,54] := 0 
+[CustomerCmp3-1,Amz,55] := 0 
+[CustomerCmp3-1,Amz,56] := 0 
+[CustomerCmp3-1,Amz,57] := 0 
+[CustomerCmp3-1,Amz,58] := 0 
+[CustomerCmp3-1,Amz,59] := 0 
+[CustomerCmp3-1,Amz,60] := 0 
+[CustomerCmp3-1,Amz,61] := 0 
+[CustomerCmp3-1,Amz,62] := 0 
+[CustomerCmp3-1,Amz,63] := 0 
+[CustomerCmp3-1,Amz,64] := 0 
+[CustomerCmp3-1,Amz,65] := 0 
+[CustomerCmp3-1,Amz,66] := 0 
+[CustomerCmp3-1,Amz,67] := 0 
+[CustomerCmp3-1,Amz,68] := 0 
+[CustomerCmp3-1,Amz,69] := 0 
+[CustomerCmp3-1,Amz,70] := 0 
+[CustomerCmp3-1,Amz,71] := 0 
+[CustomerCmp3-1,Amz,72] := 0 
+[CustomerCmp3-1,Amz,73] := 0 
+[CustomerCmp3-1,Amz,74] := 0 
+[CustomerCmp3-1,Amz,75] := 0 
+[CustomerCmp3-1,Amz,76] := 0 
+[CustomerCmp3-1,Amz,77] := 0 
+[CustomerCmp3-1,Amz,78] := 0 
+[CustomerCmp3-1,Amz,79] := 0 
+[CustomerCmp3-1,Amz,80] := 0 
+[CustomerCmp3-1,Amz,81] := 0 
+[CustomerCmp3-1,Amz,82] := 0 
+[CustomerCmp3-1,Amz,83] := 0 
+[CustomerCmp3-1,Amz,84] := 0 
+[CustomerCmp3-1,Amz,85] := 0 
+[CustomerCmp3-1,Amz,86] := 0 
+[CustomerCmp3-1,Amz,87] := 0 
+[CustomerCmp3-1,Amz,88] := 0 
+[CustomerCmp3-1,Amz,89] := 0 
+[CustomerCmp3-1,Amz,90] := 0 
+[CustomerCmp3-1,Amz,91] := 0 
+[CustomerCmp3-1,Amz,92] := 0 
+[CustomerCmp3-1,Amz,93] := 0 
+[CustomerCmp3-1,Amz,94] := 0 
+[CustomerCmp3-1,Alibaba,1] := 0 
+[CustomerCmp3-1,Alibaba,2] := 0 
+[CustomerCmp3-1,Alibaba,3] := 0 
+[CustomerCmp3-1,Alibaba,4] := 0 
+[CustomerCmp3-1,Alibaba,5] := 0 
+[CustomerCmp3-1,Alibaba,6] := 0 
+[CustomerCmp3-1,Alibaba,7] := 0 
+[CustomerCmp3-1,Alibaba,8] := 0 
+[CustomerCmp3-1,Alibaba,9] := 1 
+[CustomerCmp3-1,Alibaba,10] := 1 
+[CustomerCmp3-1,Alibaba,11] := 0 
+[CustomerCmp3-1,Alibaba,12] := 0 
+[CustomerCmp3-1,Alibaba,13] := 0 
+[CustomerCmp3-1,Alibaba,14] := 0 
+[CustomerCmp3-1,Alibaba,15] := 0 
+[CustomerCmp3-1,Alibaba,16] := 0 
+[CustomerCmp3-1,Alibaba,17] := 0 
+[CustomerCmp3-1,Alibaba,18] := 0 
+[CustomerCmp3-1,Alibaba,19] := 0 
+[CustomerCmp3-1,Alibaba,20] := 0 
+[CustomerCmp3-1,Alibaba,21] := 0 
+[CustomerCmp3-1,Alibaba,22] := 0 
+[CustomerCmp3-1,Alibaba,23] := 0 
+[CustomerCmp3-1,Alibaba,24] := 0 
+[CustomerCmp3-1,Alibaba,25] := 0 
+[CustomerCmp3-1,Alibaba,26] := 0 
+[CustomerCmp3-1,Alibaba,27] := 0 
+[CustomerCmp3-1,Alibaba,28] := 0 
+[CustomerCmp3-1,Alibaba,29] := 0 
+[CustomerCmp3-1,Alibaba,30] := 0 
+[CustomerCmp3-1,Alibaba,31] := 0 
+[CustomerCmp3-1,Alibaba,32] := 0 
+[CustomerCmp3-1,Alibaba,33] := 0 
+[CustomerCmp3-1,Alibaba,34] := 0 
+[CustomerCmp3-1,Alibaba,35] := 0 
+[CustomerCmp3-1,Alibaba,36] := 0 
+[CustomerCmp3-1,Alibaba,37] := 1 
+[CustomerCmp3-1,Alibaba,38] := 1 
+[CustomerCmp3-1,Alibaba,39] := 0 
+[CustomerCmp3-1,Alibaba,40] := 0 
+[CustomerCmp3-1,Alibaba,41] := 0 
+[CustomerCmp3-1,Alibaba,42] := 0 
+[CustomerCmp3-1,Alibaba,43] := 0 
+[CustomerCmp3-1,Alibaba,44] := 0 
+[CustomerCmp3-1,Alibaba,45] := 0 
+[CustomerCmp3-1,Alibaba,46] := 0 
+[CustomerCmp3-1,Alibaba,47] := 0 
+[CustomerCmp3-1,Alibaba,48] := 0 
+[CustomerCmp3-1,Alibaba,49] := 0 
+[CustomerCmp3-1,Alibaba,50] := 0 
+[CustomerCmp3-1,Alibaba,51] := 0 
+[CustomerCmp3-1,Alibaba,52] := 0 
+[CustomerCmp3-1,Alibaba,53] := 0 
+[CustomerCmp3-1,Alibaba,54] := 0 
+[CustomerCmp3-1,Alibaba,55] := 0 
+[CustomerCmp3-1,Alibaba,56] := 0 
+[CustomerCmp3-1,Alibaba,57] := 0 
+[CustomerCmp3-1,Alibaba,58] := 0 
+[CustomerCmp3-1,Alibaba,59] := 0 
+[CustomerCmp3-1,Alibaba,60] := 0 
+[CustomerCmp3-1,Alibaba,61] := 0 
+[CustomerCmp3-1,Alibaba,62] := 0 
+[CustomerCmp3-1,Alibaba,63] := 0 
+[CustomerCmp3-1,Alibaba,64] := 0 
+[CustomerCmp3-1,Alibaba,65] := 0 
+[CustomerCmp3-1,Alibaba,66] := 0 
+[CustomerCmp3-1,Alibaba,67] := 0 
+[CustomerCmp3-1,Alibaba,68] := 0 
+[CustomerCmp3-1,Alibaba,69] := 0 
+[CustomerCmp3-1,Alibaba,70] := 0 
+[CustomerCmp3-1,Alibaba,71] := 0 
+[CustomerCmp3-1,Alibaba,72] := 0 
+[CustomerCmp3-1,Alibaba,73] := 0 
+[CustomerCmp3-1,Alibaba,74] := 0 
+[CustomerCmp3-1,Alibaba,75] := 0 
+[CustomerCmp3-1,Alibaba,76] := 0 
+[CustomerCmp3-1,Alibaba,77] := 0 
+[CustomerCmp3-1,Alibaba,78] := 0 
+[CustomerCmp3-1,Alibaba,79] := 0 
+[CustomerCmp3-1,Alibaba,80] := 0 
+[CustomerCmp3-1,Alibaba,81] := 0 
+[CustomerCmp3-1,Alibaba,82] := 0 
+[CustomerCmp3-1,Alibaba,83] := 0 
+[CustomerCmp3-1,Alibaba,84] := 0 
+[CustomerCmp3-1,Alibaba,85] := 0 
+[CustomerCmp3-1,Alibaba,86] := 0 
+[CustomerCmp3-1,Alibaba,87] := 0 
+[CustomerCmp3-1,Alibaba,88] := 0 
+[CustomerCmp3-1,Alibaba,89] := 0 
+[CustomerCmp3-1,Alibaba,90] := 0 
+[CustomerCmp3-1,Alibaba,91] := 0 
+[CustomerCmp3-1,Alibaba,92] := 0 
+[CustomerCmp3-1,Alibaba,93] := 0 
+[CustomerCmp3-1,Alibaba,94] := 0 
+[CustomerCmp3-1,Alibaba,95] := 0 
+[CustomerCmp3-1,Alibaba,96] := 0 
+[CustomerCmp3-1,Alibaba,97] := 0 
+[CustomerCmp3-1,Alibaba,98] := 0 
+[CustomerCmp3-1,Alibaba,99] := 0 
+[CustomerCmp3-1,Alibaba,100] := 0 
+[CustomerCmp3-1,Alibaba,101] := 0 
+[CustomerCmp3-1,Alibaba,102] := 0 
+[CustomerCmp3-1,Alibaba,103] := 0 
+[CustomerCmp3-1,Alibaba,104] := 0 
+[CustomerCmp3-1,Alibaba,105] := 0 
+[CustomerCmp3-1,Alibaba,106] := 0 
+[CustomerCmp3-1,Alibaba,107] := 0 
+[CustomerCmp3-1,Alibaba,108] := 0 
+[CustomerCmp3-1,Alibaba,109] := 0 
+[CustomerCmp3-1,Alibaba,110] := 0 
+[CustomerCmp3-1,Alibaba,111] := 0 
+[CustomerCmp3-1,Alibaba,112] := 0 
+[CustomerCmp3-1,Alibaba,113] := 0 
+[CustomerCmp3-1,Alibaba,114] := 0 
+[CustomerCmp3-1,Alibaba,115] := 0 
+[CustomerCmp3-1,Alibaba,116] := 0 
+[CustomerCmp3-1,Alibaba,117] := 1 
+[CustomerCmp3-1,Alibaba,118] := 1 
+[CustomerCmp3-1,Alibaba,119] := 0 
+[CustomerCmp3-1,Alibaba,120] := 0 
+[CustomerCmp3-1,Alibaba,121] := 0 
+[CustomerCmp3-1,Alibaba,122] := 0 
+[CustomerCmp3-1,Alibaba,123] := 0 
+[CustomerCmp3-1,Alibaba,124] := 0 
+[CustomerCmp3-1,Alibaba,125] := 0 
+[CustomerCmp3-1,Alibaba,126] := 0 
+[CustomerCmp3-1,Alibaba,127] := 0 
+[CustomerCmp3-1,Alibaba,128] := 0 
+[CustomerCmp3-1,Alibaba,129] := 0 
+[CustomerCmp3-1,Alibaba,130] := 0 
+[CustomerCmp3-1,Alibaba,131] := 0 
+[CustomerCmp3-1,Alibaba,132] := 0 
+[CustomerCmp3-1,Alibaba,133] := 0 
+[CustomerCmp3-1,Alibaba,134] := 0 
+[CustomerCmp3-1,Alibaba,135] := 0 
+[CustomerCmp3-1,Alibaba,136] := 0 
+[CustomerCmp3-1,Alibaba,137] := 0 
+[CustomerCmp3-1,Alibaba,138] := 0 
+[CustomerCmp3-1,Alibaba,139] := 0 
+[CustomerCmp3-1,Alibaba,140] := 0 
+[CustomerCmp3-1,Alibaba,141] := 0 
+[CustomerCmp3-1,Alibaba,142] := 0 
+[CustomerCmp3-1,Alibaba,143] := 0 
+[CustomerCmp3-1,Alibaba,144] := 0 
+[CustomerCmp3-1,Alibaba,145] := 0 
+[CustomerCmp3-1,Alibaba,146] := 0 
+[CustomerCmp3-1,Alibaba,147] := 0 
+[CustomerCmp3-1,Alibaba,148] := 0 
+[CustomerCmp3-1,Alibaba,149] := 0 
+[CustomerCmp3-1,Alibaba,150] := 0 
+[CustomerCmp3-1,Alibaba,151] := 0 
+[CustomerCmp3-1,Alibaba,152] := 0 
+[CustomerCmp3-1,Alibaba,153] := 0 
+[CustomerCmp3-1,Alibaba,154] := 0 
+[CustomerCmp3-1,Alibaba,155] := 0 
+[CustomerCmp3-1,Alibaba,156] := 0 
+[CustomerCmp3-1,Alibaba,157] := 0 
+[CustomerCmp3-1,Alibaba,158] := 0 
+[CustomerCmp3-1,Alibaba,159] := 0 
+[CustomerCmp3-1,Alibaba,160] := 0 
+[CustomerCmp3-1,Alibaba,161] := 0 
+[CustomerCmp3-1,Alibaba,162] := 0 
+[CustomerCmp3-1,Alibaba,163] := 0 
+[CustomerCmp3-1,Alibaba,164] := 0 
+[CustomerCmp3-1,Alibaba,165] := 0 
+[CustomerCmp3-1,Alibaba,166] := 0 
+[CustomerCmp3-1,Alibaba,167] := 0 
+[CustomerCmp3-1,Alibaba,168] := 0 
+[CustomerCmp3-1,Alibaba,169] := 0 
+[CustomerCmp3-1,Alibaba,170] := 0 
+[CustomerCmp3-1,Alibaba,171] := 0 
+[CustomerCmp3-1,Alibaba,172] := 0 
+[CustomerCmp3-1,Alibaba,173] := 0 
+[CustomerCmp3-1,Alibaba,174] := 0 
+[CustomerCmp3-1,Alibaba,175] := 0 
+[CustomerCmp3-1,Alibaba,176] := 0 
+[CustomerCmp3-1,Alibaba,177] := 0 
+[CustomerCmp3-1,Alibaba,178] := 0 
+[CustomerCmp3-1,Alibaba,179] := 0 
+[CustomerCmp3-1,Alibaba,180] := 0 
+[CustomerCmp3-1,Alibaba,181] := 0 
+[CustomerCmp3-1,Alibaba,182] := 0 
+[CustomerCmp3-1,Alibaba,183] := 0 
+[CustomerCmp3-1,Alibaba,184] := 0 
+[CustomerCmp3-1,Alibaba,185] := 0 
+[CustomerCmp3-1,Alibaba,186] := 0 
+[CustomerCmp3-1,Alibaba,187] := 0 
+[CustomerCmp3-1,Alibaba,188] := 0 
+[CustomerCmp3-1,Alibaba,189] := 0 
+[CustomerCmp3-1,Alibaba,190] := 0 
+[CustomerCmp3-1,Alibaba,191] := 0 
+[CustomerCmp3-1,Alibaba,192] := 0 
+[CustomerCmp3-1,Alibaba,193] := 0 
+[CustomerCmp3-1,Alibaba,194] := 0 
+[CustomerCmp3-1,Alibaba,195] := 0 
+[CustomerCmp3-1,Alibaba,196] := 0 
+[CustomerCmp3-1,Alibaba,197] := 0 
+[CustomerCmp3-1,Alibaba,198] := 0 
+[CustomerCmp3-1,Alibaba,199] := 0 
+[CustomerCmp3-1,Alibaba,200] := 0 
+[CustomerCmp3-1,Alibaba,201] := 0 
+[CustomerCmp3-1,Alibaba,202] := 0 
+[CustomerCmp3-1,Alibaba,203] := 0 
+[CustomerCmp3-1,Alibaba,204] := 0 
+[CustomerCmp3-1,Alibaba,205] := 0 
+[CustomerCmp3-1,Alibaba,206] := 0 
+[CustomerCmp3-1,Alibaba,207] := 0 
+[CustomerCmp3-1,Alibaba,208] := 0 
+[CustomerCmp3-1,Alibaba,209] := 0 
+[CustomerCmp3-1,Alibaba,210] := 0 
+[CustomerCmp3-1,Alibaba,211] := 0 
+[CustomerCmp3-1,Alibaba,212] := 0 
+[CustomerCmp3-1,Alibaba,213] := 0 
+[CustomerCmp3-1,Alibaba,214] := 0 
+[CustomerCmp3-1,Alibaba,215] := 0 
+[CustomerCmp3-1,Alibaba,216] := 0 
+[CustomerCmp3-1,Alibaba,217] := 1 
+[CustomerCmp3-1,Alibaba,218] := 0 
+[CustomerCmp3-1,Alibaba,219] := 0 
+[CustomerCmp3-1,Alibaba,220] := 0 
+[CustomerCmp3-1,Alibaba,221] := 0 
+[CustomerCmp3-1,Alibaba,222] := 0 
+[CustomerCmp3-1,Alibaba,223] := 0 
+[CustomerCmp3-1,Alibaba,224] := 0 
+[CustomerCmp3-1,Alibaba,225] := 0 
+[CustomerCmp3-1,Alibaba,226] := 0 
+[CustomerCmp3-1,Alibaba,227] := 0 
+[CustomerCmp3-1,Alibaba,228] := 0 
+[CustomerCmp3-1,Alibaba,229] := 0 
+[CustomerCmp3-1,Alibaba,230] := 0 
+[CustomerCmp3-1,Alibaba,231] := 0 
+[CustomerCmp3-1,Alibaba,232] := 0 
+[CustomerCmp3-1,Alibaba,233] := 0 
+[CustomerCmp3-1,Alibaba,234] := 0 
+[CustomerCmp3-1,Alibaba,235] := 0 
+[CustomerCmp3-1,Alibaba,236] := 0 
+[CustomerCmp3-1,Alibaba,237] := 0 
+[CustomerCmp3-1,Alibaba,238] := 0 
+[CustomerCmp3-1,Alibaba,239] := 0 
+[CustomerCmp3-1,Alibaba,240] := 0 
+[CustomerCmp3-1,Alibaba,241] := 0 
+[CustomerCmp3-1,Alibaba,242] := 0 
+[CustomerCmp3-1,Alibaba,243] := 0 
+[CustomerCmp3-1,Alibaba,244] := 0 
+[CustomerCmp3-1,Alibaba,245] := 0 
+[CustomerCmp3-1,Alibaba,246] := 0 
+[CustomerCmp3-1,Alibaba,247] := 0 
+[CustomerCmp3-1,Alibaba,248] := 0 
+[CustomerCmp3-1,Alibaba,249] := 0 
+[CustomerCmp3-1,Alibaba,250] := 0 
+[CustomerCmp3-1,Alibaba,251] := 0 
+[CustomerCmp3-1,Alibaba,252] := 0 
+[CustomerCmp3-1,Alibaba,253] := 0 
+[CustomerCmp3-1,Alibaba,254] := 0 
+[CustomerCmp3-1,Alibaba,255] := 0 
+[CustomerCmp3-1,Alibaba,256] := 0 
+[CustomerCmp3-1,Alibaba,257] := 0 
+[CustomerCmp3-1,Alibaba,258] := 0 
+[CustomerCmp3-1,Alibaba,259] := 0 
+[CustomerCmp3-1,Alibaba,260] := 0 
+[CustomerCmp3-1,Alibaba,261] := 0 
+[CustomerCmp3-1,Alibaba,262] := 0 
+[CustomerCmp3-1,Alibaba,263] := 0 
+[CustomerCmp3-1,Alibaba,264] := 0 
+[CustomerCmp3-1,Alibaba,265] := 1 
+[CustomerCmp3-1,Alibaba,266] := 0 
+[CustomerCmp3-1,Alibaba,267] := 0 
+[CustomerCmp3-1,Alibaba,268] := 0 
+[CustomerCmp3-1,Alibaba,269] := 0 
+[CustomerCmp3-1,Alibaba,270] := 1 
+[CustomerCmp3-1,Alibaba,271] := 0 
+[CustomerCmp3-1,Alibaba,272] := 0 
+[CustomerCmp3-1,Alibaba,273] := 0 
+[CustomerCmp3-1,Alibaba,274] := 0 
+[CustomerCmp3-1,Alibaba,275] := 0 
+[CustomerCmp3-1,Alibaba,276] := 0 
+[CustomerCmp3-1,Alibaba,277] := 0 
+[CustomerCmp3-1,Alibaba,278] := 0 
+[CustomerCmp3-1,Alibaba,279] := 0 
+[CustomerCmp3-1,Alibaba,280] := 0 
+[CustomerCmp3-1,Alibaba,281] := 0 
+[CustomerCmp3-1,Alibaba,282] := 0 
+[CustomerCmp3-1,Alibaba,283] := 0 
+[CustomerCmp3-1,Alibaba,284] := 0 
+[CustomerCmp3-1,Alibaba,285] := 0 
+[CustomerCmp3-1,Alibaba,286] := 0 
+[CustomerCmp3-1,Alibaba,287] := 0 
+[CustomerCmp3-1,Alibaba,288] := 0 
+[CustomerCmp3-1,Alibaba,289] := 0 
+[CustomerCmp3-1,Alibaba,290] := 0 
+[CustomerCmp3-1,Alibaba,291] := 0 
+[CustomerCmp3-1,Alibaba,292] := 0 
+[CustomerCmp3-1,Alibaba,293] := 0 
+[CustomerCmp3-1,Alibaba,294] := 0 
+[CustomerCmp3-1,Alibaba,295] := 0 
+[CustomerCmp3-1,Alibaba,296] := 0 
+[CustomerCmp3-1,Alibaba,297] := 0 
+[CustomerCmp3-1,Alibaba,298] := 0 
+[CustomerCmp3-1,Alibaba,299] := 0 
+[CustomerCmp3-1,Alibaba,300] := 0 
+[CustomerCmp3-1,Alibaba,301] := 0 
+[CustomerCmp3-1,Alibaba,302] := 0 
+[CustomerCmp3-1,Alibaba,303] := 0 
+[CustomerCmp3-1,Alibaba,304] := 0 
+[CustomerCmp3-1,Alibaba,305] := 0 
+[CustomerCmp3-1,Alibaba,306] := 0 
+[CustomerCmp3-1,Alibaba,307] := 0 
+[CustomerCmp3-1,Alibaba,308] := 0 
+[CustomerCmp3-1,Alibaba,309] := 0 
+[CustomerCmp3-1,Alibaba,310] := 0 
+[CustomerCmp3-1,Alibaba,311] := 0 
+[CustomerCmp3-1,Alibaba,312] := 0 
+[CustomerCmp3-1,Alibaba,313] := 0 
+[CustomerCmp3-1,Alibaba,314] := 0 
+[CustomerCmp3-1,Alibaba,315] := 0 
+[CustomerCmp3-1,Alibaba,316] := 0 
+[CustomerCmp3-1,Alibaba,317] := 0 
+[CustomerCmp3-1,Alibaba,318] := 0 
+[CustomerCmp3-1,Alibaba,319] := 0 
+[CustomerCmp3-1,Alibaba,320] := 0 
+[CustomerCmp3-1,Alibaba,321] := 0 
+[CustomerCmp3-1,Alibaba,322] := 0 
+[CustomerCmp3-1,Alibaba,323] := 0 
+[CustomerCmp3-1,Alibaba,324] := 0 
+[CustomerCmp3-1,Alibaba,325] := 0 
+[CustomerCmp3-1,Alibaba,326] := 0 
+[CustomerCmp3-1,Alibaba,327] := 0 
+[CustomerCmp3-1,Alibaba,328] := 0 
+[CustomerCmp3-1,Alibaba,329] := 0 
+[CustomerCmp3-1,Alibaba,330] := 1 
+[CustomerCmp3-1,Alibaba,331] := 1 
+[CustomerCmp3-1,Alibaba,332] := 0 
+[CustomerCmp3-1,Alibaba,333] := 0 
+[CustomerCmp3-1,Alibaba,334] := 0 
+[CustomerCmp3-1,Alibaba,335] := 0 
+[CustomerCmp3-1,Alibaba,336] := 0 
+[CustomerCmp3-1,Alibaba,337] := 0 
+[CustomerCmp3-1,Alibaba,338] := 0 
+[CustomerCmp3-1,Alibaba,339] := 0 
+[CustomerCmp3-1,Alibaba,340] := 0 
+[CustomerCmp3-1,Alibaba,341] := 0 
+[CustomerCmp3-1,Alibaba,342] := 0 
+[CustomerCmp3-1,Alibaba,343] := 0 
+[CustomerCmp3-1,Alibaba,344] := 0 
+[CustomerCmp3-1,Alibaba,345] := 0 
+[CustomerCmp3-1,Alibaba,346] := 0 
+[CustomerCmp3-1,Alibaba,347] := 0 
+[CustomerCmp3-1,Alibaba,348] := 0 
+[CustomerCmp3-1,Alibaba,349] := 0 
+[CustomerCmp3-1,Alibaba,350] := 0 
+[CustomerCmp3-1,Alibaba,351] := 0 
+[CustomerCmp3-1,Alibaba,352] := 0 
+[CustomerCmp3-1,Alibaba,353] := 0 
+[CustomerCmp3-1,Alibaba,354] := 0 
+[CustomerCmp3-1,Alibaba,355] := 0 
+[CustomerCmp3-1,Alibaba,356] := 0 
+[CustomerCmp3-1,Alibaba,357] := 0 
+[CustomerCmp3-1,Alibaba,358] := 0 
+[CustomerCmp3-1,Alibaba,359] := 0 
+[CustomerCmp3-1,Alibaba,360] := 0 
+[CustomerCmp3-1,Alibaba,361] := 0 
+[CustomerCmp3-1,Alibaba,362] := 0 
+[CustomerCmp3-1,Alibaba,363] := 0 
+[CustomerCmp3-1,Alibaba,364] := 0 
+[CustomerCmp3-1,Alibaba,365] := 0 
+[CustomerCmp3-1,Alibaba,366] := 0 
+[CustomerCmp3-1,Alibaba,367] := 0 
+[CustomerCmp3-1,Alibaba,368] := 0 
+[CustomerCmp3-1,Alibaba,369] := 0 
+[CustomerCmp3-1,Alibaba,370] := 0 
+[CustomerCmp3-1,Alibaba,371] := 0 
+[CustomerCmp3-1,Alibaba,372] := 0 
+[CustomerCmp3-1,Azure,1] := 0 
+[CustomerCmp3-1,Azure,2] := 0 
+[CustomerCmp3-1,Azure,3] := 0 
+[CustomerCmp3-1,Azure,4] := 0 
+[CustomerCmp3-1,Azure,5] := 0 
+[CustomerCmp3-1,Azure,6] := 0 
+[CustomerCmp3-1,Azure,7] := 0 
+[CustomerCmp3-1,Azure,8] := 0 
+[CustomerCmp3-1,Azure,9] := 0 
+[CustomerCmp3-1,Azure,10] := 0 
+[CustomerCmp3-1,Azure,11] := 0 
+[CustomerCmp3-1,Azure,12] := 0 
+[CustomerCmp3-1,Azure,13] := 0 
+[CustomerCmp3-1,Azure,14] := 0 
+[CustomerCmp3-1,Azure,15] := 0 
+[CustomerCmp3-1,Azure,16] := 0 
+[CustomerCmp3-1,Azure,17] := 0 
+[CustomerCmp3-1,Azure,18] := 0 
+[CustomerCmp3-1,Azure,19] := 0 
+[CustomerCmp3-1,Azure,20] := 0 
+[CustomerCmp3-1,Azure,21] := 0 
+[CustomerCmp3-1,Azure,22] := 0 
+[CustomerCmp3-1,Azure,23] := 0 
+[CustomerCmp3-1,Azure,24] := 1 
+[CustomerCmp3-1,Azure,25] := 0 
+[CustomerCmp3-1,Azure,26] := 0 
+[CustomerCmp3-1,Azure,27] := 0 
+[CustomerCmp3-1,Azure,28] := 0 
+[CustomerCmp3-1,Azure,29] := 0 
+[CustomerCmp3-4,Google,1] := 0 
+[CustomerCmp3-4,Google,2] := 0 
+[CustomerCmp3-4,Google,3] := 0 
+[CustomerCmp3-4,Google,4] := 0 
+[CustomerCmp3-4,Google,5] := 0 
+[CustomerCmp3-4,Google,6] := 1 
+[CustomerCmp3-4,Google,7] := 0 
+[CustomerCmp3-4,Google,8] := 0 
+[CustomerCmp3-4,Google,9] := 0 
+[CustomerCmp3-4,Google,10] := 0 
+[CustomerCmp3-4,Google,11] := 0 
+[CustomerCmp3-4,Google,12] := 0 
+[CustomerCmp3-4,Google,13] := 0 
+[CustomerCmp3-4,Google,14] := 0 
+[CustomerCmp3-4,Google,15] := 0 
+[CustomerCmp3-4,Google,16] := 0 
+[CustomerCmp3-4,Google,17] := 0 
+[CustomerCmp3-4,Google,18] := 0 
+[CustomerCmp3-4,Google,19] := 0 
+[CustomerCmp3-4,Google,20] := 0 
+[CustomerCmp3-4,Google,21] := 0 
+[CustomerCmp3-4,Google,22] := 0 
+[CustomerCmp3-4,Google,23] := 0 
+[CustomerCmp3-4,Google,24] := 0 
+[CustomerCmp3-4,Google,25] := 0 
+[CustomerCmp3-4,Google,26] := 0 
+[CustomerCmp3-4,Google,27] := 0 
+[CustomerCmp3-4,Google,28] := 0 
+[CustomerCmp3-4,Google,29] := 0 
+[CustomerCmp3-4,Google,30] := 1 
+[CustomerCmp3-4,Google,31] := 1 
+[CustomerCmp3-4,Google,32] := 0 
+[CustomerCmp3-4,Google,33] := 0 
+[CustomerCmp3-4,Google,34] := 0 
+[CustomerCmp3-4,Google,35] := 0 
+[CustomerCmp3-4,Google,36] := 0 
+[CustomerCmp3-4,Google,37] := 0 
+[CustomerCmp3-4,Google,38] := 0 
+[CustomerCmp3-4,Google,39] := 0 
+[CustomerCmp3-4,Google,40] := 0 
+[CustomerCmp3-4,Google,41] := 0 
+[CustomerCmp3-4,Google,42] := 0 
+[CustomerCmp3-4,Google,43] := 0 
+[CustomerCmp3-4,Google,44] := 0 
+[CustomerCmp3-4,Google,45] := 0 
+[CustomerCmp3-4,Google,46] := 0 
+[CustomerCmp3-4,Google,47] := 0 
+[CustomerCmp3-4,Google,48] := 0 
+[CustomerCmp3-4,Google,49] := 0 
+[CustomerCmp3-4,Google,50] := 0 
+[CustomerCmp3-4,Google,51] := 0 
+[CustomerCmp3-4,Google,52] := 0 
+[CustomerCmp3-4,Google,53] := 0 
+[CustomerCmp3-4,Google,54] := 0 
+[CustomerCmp3-4,Google,55] := 1 
+[CustomerCmp3-4,Google,56] := 1 
+[CustomerCmp3-4,Google,57] := 0 
+[CustomerCmp3-4,Google,58] := 0 
+[CustomerCmp3-4,Google,59] := 0 
+[CustomerCmp3-4,Google,60] := 0 
+[CustomerCmp3-4,Google,61] := 0 
+[CustomerCmp3-4,Google,62] := 0 
+[CustomerCmp3-4,Google,63] := 0 
+[CustomerCmp3-4,Google,64] := 0 
+[CustomerCmp3-4,Google,65] := 0 
+[CustomerCmp3-4,Google,66] := 0 
+[CustomerCmp3-4,Google,67] := 0 
+[CustomerCmp3-4,Google,68] := 0 
+[CustomerCmp3-4,Google,69] := 0 
+[CustomerCmp3-4,Google,70] := 0 
+[CustomerCmp3-4,Google,71] := 0 
+[CustomerCmp3-4,Google,72] := 0 
+[CustomerCmp3-4,Google,73] := 0 
+[CustomerCmp3-4,Google,74] := 0 
+[CustomerCmp3-4,Google,75] := 0 
+[CustomerCmp3-4,Google,76] := 0 
+[CustomerCmp3-4,Google,77] := 0 
+[CustomerCmp3-4,Google,78] := 0 
+[CustomerCmp3-4,Google,79] := 0 
+[CustomerCmp3-4,Google,80] := 0 
+[CustomerCmp3-4,Google,81] := 0 
+[CustomerCmp3-4,Google,82] := 0 
+[CustomerCmp3-4,Google,83] := 0 
+[CustomerCmp3-4,Google,84] := 0 
+[CustomerCmp3-4,Google,85] := 0 
+[CustomerCmp3-4,Google,86] := 0 
+[CustomerCmp3-4,Google,87] := 0 
+[CustomerCmp3-4,Google,88] := 0 
+[CustomerCmp3-4,Google,89] := 0 
+[CustomerCmp3-4,Amz,1] := 0 
+[CustomerCmp3-4,Amz,2] := 0 
+[CustomerCmp3-4,Amz,3] := 0 
+[CustomerCmp3-4,Amz,4] := 0 
+[CustomerCmp3-4,Amz,5] := 0 
+[CustomerCmp3-4,Amz,6] := 0 
+[CustomerCmp3-4,Amz,7] := 0 
+[CustomerCmp3-4,Amz,8] := 0 
+[CustomerCmp3-4,Amz,9] := 0 
+[CustomerCmp3-4,Amz,10] := 0 
+[CustomerCmp3-4,Amz,11] := 0 
+[CustomerCmp3-4,Amz,12] := 0 
+[CustomerCmp3-4,Amz,13] := 0 
+[CustomerCmp3-4,Amz,14] := 0 
+[CustomerCmp3-4,Amz,15] := 0 
+[CustomerCmp3-4,Amz,16] := 0 
+[CustomerCmp3-4,Amz,17] := 0 
+[CustomerCmp3-4,Amz,18] := 0 
+[CustomerCmp3-4,Amz,19] := 0 
+[CustomerCmp3-4,Amz,20] := 0 
+[CustomerCmp3-4,Amz,21] := 0 
+[CustomerCmp3-4,Amz,22] := 0 
+[CustomerCmp3-4,Amz,23] := 0 
+[CustomerCmp3-4,Amz,24] := 0 
+[CustomerCmp3-4,Amz,25] := 0 
+[CustomerCmp3-4,Amz,26] := 0 
+[CustomerCmp3-4,Amz,27] := 0 
+[CustomerCmp3-4,Amz,28] := 0 
+[CustomerCmp3-4,Amz,29] := 0 
+[CustomerCmp3-4,Amz,30] := 0 
+[CustomerCmp3-4,Amz,31] := 0 
+[CustomerCmp3-4,Amz,32] := 0 
+[CustomerCmp3-4,Amz,33] := 0 
+[CustomerCmp3-4,Amz,34] := 0 
+[CustomerCmp3-4,Amz,35] := 0 
+[CustomerCmp3-4,Amz,36] := 0 
+[CustomerCmp3-4,Amz,37] := 0 
+[CustomerCmp3-4,Amz,38] := 0 
+[CustomerCmp3-4,Amz,39] := 0 
+[CustomerCmp3-4,Amz,40] := 0 
+[CustomerCmp3-4,Amz,41] := 0 
+[CustomerCmp3-4,Amz,42] := 0 
+[CustomerCmp3-4,Amz,43] := 0 
+[CustomerCmp3-4,Amz,44] := 0 
+[CustomerCmp3-4,Amz,45] := 0 
+[CustomerCmp3-4,Amz,46] := 0 
+[CustomerCmp3-4,Amz,47] := 0 
+[CustomerCmp3-4,Amz,48] := 0 
+[CustomerCmp3-4,Amz,49] := 0 
+[CustomerCmp3-4,Amz,50] := 0 
+[CustomerCmp3-4,Amz,51] := 0 
+[CustomerCmp3-4,Amz,52] := 0 
+[CustomerCmp3-4,Amz,53] := 0 
+[CustomerCmp3-4,Amz,54] := 0 
+[CustomerCmp3-4,Amz,55] := 0 
+[CustomerCmp3-4,Amz,56] := 0 
+[CustomerCmp3-4,Amz,57] := 0 
+[CustomerCmp3-4,Amz,58] := 0 
+[CustomerCmp3-4,Amz,59] := 0 
+[CustomerCmp3-4,Amz,60] := 0 
+[CustomerCmp3-4,Amz,61] := 0 
+[CustomerCmp3-4,Amz,62] := 0 
+[CustomerCmp3-4,Amz,63] := 0 
+[CustomerCmp3-4,Amz,64] := 0 
+[CustomerCmp3-4,Amz,65] := 0 
+[CustomerCmp3-4,Amz,66] := 0 
+[CustomerCmp3-4,Amz,67] := 0 
+[CustomerCmp3-4,Amz,68] := 0 
+[CustomerCmp3-4,Amz,69] := 0 
+[CustomerCmp3-4,Amz,70] := 0 
+[CustomerCmp3-4,Amz,71] := 0 
+[CustomerCmp3-4,Amz,72] := 0 
+[CustomerCmp3-4,Amz,73] := 0 
+[CustomerCmp3-4,Amz,74] := 0 
+[CustomerCmp3-4,Amz,75] := 0 
+[CustomerCmp3-4,Amz,76] := 0 
+[CustomerCmp3-4,Amz,77] := 0 
+[CustomerCmp3-4,Amz,78] := 0 
+[CustomerCmp3-4,Amz,79] := 0 
+[CustomerCmp3-4,Amz,80] := 0 
+[CustomerCmp3-4,Amz,81] := 0 
+[CustomerCmp3-4,Amz,82] := 0 
+[CustomerCmp3-4,Amz,83] := 0 
+[CustomerCmp3-4,Amz,84] := 0 
+[CustomerCmp3-4,Amz,85] := 0 
+[CustomerCmp3-4,Amz,86] := 0 
+[CustomerCmp3-4,Amz,87] := 0 
+[CustomerCmp3-4,Amz,88] := 0 
+[CustomerCmp3-4,Amz,89] := 0 
+[CustomerCmp3-4,Amz,90] := 0 
+[CustomerCmp3-4,Amz,91] := 0 
+[CustomerCmp3-4,Amz,92] := 0 
+[CustomerCmp3-4,Amz,93] := 0 
+[CustomerCmp3-4,Amz,94] := 0 
+[CustomerCmp3-4,Alibaba,1] := 0 
+[CustomerCmp3-4,Alibaba,2] := 0 
+[CustomerCmp3-4,Alibaba,3] := 0 
+[CustomerCmp3-4,Alibaba,4] := 0 
+[CustomerCmp3-4,Alibaba,5] := 0 
+[CustomerCmp3-4,Alibaba,6] := 1 
+[CustomerCmp3-4,Alibaba,7] := 0 
+[CustomerCmp3-4,Alibaba,8] := 0 
+[CustomerCmp3-4,Alibaba,9] := 0 
+[CustomerCmp3-4,Alibaba,10] := 0 
+[CustomerCmp3-4,Alibaba,11] := 0 
+[CustomerCmp3-4,Alibaba,12] := 0 
+[CustomerCmp3-4,Alibaba,13] := 0 
+[CustomerCmp3-4,Alibaba,14] := 0 
+[CustomerCmp3-4,Alibaba,15] := 0 
+[CustomerCmp3-4,Alibaba,16] := 0 
+[CustomerCmp3-4,Alibaba,17] := 0 
+[CustomerCmp3-4,Alibaba,18] := 0 
+[CustomerCmp3-4,Alibaba,19] := 0 
+[CustomerCmp3-4,Alibaba,20] := 0 
+[CustomerCmp3-4,Alibaba,21] := 0 
+[CustomerCmp3-4,Alibaba,22] := 0 
+[CustomerCmp3-4,Alibaba,23] := 0 
+[CustomerCmp3-4,Alibaba,24] := 0 
+[CustomerCmp3-4,Alibaba,25] := 0 
+[CustomerCmp3-4,Alibaba,26] := 0 
+[CustomerCmp3-4,Alibaba,27] := 0 
+[CustomerCmp3-4,Alibaba,28] := 0 
+[CustomerCmp3-4,Alibaba,29] := 0 
+[CustomerCmp3-4,Alibaba,30] := 1 
+[CustomerCmp3-4,Alibaba,31] := 1 
+[CustomerCmp3-4,Alibaba,32] := 0 
+[CustomerCmp3-4,Alibaba,33] := 0 
+[CustomerCmp3-4,Alibaba,34] := 0 
+[CustomerCmp3-4,Alibaba,35] := 0 
+[CustomerCmp3-4,Alibaba,36] := 0 
+[CustomerCmp3-4,Alibaba,37] := 0 
+[CustomerCmp3-4,Alibaba,38] := 0 
+[CustomerCmp3-4,Alibaba,39] := 0 
+[CustomerCmp3-4,Alibaba,40] := 0 
+[CustomerCmp3-4,Alibaba,41] := 0 
+[CustomerCmp3-4,Alibaba,42] := 0 
+[CustomerCmp3-4,Alibaba,43] := 0 
+[CustomerCmp3-4,Alibaba,44] := 0 
+[CustomerCmp3-4,Alibaba,45] := 0 
+[CustomerCmp3-4,Alibaba,46] := 0 
+[CustomerCmp3-4,Alibaba,47] := 0 
+[CustomerCmp3-4,Alibaba,48] := 0 
+[CustomerCmp3-4,Alibaba,49] := 0 
+[CustomerCmp3-4,Alibaba,50] := 0 
+[CustomerCmp3-4,Alibaba,51] := 0 
+[CustomerCmp3-4,Alibaba,52] := 0 
+[CustomerCmp3-4,Alibaba,53] := 0 
+[CustomerCmp3-4,Alibaba,54] := 0 
+[CustomerCmp3-4,Alibaba,55] := 1 
+[CustomerCmp3-4,Alibaba,56] := 1 
+[CustomerCmp3-4,Alibaba,57] := 0 
+[CustomerCmp3-4,Alibaba,58] := 0 
+[CustomerCmp3-4,Alibaba,59] := 0 
+[CustomerCmp3-4,Alibaba,60] := 0 
+[CustomerCmp3-4,Alibaba,61] := 0 
+[CustomerCmp3-4,Alibaba,62] := 0 
+[CustomerCmp3-4,Alibaba,63] := 0 
+[CustomerCmp3-4,Alibaba,64] := 0 
+[CustomerCmp3-4,Alibaba,65] := 0 
+[CustomerCmp3-4,Alibaba,66] := 0 
+[CustomerCmp3-4,Alibaba,67] := 0 
+[CustomerCmp3-4,Alibaba,68] := 0 
+[CustomerCmp3-4,Alibaba,69] := 0 
+[CustomerCmp3-4,Alibaba,70] := 0 
+[CustomerCmp3-4,Alibaba,71] := 0 
+[CustomerCmp3-4,Alibaba,72] := 0 
+[CustomerCmp3-4,Alibaba,73] := 0 
+[CustomerCmp3-4,Alibaba,74] := 0 
+[CustomerCmp3-4,Alibaba,75] := 0 
+[CustomerCmp3-4,Alibaba,76] := 0 
+[CustomerCmp3-4,Alibaba,77] := 0 
+[CustomerCmp3-4,Alibaba,78] := 0 
+[CustomerCmp3-4,Alibaba,79] := 0 
+[CustomerCmp3-4,Alibaba,80] := 0 
+[CustomerCmp3-4,Alibaba,81] := 0 
+[CustomerCmp3-4,Alibaba,82] := 0 
+[CustomerCmp3-4,Alibaba,83] := 0 
+[CustomerCmp3-4,Alibaba,84] := 0 
+[CustomerCmp3-4,Alibaba,85] := 0 
+[CustomerCmp3-4,Alibaba,86] := 0 
+[CustomerCmp3-4,Alibaba,87] := 0 
+[CustomerCmp3-4,Alibaba,88] := 0 
+[CustomerCmp3-4,Alibaba,89] := 0 
+[CustomerCmp3-4,Alibaba,90] := 0 
+[CustomerCmp3-4,Alibaba,91] := 0 
+[CustomerCmp3-4,Alibaba,92] := 0 
+[CustomerCmp3-4,Alibaba,93] := 0 
+[CustomerCmp3-4,Alibaba,94] := 0 
+[CustomerCmp3-4,Alibaba,95] := 0 
+[CustomerCmp3-4,Alibaba,96] := 0 
+[CustomerCmp3-4,Alibaba,97] := 0 
+[CustomerCmp3-4,Alibaba,98] := 0 
+[CustomerCmp3-4,Alibaba,99] := 0 
+[CustomerCmp3-4,Alibaba,100] := 0 
+[CustomerCmp3-4,Alibaba,101] := 0 
+[CustomerCmp3-4,Alibaba,102] := 0 
+[CustomerCmp3-4,Alibaba,103] := 0 
+[CustomerCmp3-4,Alibaba,104] := 0 
+[CustomerCmp3-4,Alibaba,105] := 0 
+[CustomerCmp3-4,Alibaba,106] := 0 
+[CustomerCmp3-4,Alibaba,107] := 0 
+[CustomerCmp3-4,Alibaba,108] := 0 
+[CustomerCmp3-4,Alibaba,109] := 0 
+[CustomerCmp3-4,Alibaba,110] := 0 
+[CustomerCmp3-4,Alibaba,111] := 0 
+[CustomerCmp3-4,Alibaba,112] := 0 
+[CustomerCmp3-4,Alibaba,113] := 0 
+[CustomerCmp3-4,Alibaba,114] := 0 
+[CustomerCmp3-4,Alibaba,115] := 0 
+[CustomerCmp3-4,Alibaba,116] := 0 
+[CustomerCmp3-4,Alibaba,117] := 0 
+[CustomerCmp3-4,Alibaba,118] := 0 
+[CustomerCmp3-4,Alibaba,119] := 0 
+[CustomerCmp3-4,Alibaba,120] := 0 
+[CustomerCmp3-4,Alibaba,121] := 0 
+[CustomerCmp3-4,Alibaba,122] := 0 
+[CustomerCmp3-4,Alibaba,123] := 0 
+[CustomerCmp3-4,Alibaba,124] := 0 
+[CustomerCmp3-4,Alibaba,125] := 0 
+[CustomerCmp3-4,Alibaba,126] := 0 
+[CustomerCmp3-4,Alibaba,127] := 0 
+[CustomerCmp3-4,Alibaba,128] := 0 
+[CustomerCmp3-4,Alibaba,129] := 0 
+[CustomerCmp3-4,Alibaba,130] := 0 
+[CustomerCmp3-4,Alibaba,131] := 0 
+[CustomerCmp3-4,Alibaba,132] := 0 
+[CustomerCmp3-4,Alibaba,133] := 0 
+[CustomerCmp3-4,Alibaba,134] := 0 
+[CustomerCmp3-4,Alibaba,135] := 0 
+[CustomerCmp3-4,Alibaba,136] := 0 
+[CustomerCmp3-4,Alibaba,137] := 0 
+[CustomerCmp3-4,Alibaba,138] := 1 
+[CustomerCmp3-4,Alibaba,139] := 1 
+[CustomerCmp3-4,Alibaba,140] := 0 
+[CustomerCmp3-4,Alibaba,141] := 0 
+[CustomerCmp3-4,Alibaba,142] := 0 
+[CustomerCmp3-4,Alibaba,143] := 0 
+[CustomerCmp3-4,Alibaba,144] := 0 
+[CustomerCmp3-4,Alibaba,145] := 0 
+[CustomerCmp3-4,Alibaba,146] := 0 
+[CustomerCmp3-4,Alibaba,147] := 0 
+[CustomerCmp3-4,Alibaba,148] := 0 
+[CustomerCmp3-4,Alibaba,149] := 0 
+[CustomerCmp3-4,Alibaba,150] := 0 
+[CustomerCmp3-4,Alibaba,151] := 0 
+[CustomerCmp3-4,Alibaba,152] := 0 
+[CustomerCmp3-4,Alibaba,153] := 0 
+[CustomerCmp3-4,Alibaba,154] := 0 
+[CustomerCmp3-4,Alibaba,155] := 0 
+[CustomerCmp3-4,Alibaba,156] := 0 
+[CustomerCmp3-4,Alibaba,157] := 0 
+[CustomerCmp3-4,Alibaba,158] := 0 
+[CustomerCmp3-4,Alibaba,159] := 0 
+[CustomerCmp3-4,Alibaba,160] := 0 
+[CustomerCmp3-4,Alibaba,161] := 0 
+[CustomerCmp3-4,Alibaba,162] := 0 
+[CustomerCmp3-4,Alibaba,163] := 0 
+[CustomerCmp3-4,Alibaba,164] := 0 
+[CustomerCmp3-4,Alibaba,165] := 0 
+[CustomerCmp3-4,Alibaba,166] := 0 
+[CustomerCmp3-4,Alibaba,167] := 0 
+[CustomerCmp3-4,Alibaba,168] := 0 
+[CustomerCmp3-4,Alibaba,169] := 0 
+[CustomerCmp3-4,Alibaba,170] := 0 
+[CustomerCmp3-4,Alibaba,171] := 0 
+[CustomerCmp3-4,Alibaba,172] := 0 
+[CustomerCmp3-4,Alibaba,173] := 0 
+[CustomerCmp3-4,Alibaba,174] := 0 
+[CustomerCmp3-4,Alibaba,175] := 0 
+[CustomerCmp3-4,Alibaba,176] := 0 
+[CustomerCmp3-4,Alibaba,177] := 0 
+[CustomerCmp3-4,Alibaba,178] := 0 
+[CustomerCmp3-4,Alibaba,179] := 0 
+[CustomerCmp3-4,Alibaba,180] := 0 
+[CustomerCmp3-4,Alibaba,181] := 0 
+[CustomerCmp3-4,Alibaba,182] := 0 
+[CustomerCmp3-4,Alibaba,183] := 0 
+[CustomerCmp3-4,Alibaba,184] := 0 
+[CustomerCmp3-4,Alibaba,185] := 0 
+[CustomerCmp3-4,Alibaba,186] := 0 
+[CustomerCmp3-4,Alibaba,187] := 0 
+[CustomerCmp3-4,Alibaba,188] := 0 
+[CustomerCmp3-4,Alibaba,189] := 0 
+[CustomerCmp3-4,Alibaba,190] := 0 
+[CustomerCmp3-4,Alibaba,191] := 0 
+[CustomerCmp3-4,Alibaba,192] := 0 
+[CustomerCmp3-4,Alibaba,193] := 0 
+[CustomerCmp3-4,Alibaba,194] := 0 
+[CustomerCmp3-4,Alibaba,195] := 0 
+[CustomerCmp3-4,Alibaba,196] := 0 
+[CustomerCmp3-4,Alibaba,197] := 0 
+[CustomerCmp3-4,Alibaba,198] := 0 
+[CustomerCmp3-4,Alibaba,199] := 0 
+[CustomerCmp3-4,Alibaba,200] := 0 
+[CustomerCmp3-4,Alibaba,201] := 0 
+[CustomerCmp3-4,Alibaba,202] := 0 
+[CustomerCmp3-4,Alibaba,203] := 0 
+[CustomerCmp3-4,Alibaba,204] := 0 
+[CustomerCmp3-4,Alibaba,205] := 0 
+[CustomerCmp3-4,Alibaba,206] := 0 
+[CustomerCmp3-4,Alibaba,207] := 0 
+[CustomerCmp3-4,Alibaba,208] := 0 
+[CustomerCmp3-4,Alibaba,209] := 0 
+[CustomerCmp3-4,Alibaba,210] := 0 
+[CustomerCmp3-4,Alibaba,211] := 0 
+[CustomerCmp3-4,Alibaba,212] := 0 
+[CustomerCmp3-4,Alibaba,213] := 0 
+[CustomerCmp3-4,Alibaba,214] := 0 
+[CustomerCmp3-4,Alibaba,215] := 0 
+[CustomerCmp3-4,Alibaba,216] := 0 
+[CustomerCmp3-4,Alibaba,217] := 0 
+[CustomerCmp3-4,Alibaba,218] := 0 
+[CustomerCmp3-4,Alibaba,219] := 0 
+[CustomerCmp3-4,Alibaba,220] := 0 
+[CustomerCmp3-4,Alibaba,221] := 0 
+[CustomerCmp3-4,Alibaba,222] := 0 
+[CustomerCmp3-4,Alibaba,223] := 0 
+[CustomerCmp3-4,Alibaba,224] := 0 
+[CustomerCmp3-4,Alibaba,225] := 0 
+[CustomerCmp3-4,Alibaba,226] := 0 
+[CustomerCmp3-4,Alibaba,227] := 1 
+[CustomerCmp3-4,Alibaba,228] := 0 
+[CustomerCmp3-4,Alibaba,229] := 0 
+[CustomerCmp3-4,Alibaba,230] := 0 
+[CustomerCmp3-4,Alibaba,231] := 0 
+[CustomerCmp3-4,Alibaba,232] := 0 
+[CustomerCmp3-4,Alibaba,233] := 0 
+[CustomerCmp3-4,Alibaba,234] := 0 
+[CustomerCmp3-4,Alibaba,235] := 0 
+[CustomerCmp3-4,Alibaba,236] := 0 
+[CustomerCmp3-4,Alibaba,237] := 0 
+[CustomerCmp3-4,Alibaba,238] := 0 
+[CustomerCmp3-4,Alibaba,239] := 0 
+[CustomerCmp3-4,Alibaba,240] := 0 
+[CustomerCmp3-4,Alibaba,241] := 0 
+[CustomerCmp3-4,Alibaba,242] := 0 
+[CustomerCmp3-4,Alibaba,243] := 0 
+[CustomerCmp3-4,Alibaba,244] := 0 
+[CustomerCmp3-4,Alibaba,245] := 0 
+[CustomerCmp3-4,Alibaba,246] := 0 
+[CustomerCmp3-4,Alibaba,247] := 0 
+[CustomerCmp3-4,Alibaba,248] := 0 
+[CustomerCmp3-4,Alibaba,249] := 0 
+[CustomerCmp3-4,Alibaba,250] := 0 
+[CustomerCmp3-4,Alibaba,251] := 0 
+[CustomerCmp3-4,Alibaba,252] := 0 
+[CustomerCmp3-4,Alibaba,253] := 0 
+[CustomerCmp3-4,Alibaba,254] := 0 
+[CustomerCmp3-4,Alibaba,255] := 0 
+[CustomerCmp3-4,Alibaba,256] := 0 
+[CustomerCmp3-4,Alibaba,257] := 0 
+[CustomerCmp3-4,Alibaba,258] := 0 
+[CustomerCmp3-4,Alibaba,259] := 0 
+[CustomerCmp3-4,Alibaba,260] := 1 
+[CustomerCmp3-4,Alibaba,261] := 0 
+[CustomerCmp3-4,Alibaba,262] := 0 
+[CustomerCmp3-4,Alibaba,263] := 0 
+[CustomerCmp3-4,Alibaba,264] := 0 
+[CustomerCmp3-4,Alibaba,265] := 0 
+[CustomerCmp3-4,Alibaba,266] := 0 
+[CustomerCmp3-4,Alibaba,267] := 0 
+[CustomerCmp3-4,Alibaba,268] := 0 
+[CustomerCmp3-4,Alibaba,269] := 0 
+[CustomerCmp3-4,Alibaba,270] := 0 
+[CustomerCmp3-4,Alibaba,271] := 0 
+[CustomerCmp3-4,Alibaba,272] := 0 
+[CustomerCmp3-4,Alibaba,273] := 0 
+[CustomerCmp3-4,Alibaba,274] := 0 
+[CustomerCmp3-4,Alibaba,275] := 0 
+[CustomerCmp3-4,Alibaba,276] := 0 
+[CustomerCmp3-4,Alibaba,277] := 0 
+[CustomerCmp3-4,Alibaba,278] := 0 
+[CustomerCmp3-4,Alibaba,279] := 0 
+[CustomerCmp3-4,Alibaba,280] := 0 
+[CustomerCmp3-4,Alibaba,281] := 0 
+[CustomerCmp3-4,Alibaba,282] := 0 
+[CustomerCmp3-4,Alibaba,283] := 0 
+[CustomerCmp3-4,Alibaba,284] := 0 
+[CustomerCmp3-4,Alibaba,285] := 1 
+[CustomerCmp3-4,Alibaba,286] := 0 
+[CustomerCmp3-4,Alibaba,287] := 0 
+[CustomerCmp3-4,Alibaba,288] := 0 
+[CustomerCmp3-4,Alibaba,289] := 0 
+[CustomerCmp3-4,Alibaba,290] := 0 
+[CustomerCmp3-4,Alibaba,291] := 0 
+[CustomerCmp3-4,Alibaba,292] := 0 
+[CustomerCmp3-4,Alibaba,293] := 0 
+[CustomerCmp3-4,Alibaba,294] := 0 
+[CustomerCmp3-4,Alibaba,295] := 0 
+[CustomerCmp3-4,Alibaba,296] := 0 
+[CustomerCmp3-4,Alibaba,297] := 0 
+[CustomerCmp3-4,Alibaba,298] := 0 
+[CustomerCmp3-4,Alibaba,299] := 0 
+[CustomerCmp3-4,Alibaba,300] := 0 
+[CustomerCmp3-4,Alibaba,301] := 0 
+[CustomerCmp3-4,Alibaba,302] := 0 
+[CustomerCmp3-4,Alibaba,303] := 0 
+[CustomerCmp3-4,Alibaba,304] := 0 
+[CustomerCmp3-4,Alibaba,305] := 0 
+[CustomerCmp3-4,Alibaba,306] := 0 
+[CustomerCmp3-4,Alibaba,307] := 0 
+[CustomerCmp3-4,Alibaba,308] := 0 
+[CustomerCmp3-4,Alibaba,309] := 0 
+[CustomerCmp3-4,Alibaba,310] := 0 
+[CustomerCmp3-4,Alibaba,311] := 0 
+[CustomerCmp3-4,Alibaba,312] := 0 
+[CustomerCmp3-4,Alibaba,313] := 0 
+[CustomerCmp3-4,Alibaba,314] := 0 
+[CustomerCmp3-4,Alibaba,315] := 0 
+[CustomerCmp3-4,Alibaba,316] := 0 
+[CustomerCmp3-4,Alibaba,317] := 0 
+[CustomerCmp3-4,Alibaba,318] := 0 
+[CustomerCmp3-4,Alibaba,319] := 0 
+[CustomerCmp3-4,Alibaba,320] := 0 
+[CustomerCmp3-4,Alibaba,321] := 0 
+[CustomerCmp3-4,Alibaba,322] := 0 
+[CustomerCmp3-4,Alibaba,323] := 0 
+[CustomerCmp3-4,Alibaba,324] := 0 
+[CustomerCmp3-4,Alibaba,325] := 0 
+[CustomerCmp3-4,Alibaba,326] := 0 
+[CustomerCmp3-4,Alibaba,327] := 0 
+[CustomerCmp3-4,Alibaba,328] := 0 
+[CustomerCmp3-4,Alibaba,329] := 0 
+[CustomerCmp3-4,Alibaba,330] := 0 
+[CustomerCmp3-4,Alibaba,331] := 0 
+[CustomerCmp3-4,Alibaba,332] := 0 
+[CustomerCmp3-4,Alibaba,333] := 0 
+[CustomerCmp3-4,Alibaba,334] := 0 
+[CustomerCmp3-4,Alibaba,335] := 0 
+[CustomerCmp3-4,Alibaba,336] := 0 
+[CustomerCmp3-4,Alibaba,337] := 0 
+[CustomerCmp3-4,Alibaba,338] := 0 
+[CustomerCmp3-4,Alibaba,339] := 0 
+[CustomerCmp3-4,Alibaba,340] := 0 
+[CustomerCmp3-4,Alibaba,341] := 0 
+[CustomerCmp3-4,Alibaba,342] := 0 
+[CustomerCmp3-4,Alibaba,343] := 0 
+[CustomerCmp3-4,Alibaba,344] := 1 
+[CustomerCmp3-4,Alibaba,345] := 1 
+[CustomerCmp3-4,Alibaba,346] := 0 
+[CustomerCmp3-4,Alibaba,347] := 0 
+[CustomerCmp3-4,Alibaba,348] := 0 
+[CustomerCmp3-4,Alibaba,349] := 0 
+[CustomerCmp3-4,Alibaba,350] := 0 
+[CustomerCmp3-4,Alibaba,351] := 0 
+[CustomerCmp3-4,Alibaba,352] := 0 
+[CustomerCmp3-4,Alibaba,353] := 0 
+[CustomerCmp3-4,Alibaba,354] := 0 
+[CustomerCmp3-4,Alibaba,355] := 0 
+[CustomerCmp3-4,Alibaba,356] := 0 
+[CustomerCmp3-4,Alibaba,357] := 0 
+[CustomerCmp3-4,Alibaba,358] := 0 
+[CustomerCmp3-4,Alibaba,359] := 0 
+[CustomerCmp3-4,Alibaba,360] := 0 
+[CustomerCmp3-4,Alibaba,361] := 0 
+[CustomerCmp3-4,Alibaba,362] := 0 
+[CustomerCmp3-4,Alibaba,363] := 0 
+[CustomerCmp3-4,Alibaba,364] := 0 
+[CustomerCmp3-4,Alibaba,365] := 0 
+[CustomerCmp3-4,Alibaba,366] := 0 
+[CustomerCmp3-4,Alibaba,367] := 0 
+[CustomerCmp3-4,Alibaba,368] := 0 
+[CustomerCmp3-4,Alibaba,369] := 0 
+[CustomerCmp3-4,Alibaba,370] := 0 
+[CustomerCmp3-4,Alibaba,371] := 0 
+[CustomerCmp3-4,Alibaba,372] := 0 
+[CustomerCmp3-4,Azure,1] := 0 
+[CustomerCmp3-4,Azure,2] := 0 
+[CustomerCmp3-4,Azure,3] := 0 
+[CustomerCmp3-4,Azure,4] := 0 
+[CustomerCmp3-4,Azure,5] := 0 
+[CustomerCmp3-4,Azure,6] := 0 
+[CustomerCmp3-4,Azure,7] := 0 
+[CustomerCmp3-4,Azure,8] := 0 
+[CustomerCmp3-4,Azure,9] := 0 
+[CustomerCmp3-4,Azure,10] := 0 
+[CustomerCmp3-4,Azure,11] := 0 
+[CustomerCmp3-4,Azure,12] := 0 
+[CustomerCmp3-4,Azure,13] := 0 
+[CustomerCmp3-4,Azure,14] := 0 
+[CustomerCmp3-4,Azure,15] := 0 
+[CustomerCmp3-4,Azure,16] := 0 
+[CustomerCmp3-4,Azure,17] := 0 
+[CustomerCmp3-4,Azure,18] := 1 
+[CustomerCmp3-4,Azure,19] := 0 
+[CustomerCmp3-4,Azure,20] := 0 
+[CustomerCmp3-4,Azure,21] := 0 
+[CustomerCmp3-4,Azure,22] := 0 
+[CustomerCmp3-4,Azure,23] := 0 
+[CustomerCmp3-4,Azure,24] := 0 
+[CustomerCmp3-4,Azure,25] := 0 
+[CustomerCmp3-4,Azure,26] := 0 
+[CustomerCmp3-4,Azure,27] := 0 
+[CustomerCmp3-4,Azure,28] := 0 
+[CustomerCmp3-4,Azure,29] := 0 
+[CustomerCmp3-5,Google,1] := 0 
+[CustomerCmp3-5,Google,2] := 0 
+[CustomerCmp3-5,Google,3] := 0 
+[CustomerCmp3-5,Google,4] := 0 
+[CustomerCmp3-5,Google,5] := 0 
+[CustomerCmp3-5,Google,6] := 0 
+[CustomerCmp3-5,Google,7] := 0 
+[CustomerCmp3-5,Google,8] := 0 
+[CustomerCmp3-5,Google,9] := 1 
+[CustomerCmp3-5,Google,10] := 1 
+[CustomerCmp3-5,Google,11] := 0 
+[CustomerCmp3-5,Google,12] := 0 
+[CustomerCmp3-5,Google,13] := 0 
+[CustomerCmp3-5,Google,14] := 0 
+[CustomerCmp3-5,Google,15] := 0 
+[CustomerCmp3-5,Google,16] := 0 
+[CustomerCmp3-5,Google,17] := 0 
+[CustomerCmp3-5,Google,18] := 0 
+[CustomerCmp3-5,Google,19] := 0 
+[CustomerCmp3-5,Google,20] := 0 
+[CustomerCmp3-5,Google,21] := 0 
+[CustomerCmp3-5,Google,22] := 0 
+[CustomerCmp3-5,Google,23] := 0 
+[CustomerCmp3-5,Google,24] := 0 
+[CustomerCmp3-5,Google,25] := 0 
+[CustomerCmp3-5,Google,26] := 0 
+[CustomerCmp3-5,Google,27] := 0 
+[CustomerCmp3-5,Google,28] := 0 
+[CustomerCmp3-5,Google,29] := 0 
+[CustomerCmp3-5,Google,30] := 0 
+[CustomerCmp3-5,Google,31] := 0 
+[CustomerCmp3-5,Google,32] := 0 
+[CustomerCmp3-5,Google,33] := 0 
+[CustomerCmp3-5,Google,34] := 0 
+[CustomerCmp3-5,Google,35] := 0 
+[CustomerCmp3-5,Google,36] := 0 
+[CustomerCmp3-5,Google,37] := 1 
+[CustomerCmp3-5,Google,38] := 1 
+[CustomerCmp3-5,Google,39] := 0 
+[CustomerCmp3-5,Google,40] := 0 
+[CustomerCmp3-5,Google,41] := 0 
+[CustomerCmp3-5,Google,42] := 0 
+[CustomerCmp3-5,Google,43] := 0 
+[CustomerCmp3-5,Google,44] := 0 
+[CustomerCmp3-5,Google,45] := 0 
+[CustomerCmp3-5,Google,46] := 0 
+[CustomerCmp3-5,Google,47] := 0 
+[CustomerCmp3-5,Google,48] := 0 
+[CustomerCmp3-5,Google,49] := 0 
+[CustomerCmp3-5,Google,50] := 0 
+[CustomerCmp3-5,Google,51] := 0 
+[CustomerCmp3-5,Google,52] := 0 
+[CustomerCmp3-5,Google,53] := 0 
+[CustomerCmp3-5,Google,54] := 0 
+[CustomerCmp3-5,Google,55] := 0 
+[CustomerCmp3-5,Google,56] := 0 
+[CustomerCmp3-5,Google,57] := 0 
+[CustomerCmp3-5,Google,58] := 0 
+[CustomerCmp3-5,Google,59] := 0 
+[CustomerCmp3-5,Google,60] := 0 
+[CustomerCmp3-5,Google,61] := 0 
+[CustomerCmp3-5,Google,62] := 0 
+[CustomerCmp3-5,Google,63] := 0 
+[CustomerCmp3-5,Google,64] := 0 
+[CustomerCmp3-5,Google,65] := 0 
+[CustomerCmp3-5,Google,66] := 0 
+[CustomerCmp3-5,Google,67] := 0 
+[CustomerCmp3-5,Google,68] := 0 
+[CustomerCmp3-5,Google,69] := 0 
+[CustomerCmp3-5,Google,70] := 0 
+[CustomerCmp3-5,Google,71] := 0 
+[CustomerCmp3-5,Google,72] := 0 
+[CustomerCmp3-5,Google,73] := 0 
+[CustomerCmp3-5,Google,74] := 0 
+[CustomerCmp3-5,Google,75] := 0 
+[CustomerCmp3-5,Google,76] := 0 
+[CustomerCmp3-5,Google,77] := 0 
+[CustomerCmp3-5,Google,78] := 0 
+[CustomerCmp3-5,Google,79] := 0 
+[CustomerCmp3-5,Google,80] := 0 
+[CustomerCmp3-5,Google,81] := 0 
+[CustomerCmp3-5,Google,82] := 0 
+[CustomerCmp3-5,Google,83] := 0 
+[CustomerCmp3-5,Google,84] := 0 
+[CustomerCmp3-5,Google,85] := 0 
+[CustomerCmp3-5,Google,86] := 0 
+[CustomerCmp3-5,Google,87] := 0 
+[CustomerCmp3-5,Google,88] := 0 
+[CustomerCmp3-5,Google,89] := 0 
+[CustomerCmp3-5,Amz,1] := 0 
+[CustomerCmp3-5,Amz,2] := 0 
+[CustomerCmp3-5,Amz,3] := 0 
+[CustomerCmp3-5,Amz,4] := 0 
+[CustomerCmp3-5,Amz,5] := 0 
+[CustomerCmp3-5,Amz,6] := 0 
+[CustomerCmp3-5,Amz,7] := 0 
+[CustomerCmp3-5,Amz,8] := 0 
+[CustomerCmp3-5,Amz,9] := 0 
+[CustomerCmp3-5,Amz,10] := 0 
+[CustomerCmp3-5,Amz,11] := 0 
+[CustomerCmp3-5,Amz,12] := 0 
+[CustomerCmp3-5,Amz,13] := 0 
+[CustomerCmp3-5,Amz,14] := 0 
+[CustomerCmp3-5,Amz,15] := 0 
+[CustomerCmp3-5,Amz,16] := 0 
+[CustomerCmp3-5,Amz,17] := 0 
+[CustomerCmp3-5,Amz,18] := 0 
+[CustomerCmp3-5,Amz,19] := 0 
+[CustomerCmp3-5,Amz,20] := 0 
+[CustomerCmp3-5,Amz,21] := 0 
+[CustomerCmp3-5,Amz,22] := 0 
+[CustomerCmp3-5,Amz,23] := 0 
+[CustomerCmp3-5,Amz,24] := 0 
+[CustomerCmp3-5,Amz,25] := 0 
+[CustomerCmp3-5,Amz,26] := 0 
+[CustomerCmp3-5,Amz,27] := 0 
+[CustomerCmp3-5,Amz,28] := 0 
+[CustomerCmp3-5,Amz,29] := 0 
+[CustomerCmp3-5,Amz,30] := 0 
+[CustomerCmp3-5,Amz,31] := 0 
+[CustomerCmp3-5,Amz,32] := 0 
+[CustomerCmp3-5,Amz,33] := 0 
+[CustomerCmp3-5,Amz,34] := 0 
+[CustomerCmp3-5,Amz,35] := 0 
+[CustomerCmp3-5,Amz,36] := 0 
+[CustomerCmp3-5,Amz,37] := 0 
+[CustomerCmp3-5,Amz,38] := 0 
+[CustomerCmp3-5,Amz,39] := 0 
+[CustomerCmp3-5,Amz,40] := 0 
+[CustomerCmp3-5,Amz,41] := 0 
+[CustomerCmp3-5,Amz,42] := 0 
+[CustomerCmp3-5,Amz,43] := 0 
+[CustomerCmp3-5,Amz,44] := 0 
+[CustomerCmp3-5,Amz,45] := 0 
+[CustomerCmp3-5,Amz,46] := 0 
+[CustomerCmp3-5,Amz,47] := 0 
+[CustomerCmp3-5,Amz,48] := 0 
+[CustomerCmp3-5,Amz,49] := 0 
+[CustomerCmp3-5,Amz,50] := 0 
+[CustomerCmp3-5,Amz,51] := 0 
+[CustomerCmp3-5,Amz,52] := 0 
+[CustomerCmp3-5,Amz,53] := 0 
+[CustomerCmp3-5,Amz,54] := 0 
+[CustomerCmp3-5,Amz,55] := 0 
+[CustomerCmp3-5,Amz,56] := 0 
+[CustomerCmp3-5,Amz,57] := 0 
+[CustomerCmp3-5,Amz,58] := 0 
+[CustomerCmp3-5,Amz,59] := 0 
+[CustomerCmp3-5,Amz,60] := 0 
+[CustomerCmp3-5,Amz,61] := 0 
+[CustomerCmp3-5,Amz,62] := 0 
+[CustomerCmp3-5,Amz,63] := 0 
+[CustomerCmp3-5,Amz,64] := 0 
+[CustomerCmp3-5,Amz,65] := 0 
+[CustomerCmp3-5,Amz,66] := 0 
+[CustomerCmp3-5,Amz,67] := 0 
+[CustomerCmp3-5,Amz,68] := 0 
+[CustomerCmp3-5,Amz,69] := 0 
+[CustomerCmp3-5,Amz,70] := 0 
+[CustomerCmp3-5,Amz,71] := 0 
+[CustomerCmp3-5,Amz,72] := 0 
+[CustomerCmp3-5,Amz,73] := 0 
+[CustomerCmp3-5,Amz,74] := 0 
+[CustomerCmp3-5,Amz,75] := 0 
+[CustomerCmp3-5,Amz,76] := 0 
+[CustomerCmp3-5,Amz,77] := 0 
+[CustomerCmp3-5,Amz,78] := 0 
+[CustomerCmp3-5,Amz,79] := 0 
+[CustomerCmp3-5,Amz,80] := 0 
+[CustomerCmp3-5,Amz,81] := 0 
+[CustomerCmp3-5,Amz,82] := 0 
+[CustomerCmp3-5,Amz,83] := 0 
+[CustomerCmp3-5,Amz,84] := 0 
+[CustomerCmp3-5,Amz,85] := 0 
+[CustomerCmp3-5,Amz,86] := 0 
+[CustomerCmp3-5,Amz,87] := 0 
+[CustomerCmp3-5,Amz,88] := 0 
+[CustomerCmp3-5,Amz,89] := 0 
+[CustomerCmp3-5,Amz,90] := 0 
+[CustomerCmp3-5,Amz,91] := 0 
+[CustomerCmp3-5,Amz,92] := 0 
+[CustomerCmp3-5,Amz,93] := 0 
+[CustomerCmp3-5,Amz,94] := 0 
+[CustomerCmp3-5,Alibaba,1] := 0 
+[CustomerCmp3-5,Alibaba,2] := 0 
+[CustomerCmp3-5,Alibaba,3] := 0 
+[CustomerCmp3-5,Alibaba,4] := 0 
+[CustomerCmp3-5,Alibaba,5] := 0 
+[CustomerCmp3-5,Alibaba,6] := 0 
+[CustomerCmp3-5,Alibaba,7] := 0 
+[CustomerCmp3-5,Alibaba,8] := 0 
+[CustomerCmp3-5,Alibaba,9] := 1 
+[CustomerCmp3-5,Alibaba,10] := 1 
+[CustomerCmp3-5,Alibaba,11] := 0 
+[CustomerCmp3-5,Alibaba,12] := 0 
+[CustomerCmp3-5,Alibaba,13] := 0 
+[CustomerCmp3-5,Alibaba,14] := 0 
+[CustomerCmp3-5,Alibaba,15] := 0 
+[CustomerCmp3-5,Alibaba,16] := 0 
+[CustomerCmp3-5,Alibaba,17] := 0 
+[CustomerCmp3-5,Alibaba,18] := 0 
+[CustomerCmp3-5,Alibaba,19] := 0 
+[CustomerCmp3-5,Alibaba,20] := 0 
+[CustomerCmp3-5,Alibaba,21] := 0 
+[CustomerCmp3-5,Alibaba,22] := 0 
+[CustomerCmp3-5,Alibaba,23] := 0 
+[CustomerCmp3-5,Alibaba,24] := 0 
+[CustomerCmp3-5,Alibaba,25] := 0 
+[CustomerCmp3-5,Alibaba,26] := 0 
+[CustomerCmp3-5,Alibaba,27] := 0 
+[CustomerCmp3-5,Alibaba,28] := 0 
+[CustomerCmp3-5,Alibaba,29] := 0 
+[CustomerCmp3-5,Alibaba,30] := 0 
+[CustomerCmp3-5,Alibaba,31] := 0 
+[CustomerCmp3-5,Alibaba,32] := 0 
+[CustomerCmp3-5,Alibaba,33] := 0 
+[CustomerCmp3-5,Alibaba,34] := 0 
+[CustomerCmp3-5,Alibaba,35] := 0 
+[CustomerCmp3-5,Alibaba,36] := 0 
+[CustomerCmp3-5,Alibaba,37] := 1 
+[CustomerCmp3-5,Alibaba,38] := 1 
+[CustomerCmp3-5,Alibaba,39] := 0 
+[CustomerCmp3-5,Alibaba,40] := 0 
+[CustomerCmp3-5,Alibaba,41] := 0 
+[CustomerCmp3-5,Alibaba,42] := 0 
+[CustomerCmp3-5,Alibaba,43] := 0 
+[CustomerCmp3-5,Alibaba,44] := 0 
+[CustomerCmp3-5,Alibaba,45] := 0 
+[CustomerCmp3-5,Alibaba,46] := 0 
+[CustomerCmp3-5,Alibaba,47] := 0 
+[CustomerCmp3-5,Alibaba,48] := 0 
+[CustomerCmp3-5,Alibaba,49] := 0 
+[CustomerCmp3-5,Alibaba,50] := 0 
+[CustomerCmp3-5,Alibaba,51] := 0 
+[CustomerCmp3-5,Alibaba,52] := 0 
+[CustomerCmp3-5,Alibaba,53] := 0 
+[CustomerCmp3-5,Alibaba,54] := 0 
+[CustomerCmp3-5,Alibaba,55] := 0 
+[CustomerCmp3-5,Alibaba,56] := 0 
+[CustomerCmp3-5,Alibaba,57] := 0 
+[CustomerCmp3-5,Alibaba,58] := 0 
+[CustomerCmp3-5,Alibaba,59] := 0 
+[CustomerCmp3-5,Alibaba,60] := 0 
+[CustomerCmp3-5,Alibaba,61] := 0 
+[CustomerCmp3-5,Alibaba,62] := 0 
+[CustomerCmp3-5,Alibaba,63] := 0 
+[CustomerCmp3-5,Alibaba,64] := 0 
+[CustomerCmp3-5,Alibaba,65] := 0 
+[CustomerCmp3-5,Alibaba,66] := 0 
+[CustomerCmp3-5,Alibaba,67] := 0 
+[CustomerCmp3-5,Alibaba,68] := 0 
+[CustomerCmp3-5,Alibaba,69] := 0 
+[CustomerCmp3-5,Alibaba,70] := 0 
+[CustomerCmp3-5,Alibaba,71] := 0 
+[CustomerCmp3-5,Alibaba,72] := 0 
+[CustomerCmp3-5,Alibaba,73] := 0 
+[CustomerCmp3-5,Alibaba,74] := 0 
+[CustomerCmp3-5,Alibaba,75] := 0 
+[CustomerCmp3-5,Alibaba,76] := 0 
+[CustomerCmp3-5,Alibaba,77] := 0 
+[CustomerCmp3-5,Alibaba,78] := 0 
+[CustomerCmp3-5,Alibaba,79] := 0 
+[CustomerCmp3-5,Alibaba,80] := 0 
+[CustomerCmp3-5,Alibaba,81] := 0 
+[CustomerCmp3-5,Alibaba,82] := 0 
+[CustomerCmp3-5,Alibaba,83] := 0 
+[CustomerCmp3-5,Alibaba,84] := 0 
+[CustomerCmp3-5,Alibaba,85] := 0 
+[CustomerCmp3-5,Alibaba,86] := 0 
+[CustomerCmp3-5,Alibaba,87] := 0 
+[CustomerCmp3-5,Alibaba,88] := 0 
+[CustomerCmp3-5,Alibaba,89] := 0 
+[CustomerCmp3-5,Alibaba,90] := 0 
+[CustomerCmp3-5,Alibaba,91] := 0 
+[CustomerCmp3-5,Alibaba,92] := 0 
+[CustomerCmp3-5,Alibaba,93] := 0 
+[CustomerCmp3-5,Alibaba,94] := 0 
+[CustomerCmp3-5,Alibaba,95] := 0 
+[CustomerCmp3-5,Alibaba,96] := 0 
+[CustomerCmp3-5,Alibaba,97] := 0 
+[CustomerCmp3-5,Alibaba,98] := 0 
+[CustomerCmp3-5,Alibaba,99] := 0 
+[CustomerCmp3-5,Alibaba,100] := 0 
+[CustomerCmp3-5,Alibaba,101] := 0 
+[CustomerCmp3-5,Alibaba,102] := 0 
+[CustomerCmp3-5,Alibaba,103] := 0 
+[CustomerCmp3-5,Alibaba,104] := 0 
+[CustomerCmp3-5,Alibaba,105] := 0 
+[CustomerCmp3-5,Alibaba,106] := 0 
+[CustomerCmp3-5,Alibaba,107] := 0 
+[CustomerCmp3-5,Alibaba,108] := 0 
+[CustomerCmp3-5,Alibaba,109] := 0 
+[CustomerCmp3-5,Alibaba,110] := 0 
+[CustomerCmp3-5,Alibaba,111] := 0 
+[CustomerCmp3-5,Alibaba,112] := 0 
+[CustomerCmp3-5,Alibaba,113] := 0 
+[CustomerCmp3-5,Alibaba,114] := 0 
+[CustomerCmp3-5,Alibaba,115] := 0 
+[CustomerCmp3-5,Alibaba,116] := 0 
+[CustomerCmp3-5,Alibaba,117] := 1 
+[CustomerCmp3-5,Alibaba,118] := 1 
+[CustomerCmp3-5,Alibaba,119] := 0 
+[CustomerCmp3-5,Alibaba,120] := 0 
+[CustomerCmp3-5,Alibaba,121] := 0 
+[CustomerCmp3-5,Alibaba,122] := 0 
+[CustomerCmp3-5,Alibaba,123] := 0 
+[CustomerCmp3-5,Alibaba,124] := 0 
+[CustomerCmp3-5,Alibaba,125] := 0 
+[CustomerCmp3-5,Alibaba,126] := 0 
+[CustomerCmp3-5,Alibaba,127] := 0 
+[CustomerCmp3-5,Alibaba,128] := 0 
+[CustomerCmp3-5,Alibaba,129] := 0 
+[CustomerCmp3-5,Alibaba,130] := 0 
+[CustomerCmp3-5,Alibaba,131] := 0 
+[CustomerCmp3-5,Alibaba,132] := 0 
+[CustomerCmp3-5,Alibaba,133] := 0 
+[CustomerCmp3-5,Alibaba,134] := 0 
+[CustomerCmp3-5,Alibaba,135] := 0 
+[CustomerCmp3-5,Alibaba,136] := 0 
+[CustomerCmp3-5,Alibaba,137] := 0 
+[CustomerCmp3-5,Alibaba,138] := 0 
+[CustomerCmp3-5,Alibaba,139] := 0 
+[CustomerCmp3-5,Alibaba,140] := 0 
+[CustomerCmp3-5,Alibaba,141] := 0 
+[CustomerCmp3-5,Alibaba,142] := 0 
+[CustomerCmp3-5,Alibaba,143] := 0 
+[CustomerCmp3-5,Alibaba,144] := 0 
+[CustomerCmp3-5,Alibaba,145] := 0 
+[CustomerCmp3-5,Alibaba,146] := 0 
+[CustomerCmp3-5,Alibaba,147] := 0 
+[CustomerCmp3-5,Alibaba,148] := 0 
+[CustomerCmp3-5,Alibaba,149] := 0 
+[CustomerCmp3-5,Alibaba,150] := 0 
+[CustomerCmp3-5,Alibaba,151] := 0 
+[CustomerCmp3-5,Alibaba,152] := 0 
+[CustomerCmp3-5,Alibaba,153] := 0 
+[CustomerCmp3-5,Alibaba,154] := 0 
+[CustomerCmp3-5,Alibaba,155] := 0 
+[CustomerCmp3-5,Alibaba,156] := 0 
+[CustomerCmp3-5,Alibaba,157] := 0 
+[CustomerCmp3-5,Alibaba,158] := 0 
+[CustomerCmp3-5,Alibaba,159] := 0 
+[CustomerCmp3-5,Alibaba,160] := 0 
+[CustomerCmp3-5,Alibaba,161] := 0 
+[CustomerCmp3-5,Alibaba,162] := 0 
+[CustomerCmp3-5,Alibaba,163] := 0 
+[CustomerCmp3-5,Alibaba,164] := 0 
+[CustomerCmp3-5,Alibaba,165] := 0 
+[CustomerCmp3-5,Alibaba,166] := 0 
+[CustomerCmp3-5,Alibaba,167] := 0 
+[CustomerCmp3-5,Alibaba,168] := 0 
+[CustomerCmp3-5,Alibaba,169] := 0 
+[CustomerCmp3-5,Alibaba,170] := 0 
+[CustomerCmp3-5,Alibaba,171] := 0 
+[CustomerCmp3-5,Alibaba,172] := 0 
+[CustomerCmp3-5,Alibaba,173] := 0 
+[CustomerCmp3-5,Alibaba,174] := 0 
+[CustomerCmp3-5,Alibaba,175] := 0 
+[CustomerCmp3-5,Alibaba,176] := 0 
+[CustomerCmp3-5,Alibaba,177] := 0 
+[CustomerCmp3-5,Alibaba,178] := 0 
+[CustomerCmp3-5,Alibaba,179] := 0 
+[CustomerCmp3-5,Alibaba,180] := 0 
+[CustomerCmp3-5,Alibaba,181] := 0 
+[CustomerCmp3-5,Alibaba,182] := 0 
+[CustomerCmp3-5,Alibaba,183] := 0 
+[CustomerCmp3-5,Alibaba,184] := 0 
+[CustomerCmp3-5,Alibaba,185] := 0 
+[CustomerCmp3-5,Alibaba,186] := 0 
+[CustomerCmp3-5,Alibaba,187] := 0 
+[CustomerCmp3-5,Alibaba,188] := 0 
+[CustomerCmp3-5,Alibaba,189] := 0 
+[CustomerCmp3-5,Alibaba,190] := 0 
+[CustomerCmp3-5,Alibaba,191] := 0 
+[CustomerCmp3-5,Alibaba,192] := 0 
+[CustomerCmp3-5,Alibaba,193] := 0 
+[CustomerCmp3-5,Alibaba,194] := 0 
+[CustomerCmp3-5,Alibaba,195] := 0 
+[CustomerCmp3-5,Alibaba,196] := 0 
+[CustomerCmp3-5,Alibaba,197] := 0 
+[CustomerCmp3-5,Alibaba,198] := 0 
+[CustomerCmp3-5,Alibaba,199] := 0 
+[CustomerCmp3-5,Alibaba,200] := 0 
+[CustomerCmp3-5,Alibaba,201] := 0 
+[CustomerCmp3-5,Alibaba,202] := 0 
+[CustomerCmp3-5,Alibaba,203] := 0 
+[CustomerCmp3-5,Alibaba,204] := 0 
+[CustomerCmp3-5,Alibaba,205] := 0 
+[CustomerCmp3-5,Alibaba,206] := 0 
+[CustomerCmp3-5,Alibaba,207] := 0 
+[CustomerCmp3-5,Alibaba,208] := 0 
+[CustomerCmp3-5,Alibaba,209] := 0 
+[CustomerCmp3-5,Alibaba,210] := 0 
+[CustomerCmp3-5,Alibaba,211] := 0 
+[CustomerCmp3-5,Alibaba,212] := 0 
+[CustomerCmp3-5,Alibaba,213] := 0 
+[CustomerCmp3-5,Alibaba,214] := 0 
+[CustomerCmp3-5,Alibaba,215] := 0 
+[CustomerCmp3-5,Alibaba,216] := 0 
+[CustomerCmp3-5,Alibaba,217] := 1 
+[CustomerCmp3-5,Alibaba,218] := 0 
+[CustomerCmp3-5,Alibaba,219] := 0 
+[CustomerCmp3-5,Alibaba,220] := 0 
+[CustomerCmp3-5,Alibaba,221] := 0 
+[CustomerCmp3-5,Alibaba,222] := 0 
+[CustomerCmp3-5,Alibaba,223] := 0 
+[CustomerCmp3-5,Alibaba,224] := 0 
+[CustomerCmp3-5,Alibaba,225] := 0 
+[CustomerCmp3-5,Alibaba,226] := 0 
+[CustomerCmp3-5,Alibaba,227] := 0 
+[CustomerCmp3-5,Alibaba,228] := 0 
+[CustomerCmp3-5,Alibaba,229] := 0 
+[CustomerCmp3-5,Alibaba,230] := 0 
+[CustomerCmp3-5,Alibaba,231] := 0 
+[CustomerCmp3-5,Alibaba,232] := 0 
+[CustomerCmp3-5,Alibaba,233] := 0 
+[CustomerCmp3-5,Alibaba,234] := 0 
+[CustomerCmp3-5,Alibaba,235] := 0 
+[CustomerCmp3-5,Alibaba,236] := 0 
+[CustomerCmp3-5,Alibaba,237] := 0 
+[CustomerCmp3-5,Alibaba,238] := 0 
+[CustomerCmp3-5,Alibaba,239] := 0 
+[CustomerCmp3-5,Alibaba,240] := 0 
+[CustomerCmp3-5,Alibaba,241] := 0 
+[CustomerCmp3-5,Alibaba,242] := 0 
+[CustomerCmp3-5,Alibaba,243] := 0 
+[CustomerCmp3-5,Alibaba,244] := 0 
+[CustomerCmp3-5,Alibaba,245] := 0 
+[CustomerCmp3-5,Alibaba,246] := 0 
+[CustomerCmp3-5,Alibaba,247] := 0 
+[CustomerCmp3-5,Alibaba,248] := 0 
+[CustomerCmp3-5,Alibaba,249] := 0 
+[CustomerCmp3-5,Alibaba,250] := 0 
+[CustomerCmp3-5,Alibaba,251] := 0 
+[CustomerCmp3-5,Alibaba,252] := 0 
+[CustomerCmp3-5,Alibaba,253] := 0 
+[CustomerCmp3-5,Alibaba,254] := 0 
+[CustomerCmp3-5,Alibaba,255] := 0 
+[CustomerCmp3-5,Alibaba,256] := 0 
+[CustomerCmp3-5,Alibaba,257] := 0 
+[CustomerCmp3-5,Alibaba,258] := 0 
+[CustomerCmp3-5,Alibaba,259] := 0 
+[CustomerCmp3-5,Alibaba,260] := 0 
+[CustomerCmp3-5,Alibaba,261] := 0 
+[CustomerCmp3-5,Alibaba,262] := 0 
+[CustomerCmp3-5,Alibaba,263] := 0 
+[CustomerCmp3-5,Alibaba,264] := 0 
+[CustomerCmp3-5,Alibaba,265] := 1 
+[CustomerCmp3-5,Alibaba,266] := 0 
+[CustomerCmp3-5,Alibaba,267] := 0 
+[CustomerCmp3-5,Alibaba,268] := 0 
+[CustomerCmp3-5,Alibaba,269] := 0 
+[CustomerCmp3-5,Alibaba,270] := 1 
+[CustomerCmp3-5,Alibaba,271] := 0 
+[CustomerCmp3-5,Alibaba,272] := 0 
+[CustomerCmp3-5,Alibaba,273] := 0 
+[CustomerCmp3-5,Alibaba,274] := 0 
+[CustomerCmp3-5,Alibaba,275] := 0 
+[CustomerCmp3-5,Alibaba,276] := 0 
+[CustomerCmp3-5,Alibaba,277] := 0 
+[CustomerCmp3-5,Alibaba,278] := 0 
+[CustomerCmp3-5,Alibaba,279] := 0 
+[CustomerCmp3-5,Alibaba,280] := 0 
+[CustomerCmp3-5,Alibaba,281] := 0 
+[CustomerCmp3-5,Alibaba,282] := 0 
+[CustomerCmp3-5,Alibaba,283] := 0 
+[CustomerCmp3-5,Alibaba,284] := 0 
+[CustomerCmp3-5,Alibaba,285] := 0 
+[CustomerCmp3-5,Alibaba,286] := 0 
+[CustomerCmp3-5,Alibaba,287] := 0 
+[CustomerCmp3-5,Alibaba,288] := 0 
+[CustomerCmp3-5,Alibaba,289] := 0 
+[CustomerCmp3-5,Alibaba,290] := 0 
+[CustomerCmp3-5,Alibaba,291] := 0 
+[CustomerCmp3-5,Alibaba,292] := 0 
+[CustomerCmp3-5,Alibaba,293] := 0 
+[CustomerCmp3-5,Alibaba,294] := 0 
+[CustomerCmp3-5,Alibaba,295] := 0 
+[CustomerCmp3-5,Alibaba,296] := 0 
+[CustomerCmp3-5,Alibaba,297] := 0 
+[CustomerCmp3-5,Alibaba,298] := 0 
+[CustomerCmp3-5,Alibaba,299] := 0 
+[CustomerCmp3-5,Alibaba,300] := 0 
+[CustomerCmp3-5,Alibaba,301] := 0 
+[CustomerCmp3-5,Alibaba,302] := 0 
+[CustomerCmp3-5,Alibaba,303] := 0 
+[CustomerCmp3-5,Alibaba,304] := 0 
+[CustomerCmp3-5,Alibaba,305] := 0 
+[CustomerCmp3-5,Alibaba,306] := 0 
+[CustomerCmp3-5,Alibaba,307] := 0 
+[CustomerCmp3-5,Alibaba,308] := 0 
+[CustomerCmp3-5,Alibaba,309] := 0 
+[CustomerCmp3-5,Alibaba,310] := 0 
+[CustomerCmp3-5,Alibaba,311] := 0 
+[CustomerCmp3-5,Alibaba,312] := 0 
+[CustomerCmp3-5,Alibaba,313] := 0 
+[CustomerCmp3-5,Alibaba,314] := 0 
+[CustomerCmp3-5,Alibaba,315] := 0 
+[CustomerCmp3-5,Alibaba,316] := 0 
+[CustomerCmp3-5,Alibaba,317] := 0 
+[CustomerCmp3-5,Alibaba,318] := 0 
+[CustomerCmp3-5,Alibaba,319] := 0 
+[CustomerCmp3-5,Alibaba,320] := 0 
+[CustomerCmp3-5,Alibaba,321] := 0 
+[CustomerCmp3-5,Alibaba,322] := 0 
+[CustomerCmp3-5,Alibaba,323] := 0 
+[CustomerCmp3-5,Alibaba,324] := 0 
+[CustomerCmp3-5,Alibaba,325] := 0 
+[CustomerCmp3-5,Alibaba,326] := 0 
+[CustomerCmp3-5,Alibaba,327] := 0 
+[CustomerCmp3-5,Alibaba,328] := 0 
+[CustomerCmp3-5,Alibaba,329] := 0 
+[CustomerCmp3-5,Alibaba,330] := 1 
+[CustomerCmp3-5,Alibaba,331] := 1 
+[CustomerCmp3-5,Alibaba,332] := 0 
+[CustomerCmp3-5,Alibaba,333] := 0 
+[CustomerCmp3-5,Alibaba,334] := 0 
+[CustomerCmp3-5,Alibaba,335] := 0 
+[CustomerCmp3-5,Alibaba,336] := 0 
+[CustomerCmp3-5,Alibaba,337] := 0 
+[CustomerCmp3-5,Alibaba,338] := 0 
+[CustomerCmp3-5,Alibaba,339] := 0 
+[CustomerCmp3-5,Alibaba,340] := 0 
+[CustomerCmp3-5,Alibaba,341] := 0 
+[CustomerCmp3-5,Alibaba,342] := 0 
+[CustomerCmp3-5,Alibaba,343] := 0 
+[CustomerCmp3-5,Alibaba,344] := 0 
+[CustomerCmp3-5,Alibaba,345] := 0 
+[CustomerCmp3-5,Alibaba,346] := 0 
+[CustomerCmp3-5,Alibaba,347] := 0 
+[CustomerCmp3-5,Alibaba,348] := 0 
+[CustomerCmp3-5,Alibaba,349] := 0 
+[CustomerCmp3-5,Alibaba,350] := 0 
+[CustomerCmp3-5,Alibaba,351] := 0 
+[CustomerCmp3-5,Alibaba,352] := 0 
+[CustomerCmp3-5,Alibaba,353] := 0 
+[CustomerCmp3-5,Alibaba,354] := 0 
+[CustomerCmp3-5,Alibaba,355] := 0 
+[CustomerCmp3-5,Alibaba,356] := 0 
+[CustomerCmp3-5,Alibaba,357] := 0 
+[CustomerCmp3-5,Alibaba,358] := 0 
+[CustomerCmp3-5,Alibaba,359] := 0 
+[CustomerCmp3-5,Alibaba,360] := 0 
+[CustomerCmp3-5,Alibaba,361] := 0 
+[CustomerCmp3-5,Alibaba,362] := 0 
+[CustomerCmp3-5,Alibaba,363] := 0 
+[CustomerCmp3-5,Alibaba,364] := 0 
+[CustomerCmp3-5,Alibaba,365] := 0 
+[CustomerCmp3-5,Alibaba,366] := 0 
+[CustomerCmp3-5,Alibaba,367] := 0 
+[CustomerCmp3-5,Alibaba,368] := 0 
+[CustomerCmp3-5,Alibaba,369] := 0 
+[CustomerCmp3-5,Alibaba,370] := 0 
+[CustomerCmp3-5,Alibaba,371] := 0 
+[CustomerCmp3-5,Alibaba,372] := 0 
+[CustomerCmp3-5,Azure,1] := 0 
+[CustomerCmp3-5,Azure,2] := 0 
+[CustomerCmp3-5,Azure,3] := 0 
+[CustomerCmp3-5,Azure,4] := 0 
+[CustomerCmp3-5,Azure,5] := 0 
+[CustomerCmp3-5,Azure,6] := 0 
+[CustomerCmp3-5,Azure,7] := 0 
+[CustomerCmp3-5,Azure,8] := 0 
+[CustomerCmp3-5,Azure,9] := 0 
+[CustomerCmp3-5,Azure,10] := 0 
+[CustomerCmp3-5,Azure,11] := 0 
+[CustomerCmp3-5,Azure,12] := 0 
+[CustomerCmp3-5,Azure,13] := 0 
+[CustomerCmp3-5,Azure,14] := 0 
+[CustomerCmp3-5,Azure,15] := 0 
+[CustomerCmp3-5,Azure,16] := 0 
+[CustomerCmp3-5,Azure,17] := 0 
+[CustomerCmp3-5,Azure,18] := 0 
+[CustomerCmp3-5,Azure,19] := 0 
+[CustomerCmp3-5,Azure,20] := 0 
+[CustomerCmp3-5,Azure,21] := 0 
+[CustomerCmp3-5,Azure,22] := 0 
+[CustomerCmp3-5,Azure,23] := 0 
+[CustomerCmp3-5,Azure,24] := 1 
+[CustomerCmp3-5,Azure,25] := 0 
+[CustomerCmp3-5,Azure,26] := 0 
+[CustomerCmp3-5,Azure,27] := 0 
+[CustomerCmp3-5,Azure,28] := 0 
+[CustomerCmp3-5,Azure,29] := 0 
+[CustomerCmp3-3,Google,1] := 0 
+[CustomerCmp3-3,Google,2] := 0 
+[CustomerCmp3-3,Google,3] := 0 
+[CustomerCmp3-3,Google,4] := 0 
+[CustomerCmp3-3,Google,5] := 0 
+[CustomerCmp3-3,Google,6] := 1 
+[CustomerCmp3-3,Google,7] := 0 
+[CustomerCmp3-3,Google,8] := 0 
+[CustomerCmp3-3,Google,9] := 0 
+[CustomerCmp3-3,Google,10] := 0 
+[CustomerCmp3-3,Google,11] := 0 
+[CustomerCmp3-3,Google,12] := 0 
+[CustomerCmp3-3,Google,13] := 0 
+[CustomerCmp3-3,Google,14] := 0 
+[CustomerCmp3-3,Google,15] := 0 
+[CustomerCmp3-3,Google,16] := 0 
+[CustomerCmp3-3,Google,17] := 0 
+[CustomerCmp3-3,Google,18] := 0 
+[CustomerCmp3-3,Google,19] := 0 
+[CustomerCmp3-3,Google,20] := 0 
+[CustomerCmp3-3,Google,21] := 0 
+[CustomerCmp3-3,Google,22] := 0 
+[CustomerCmp3-3,Google,23] := 0 
+[CustomerCmp3-3,Google,24] := 0 
+[CustomerCmp3-3,Google,25] := 0 
+[CustomerCmp3-3,Google,26] := 0 
+[CustomerCmp3-3,Google,27] := 0 
+[CustomerCmp3-3,Google,28] := 0 
+[CustomerCmp3-3,Google,29] := 0 
+[CustomerCmp3-3,Google,30] := 1 
+[CustomerCmp3-3,Google,31] := 1 
+[CustomerCmp3-3,Google,32] := 0 
+[CustomerCmp3-3,Google,33] := 0 
+[CustomerCmp3-3,Google,34] := 0 
+[CustomerCmp3-3,Google,35] := 0 
+[CustomerCmp3-3,Google,36] := 0 
+[CustomerCmp3-3,Google,37] := 0 
+[CustomerCmp3-3,Google,38] := 0 
+[CustomerCmp3-3,Google,39] := 0 
+[CustomerCmp3-3,Google,40] := 0 
+[CustomerCmp3-3,Google,41] := 0 
+[CustomerCmp3-3,Google,42] := 0 
+[CustomerCmp3-3,Google,43] := 0 
+[CustomerCmp3-3,Google,44] := 0 
+[CustomerCmp3-3,Google,45] := 0 
+[CustomerCmp3-3,Google,46] := 0 
+[CustomerCmp3-3,Google,47] := 0 
+[CustomerCmp3-3,Google,48] := 0 
+[CustomerCmp3-3,Google,49] := 0 
+[CustomerCmp3-3,Google,50] := 0 
+[CustomerCmp3-3,Google,51] := 0 
+[CustomerCmp3-3,Google,52] := 0 
+[CustomerCmp3-3,Google,53] := 0 
+[CustomerCmp3-3,Google,54] := 0 
+[CustomerCmp3-3,Google,55] := 1 
+[CustomerCmp3-3,Google,56] := 1 
+[CustomerCmp3-3,Google,57] := 0 
+[CustomerCmp3-3,Google,58] := 0 
+[CustomerCmp3-3,Google,59] := 0 
+[CustomerCmp3-3,Google,60] := 0 
+[CustomerCmp3-3,Google,61] := 0 
+[CustomerCmp3-3,Google,62] := 0 
+[CustomerCmp3-3,Google,63] := 0 
+[CustomerCmp3-3,Google,64] := 0 
+[CustomerCmp3-3,Google,65] := 0 
+[CustomerCmp3-3,Google,66] := 0 
+[CustomerCmp3-3,Google,67] := 0 
+[CustomerCmp3-3,Google,68] := 0 
+[CustomerCmp3-3,Google,69] := 0 
+[CustomerCmp3-3,Google,70] := 0 
+[CustomerCmp3-3,Google,71] := 0 
+[CustomerCmp3-3,Google,72] := 0 
+[CustomerCmp3-3,Google,73] := 0 
+[CustomerCmp3-3,Google,74] := 0 
+[CustomerCmp3-3,Google,75] := 0 
+[CustomerCmp3-3,Google,76] := 0 
+[CustomerCmp3-3,Google,77] := 0 
+[CustomerCmp3-3,Google,78] := 0 
+[CustomerCmp3-3,Google,79] := 0 
+[CustomerCmp3-3,Google,80] := 0 
+[CustomerCmp3-3,Google,81] := 0 
+[CustomerCmp3-3,Google,82] := 0 
+[CustomerCmp3-3,Google,83] := 0 
+[CustomerCmp3-3,Google,84] := 0 
+[CustomerCmp3-3,Google,85] := 0 
+[CustomerCmp3-3,Google,86] := 0 
+[CustomerCmp3-3,Google,87] := 0 
+[CustomerCmp3-3,Google,88] := 0 
+[CustomerCmp3-3,Google,89] := 0 
+[CustomerCmp3-3,Amz,1] := 0 
+[CustomerCmp3-3,Amz,2] := 0 
+[CustomerCmp3-3,Amz,3] := 0 
+[CustomerCmp3-3,Amz,4] := 0 
+[CustomerCmp3-3,Amz,5] := 0 
+[CustomerCmp3-3,Amz,6] := 0 
+[CustomerCmp3-3,Amz,7] := 0 
+[CustomerCmp3-3,Amz,8] := 0 
+[CustomerCmp3-3,Amz,9] := 0 
+[CustomerCmp3-3,Amz,10] := 0 
+[CustomerCmp3-3,Amz,11] := 0 
+[CustomerCmp3-3,Amz,12] := 0 
+[CustomerCmp3-3,Amz,13] := 0 
+[CustomerCmp3-3,Amz,14] := 0 
+[CustomerCmp3-3,Amz,15] := 0 
+[CustomerCmp3-3,Amz,16] := 0 
+[CustomerCmp3-3,Amz,17] := 0 
+[CustomerCmp3-3,Amz,18] := 0 
+[CustomerCmp3-3,Amz,19] := 0 
+[CustomerCmp3-3,Amz,20] := 0 
+[CustomerCmp3-3,Amz,21] := 0 
+[CustomerCmp3-3,Amz,22] := 0 
+[CustomerCmp3-3,Amz,23] := 0 
+[CustomerCmp3-3,Amz,24] := 0 
+[CustomerCmp3-3,Amz,25] := 0 
+[CustomerCmp3-3,Amz,26] := 0 
+[CustomerCmp3-3,Amz,27] := 0 
+[CustomerCmp3-3,Amz,28] := 0 
+[CustomerCmp3-3,Amz,29] := 0 
+[CustomerCmp3-3,Amz,30] := 0 
+[CustomerCmp3-3,Amz,31] := 0 
+[CustomerCmp3-3,Amz,32] := 0 
+[CustomerCmp3-3,Amz,33] := 0 
+[CustomerCmp3-3,Amz,34] := 0 
+[CustomerCmp3-3,Amz,35] := 0 
+[CustomerCmp3-3,Amz,36] := 0 
+[CustomerCmp3-3,Amz,37] := 0 
+[CustomerCmp3-3,Amz,38] := 0 
+[CustomerCmp3-3,Amz,39] := 0 
+[CustomerCmp3-3,Amz,40] := 0 
+[CustomerCmp3-3,Amz,41] := 0 
+[CustomerCmp3-3,Amz,42] := 0 
+[CustomerCmp3-3,Amz,43] := 0 
+[CustomerCmp3-3,Amz,44] := 0 
+[CustomerCmp3-3,Amz,45] := 0 
+[CustomerCmp3-3,Amz,46] := 0 
+[CustomerCmp3-3,Amz,47] := 0 
+[CustomerCmp3-3,Amz,48] := 0 
+[CustomerCmp3-3,Amz,49] := 0 
+[CustomerCmp3-3,Amz,50] := 0 
+[CustomerCmp3-3,Amz,51] := 0 
+[CustomerCmp3-3,Amz,52] := 0 
+[CustomerCmp3-3,Amz,53] := 0 
+[CustomerCmp3-3,Amz,54] := 0 
+[CustomerCmp3-3,Amz,55] := 0 
+[CustomerCmp3-3,Amz,56] := 0 
+[CustomerCmp3-3,Amz,57] := 0 
+[CustomerCmp3-3,Amz,58] := 0 
+[CustomerCmp3-3,Amz,59] := 0 
+[CustomerCmp3-3,Amz,60] := 0 
+[CustomerCmp3-3,Amz,61] := 0 
+[CustomerCmp3-3,Amz,62] := 0 
+[CustomerCmp3-3,Amz,63] := 0 
+[CustomerCmp3-3,Amz,64] := 0 
+[CustomerCmp3-3,Amz,65] := 0 
+[CustomerCmp3-3,Amz,66] := 0 
+[CustomerCmp3-3,Amz,67] := 0 
+[CustomerCmp3-3,Amz,68] := 0 
+[CustomerCmp3-3,Amz,69] := 0 
+[CustomerCmp3-3,Amz,70] := 0 
+[CustomerCmp3-3,Amz,71] := 0 
+[CustomerCmp3-3,Amz,72] := 0 
+[CustomerCmp3-3,Amz,73] := 0 
+[CustomerCmp3-3,Amz,74] := 0 
+[CustomerCmp3-3,Amz,75] := 0 
+[CustomerCmp3-3,Amz,76] := 0 
+[CustomerCmp3-3,Amz,77] := 0 
+[CustomerCmp3-3,Amz,78] := 0 
+[CustomerCmp3-3,Amz,79] := 0 
+[CustomerCmp3-3,Amz,80] := 0 
+[CustomerCmp3-3,Amz,81] := 0 
+[CustomerCmp3-3,Amz,82] := 0 
+[CustomerCmp3-3,Amz,83] := 0 
+[CustomerCmp3-3,Amz,84] := 0 
+[CustomerCmp3-3,Amz,85] := 0 
+[CustomerCmp3-3,Amz,86] := 0 
+[CustomerCmp3-3,Amz,87] := 0 
+[CustomerCmp3-3,Amz,88] := 0 
+[CustomerCmp3-3,Amz,89] := 0 
+[CustomerCmp3-3,Amz,90] := 0 
+[CustomerCmp3-3,Amz,91] := 0 
+[CustomerCmp3-3,Amz,92] := 0 
+[CustomerCmp3-3,Amz,93] := 0 
+[CustomerCmp3-3,Amz,94] := 0 
+[CustomerCmp3-3,Alibaba,1] := 0 
+[CustomerCmp3-3,Alibaba,2] := 0 
+[CustomerCmp3-3,Alibaba,3] := 0 
+[CustomerCmp3-3,Alibaba,4] := 0 
+[CustomerCmp3-3,Alibaba,5] := 0 
+[CustomerCmp3-3,Alibaba,6] := 1 
+[CustomerCmp3-3,Alibaba,7] := 0 
+[CustomerCmp3-3,Alibaba,8] := 0 
+[CustomerCmp3-3,Alibaba,9] := 0 
+[CustomerCmp3-3,Alibaba,10] := 0 
+[CustomerCmp3-3,Alibaba,11] := 0 
+[CustomerCmp3-3,Alibaba,12] := 0 
+[CustomerCmp3-3,Alibaba,13] := 0 
+[CustomerCmp3-3,Alibaba,14] := 0 
+[CustomerCmp3-3,Alibaba,15] := 0 
+[CustomerCmp3-3,Alibaba,16] := 0 
+[CustomerCmp3-3,Alibaba,17] := 0 
+[CustomerCmp3-3,Alibaba,18] := 0 
+[CustomerCmp3-3,Alibaba,19] := 0 
+[CustomerCmp3-3,Alibaba,20] := 0 
+[CustomerCmp3-3,Alibaba,21] := 0 
+[CustomerCmp3-3,Alibaba,22] := 0 
+[CustomerCmp3-3,Alibaba,23] := 0 
+[CustomerCmp3-3,Alibaba,24] := 0 
+[CustomerCmp3-3,Alibaba,25] := 0 
+[CustomerCmp3-3,Alibaba,26] := 0 
+[CustomerCmp3-3,Alibaba,27] := 0 
+[CustomerCmp3-3,Alibaba,28] := 0 
+[CustomerCmp3-3,Alibaba,29] := 0 
+[CustomerCmp3-3,Alibaba,30] := 1 
+[CustomerCmp3-3,Alibaba,31] := 1 
+[CustomerCmp3-3,Alibaba,32] := 0 
+[CustomerCmp3-3,Alibaba,33] := 0 
+[CustomerCmp3-3,Alibaba,34] := 0 
+[CustomerCmp3-3,Alibaba,35] := 0 
+[CustomerCmp3-3,Alibaba,36] := 0 
+[CustomerCmp3-3,Alibaba,37] := 0 
+[CustomerCmp3-3,Alibaba,38] := 0 
+[CustomerCmp3-3,Alibaba,39] := 0 
+[CustomerCmp3-3,Alibaba,40] := 0 
+[CustomerCmp3-3,Alibaba,41] := 0 
+[CustomerCmp3-3,Alibaba,42] := 0 
+[CustomerCmp3-3,Alibaba,43] := 0 
+[CustomerCmp3-3,Alibaba,44] := 0 
+[CustomerCmp3-3,Alibaba,45] := 0 
+[CustomerCmp3-3,Alibaba,46] := 0 
+[CustomerCmp3-3,Alibaba,47] := 0 
+[CustomerCmp3-3,Alibaba,48] := 0 
+[CustomerCmp3-3,Alibaba,49] := 0 
+[CustomerCmp3-3,Alibaba,50] := 0 
+[CustomerCmp3-3,Alibaba,51] := 0 
+[CustomerCmp3-3,Alibaba,52] := 0 
+[CustomerCmp3-3,Alibaba,53] := 0 
+[CustomerCmp3-3,Alibaba,54] := 0 
+[CustomerCmp3-3,Alibaba,55] := 1 
+[CustomerCmp3-3,Alibaba,56] := 1 
+[CustomerCmp3-3,Alibaba,57] := 0 
+[CustomerCmp3-3,Alibaba,58] := 0 
+[CustomerCmp3-3,Alibaba,59] := 0 
+[CustomerCmp3-3,Alibaba,60] := 0 
+[CustomerCmp3-3,Alibaba,61] := 0 
+[CustomerCmp3-3,Alibaba,62] := 0 
+[CustomerCmp3-3,Alibaba,63] := 0 
+[CustomerCmp3-3,Alibaba,64] := 0 
+[CustomerCmp3-3,Alibaba,65] := 0 
+[CustomerCmp3-3,Alibaba,66] := 0 
+[CustomerCmp3-3,Alibaba,67] := 0 
+[CustomerCmp3-3,Alibaba,68] := 0 
+[CustomerCmp3-3,Alibaba,69] := 0 
+[CustomerCmp3-3,Alibaba,70] := 0 
+[CustomerCmp3-3,Alibaba,71] := 0 
+[CustomerCmp3-3,Alibaba,72] := 0 
+[CustomerCmp3-3,Alibaba,73] := 0 
+[CustomerCmp3-3,Alibaba,74] := 0 
+[CustomerCmp3-3,Alibaba,75] := 0 
+[CustomerCmp3-3,Alibaba,76] := 0 
+[CustomerCmp3-3,Alibaba,77] := 0 
+[CustomerCmp3-3,Alibaba,78] := 0 
+[CustomerCmp3-3,Alibaba,79] := 0 
+[CustomerCmp3-3,Alibaba,80] := 0 
+[CustomerCmp3-3,Alibaba,81] := 0 
+[CustomerCmp3-3,Alibaba,82] := 0 
+[CustomerCmp3-3,Alibaba,83] := 0 
+[CustomerCmp3-3,Alibaba,84] := 0 
+[CustomerCmp3-3,Alibaba,85] := 0 
+[CustomerCmp3-3,Alibaba,86] := 0 
+[CustomerCmp3-3,Alibaba,87] := 0 
+[CustomerCmp3-3,Alibaba,88] := 0 
+[CustomerCmp3-3,Alibaba,89] := 0 
+[CustomerCmp3-3,Alibaba,90] := 0 
+[CustomerCmp3-3,Alibaba,91] := 0 
+[CustomerCmp3-3,Alibaba,92] := 0 
+[CustomerCmp3-3,Alibaba,93] := 0 
+[CustomerCmp3-3,Alibaba,94] := 0 
+[CustomerCmp3-3,Alibaba,95] := 0 
+[CustomerCmp3-3,Alibaba,96] := 0 
+[CustomerCmp3-3,Alibaba,97] := 0 
+[CustomerCmp3-3,Alibaba,98] := 0 
+[CustomerCmp3-3,Alibaba,99] := 0 
+[CustomerCmp3-3,Alibaba,100] := 0 
+[CustomerCmp3-3,Alibaba,101] := 0 
+[CustomerCmp3-3,Alibaba,102] := 0 
+[CustomerCmp3-3,Alibaba,103] := 0 
+[CustomerCmp3-3,Alibaba,104] := 0 
+[CustomerCmp3-3,Alibaba,105] := 0 
+[CustomerCmp3-3,Alibaba,106] := 0 
+[CustomerCmp3-3,Alibaba,107] := 0 
+[CustomerCmp3-3,Alibaba,108] := 0 
+[CustomerCmp3-3,Alibaba,109] := 0 
+[CustomerCmp3-3,Alibaba,110] := 0 
+[CustomerCmp3-3,Alibaba,111] := 0 
+[CustomerCmp3-3,Alibaba,112] := 0 
+[CustomerCmp3-3,Alibaba,113] := 0 
+[CustomerCmp3-3,Alibaba,114] := 0 
+[CustomerCmp3-3,Alibaba,115] := 0 
+[CustomerCmp3-3,Alibaba,116] := 0 
+[CustomerCmp3-3,Alibaba,117] := 0 
+[CustomerCmp3-3,Alibaba,118] := 0 
+[CustomerCmp3-3,Alibaba,119] := 0 
+[CustomerCmp3-3,Alibaba,120] := 0 
+[CustomerCmp3-3,Alibaba,121] := 0 
+[CustomerCmp3-3,Alibaba,122] := 0 
+[CustomerCmp3-3,Alibaba,123] := 0 
+[CustomerCmp3-3,Alibaba,124] := 0 
+[CustomerCmp3-3,Alibaba,125] := 0 
+[CustomerCmp3-3,Alibaba,126] := 0 
+[CustomerCmp3-3,Alibaba,127] := 0 
+[CustomerCmp3-3,Alibaba,128] := 0 
+[CustomerCmp3-3,Alibaba,129] := 0 
+[CustomerCmp3-3,Alibaba,130] := 0 
+[CustomerCmp3-3,Alibaba,131] := 0 
+[CustomerCmp3-3,Alibaba,132] := 0 
+[CustomerCmp3-3,Alibaba,133] := 0 
+[CustomerCmp3-3,Alibaba,134] := 0 
+[CustomerCmp3-3,Alibaba,135] := 0 
+[CustomerCmp3-3,Alibaba,136] := 0 
+[CustomerCmp3-3,Alibaba,137] := 0 
+[CustomerCmp3-3,Alibaba,138] := 1 
+[CustomerCmp3-3,Alibaba,139] := 1 
+[CustomerCmp3-3,Alibaba,140] := 0 
+[CustomerCmp3-3,Alibaba,141] := 0 
+[CustomerCmp3-3,Alibaba,142] := 0 
+[CustomerCmp3-3,Alibaba,143] := 0 
+[CustomerCmp3-3,Alibaba,144] := 0 
+[CustomerCmp3-3,Alibaba,145] := 0 
+[CustomerCmp3-3,Alibaba,146] := 0 
+[CustomerCmp3-3,Alibaba,147] := 0 
+[CustomerCmp3-3,Alibaba,148] := 0 
+[CustomerCmp3-3,Alibaba,149] := 0 
+[CustomerCmp3-3,Alibaba,150] := 0 
+[CustomerCmp3-3,Alibaba,151] := 0 
+[CustomerCmp3-3,Alibaba,152] := 0 
+[CustomerCmp3-3,Alibaba,153] := 0 
+[CustomerCmp3-3,Alibaba,154] := 0 
+[CustomerCmp3-3,Alibaba,155] := 0 
+[CustomerCmp3-3,Alibaba,156] := 0 
+[CustomerCmp3-3,Alibaba,157] := 0 
+[CustomerCmp3-3,Alibaba,158] := 0 
+[CustomerCmp3-3,Alibaba,159] := 0 
+[CustomerCmp3-3,Alibaba,160] := 0 
+[CustomerCmp3-3,Alibaba,161] := 0 
+[CustomerCmp3-3,Alibaba,162] := 0 
+[CustomerCmp3-3,Alibaba,163] := 0 
+[CustomerCmp3-3,Alibaba,164] := 0 
+[CustomerCmp3-3,Alibaba,165] := 0 
+[CustomerCmp3-3,Alibaba,166] := 0 
+[CustomerCmp3-3,Alibaba,167] := 0 
+[CustomerCmp3-3,Alibaba,168] := 0 
+[CustomerCmp3-3,Alibaba,169] := 0 
+[CustomerCmp3-3,Alibaba,170] := 0 
+[CustomerCmp3-3,Alibaba,171] := 0 
+[CustomerCmp3-3,Alibaba,172] := 0 
+[CustomerCmp3-3,Alibaba,173] := 0 
+[CustomerCmp3-3,Alibaba,174] := 0 
+[CustomerCmp3-3,Alibaba,175] := 0 
+[CustomerCmp3-3,Alibaba,176] := 0 
+[CustomerCmp3-3,Alibaba,177] := 0 
+[CustomerCmp3-3,Alibaba,178] := 0 
+[CustomerCmp3-3,Alibaba,179] := 0 
+[CustomerCmp3-3,Alibaba,180] := 0 
+[CustomerCmp3-3,Alibaba,181] := 0 
+[CustomerCmp3-3,Alibaba,182] := 0 
+[CustomerCmp3-3,Alibaba,183] := 0 
+[CustomerCmp3-3,Alibaba,184] := 0 
+[CustomerCmp3-3,Alibaba,185] := 0 
+[CustomerCmp3-3,Alibaba,186] := 0 
+[CustomerCmp3-3,Alibaba,187] := 0 
+[CustomerCmp3-3,Alibaba,188] := 0 
+[CustomerCmp3-3,Alibaba,189] := 0 
+[CustomerCmp3-3,Alibaba,190] := 0 
+[CustomerCmp3-3,Alibaba,191] := 0 
+[CustomerCmp3-3,Alibaba,192] := 0 
+[CustomerCmp3-3,Alibaba,193] := 0 
+[CustomerCmp3-3,Alibaba,194] := 0 
+[CustomerCmp3-3,Alibaba,195] := 0 
+[CustomerCmp3-3,Alibaba,196] := 0 
+[CustomerCmp3-3,Alibaba,197] := 0 
+[CustomerCmp3-3,Alibaba,198] := 0 
+[CustomerCmp3-3,Alibaba,199] := 0 
+[CustomerCmp3-3,Alibaba,200] := 0 
+[CustomerCmp3-3,Alibaba,201] := 0 
+[CustomerCmp3-3,Alibaba,202] := 0 
+[CustomerCmp3-3,Alibaba,203] := 0 
+[CustomerCmp3-3,Alibaba,204] := 0 
+[CustomerCmp3-3,Alibaba,205] := 0 
+[CustomerCmp3-3,Alibaba,206] := 0 
+[CustomerCmp3-3,Alibaba,207] := 0 
+[CustomerCmp3-3,Alibaba,208] := 0 
+[CustomerCmp3-3,Alibaba,209] := 0 
+[CustomerCmp3-3,Alibaba,210] := 0 
+[CustomerCmp3-3,Alibaba,211] := 0 
+[CustomerCmp3-3,Alibaba,212] := 0 
+[CustomerCmp3-3,Alibaba,213] := 0 
+[CustomerCmp3-3,Alibaba,214] := 0 
+[CustomerCmp3-3,Alibaba,215] := 0 
+[CustomerCmp3-3,Alibaba,216] := 0 
+[CustomerCmp3-3,Alibaba,217] := 0 
+[CustomerCmp3-3,Alibaba,218] := 0 
+[CustomerCmp3-3,Alibaba,219] := 0 
+[CustomerCmp3-3,Alibaba,220] := 0 
+[CustomerCmp3-3,Alibaba,221] := 0 
+[CustomerCmp3-3,Alibaba,222] := 0 
+[CustomerCmp3-3,Alibaba,223] := 0 
+[CustomerCmp3-3,Alibaba,224] := 0 
+[CustomerCmp3-3,Alibaba,225] := 0 
+[CustomerCmp3-3,Alibaba,226] := 0 
+[CustomerCmp3-3,Alibaba,227] := 1 
+[CustomerCmp3-3,Alibaba,228] := 0 
+[CustomerCmp3-3,Alibaba,229] := 0 
+[CustomerCmp3-3,Alibaba,230] := 0 
+[CustomerCmp3-3,Alibaba,231] := 0 
+[CustomerCmp3-3,Alibaba,232] := 0 
+[CustomerCmp3-3,Alibaba,233] := 0 
+[CustomerCmp3-3,Alibaba,234] := 0 
+[CustomerCmp3-3,Alibaba,235] := 0 
+[CustomerCmp3-3,Alibaba,236] := 0 
+[CustomerCmp3-3,Alibaba,237] := 0 
+[CustomerCmp3-3,Alibaba,238] := 0 
+[CustomerCmp3-3,Alibaba,239] := 0 
+[CustomerCmp3-3,Alibaba,240] := 0 
+[CustomerCmp3-3,Alibaba,241] := 0 
+[CustomerCmp3-3,Alibaba,242] := 0 
+[CustomerCmp3-3,Alibaba,243] := 0 
+[CustomerCmp3-3,Alibaba,244] := 0 
+[CustomerCmp3-3,Alibaba,245] := 0 
+[CustomerCmp3-3,Alibaba,246] := 0 
+[CustomerCmp3-3,Alibaba,247] := 0 
+[CustomerCmp3-3,Alibaba,248] := 0 
+[CustomerCmp3-3,Alibaba,249] := 0 
+[CustomerCmp3-3,Alibaba,250] := 0 
+[CustomerCmp3-3,Alibaba,251] := 0 
+[CustomerCmp3-3,Alibaba,252] := 0 
+[CustomerCmp3-3,Alibaba,253] := 0 
+[CustomerCmp3-3,Alibaba,254] := 0 
+[CustomerCmp3-3,Alibaba,255] := 0 
+[CustomerCmp3-3,Alibaba,256] := 0 
+[CustomerCmp3-3,Alibaba,257] := 0 
+[CustomerCmp3-3,Alibaba,258] := 0 
+[CustomerCmp3-3,Alibaba,259] := 0 
+[CustomerCmp3-3,Alibaba,260] := 1 
+[CustomerCmp3-3,Alibaba,261] := 0 
+[CustomerCmp3-3,Alibaba,262] := 0 
+[CustomerCmp3-3,Alibaba,263] := 0 
+[CustomerCmp3-3,Alibaba,264] := 0 
+[CustomerCmp3-3,Alibaba,265] := 0 
+[CustomerCmp3-3,Alibaba,266] := 0 
+[CustomerCmp3-3,Alibaba,267] := 0 
+[CustomerCmp3-3,Alibaba,268] := 0 
+[CustomerCmp3-3,Alibaba,269] := 0 
+[CustomerCmp3-3,Alibaba,270] := 0 
+[CustomerCmp3-3,Alibaba,271] := 0 
+[CustomerCmp3-3,Alibaba,272] := 0 
+[CustomerCmp3-3,Alibaba,273] := 0 
+[CustomerCmp3-3,Alibaba,274] := 0 
+[CustomerCmp3-3,Alibaba,275] := 0 
+[CustomerCmp3-3,Alibaba,276] := 0 
+[CustomerCmp3-3,Alibaba,277] := 0 
+[CustomerCmp3-3,Alibaba,278] := 0 
+[CustomerCmp3-3,Alibaba,279] := 0 
+[CustomerCmp3-3,Alibaba,280] := 0 
+[CustomerCmp3-3,Alibaba,281] := 0 
+[CustomerCmp3-3,Alibaba,282] := 0 
+[CustomerCmp3-3,Alibaba,283] := 0 
+[CustomerCmp3-3,Alibaba,284] := 0 
+[CustomerCmp3-3,Alibaba,285] := 1 
+[CustomerCmp3-3,Alibaba,286] := 0 
+[CustomerCmp3-3,Alibaba,287] := 0 
+[CustomerCmp3-3,Alibaba,288] := 0 
+[CustomerCmp3-3,Alibaba,289] := 0 
+[CustomerCmp3-3,Alibaba,290] := 0 
+[CustomerCmp3-3,Alibaba,291] := 0 
+[CustomerCmp3-3,Alibaba,292] := 0 
+[CustomerCmp3-3,Alibaba,293] := 0 
+[CustomerCmp3-3,Alibaba,294] := 0 
+[CustomerCmp3-3,Alibaba,295] := 0 
+[CustomerCmp3-3,Alibaba,296] := 0 
+[CustomerCmp3-3,Alibaba,297] := 0 
+[CustomerCmp3-3,Alibaba,298] := 0 
+[CustomerCmp3-3,Alibaba,299] := 0 
+[CustomerCmp3-3,Alibaba,300] := 0 
+[CustomerCmp3-3,Alibaba,301] := 0 
+[CustomerCmp3-3,Alibaba,302] := 0 
+[CustomerCmp3-3,Alibaba,303] := 0 
+[CustomerCmp3-3,Alibaba,304] := 0 
+[CustomerCmp3-3,Alibaba,305] := 0 
+[CustomerCmp3-3,Alibaba,306] := 0 
+[CustomerCmp3-3,Alibaba,307] := 0 
+[CustomerCmp3-3,Alibaba,308] := 0 
+[CustomerCmp3-3,Alibaba,309] := 0 
+[CustomerCmp3-3,Alibaba,310] := 0 
+[CustomerCmp3-3,Alibaba,311] := 0 
+[CustomerCmp3-3,Alibaba,312] := 0 
+[CustomerCmp3-3,Alibaba,313] := 0 
+[CustomerCmp3-3,Alibaba,314] := 0 
+[CustomerCmp3-3,Alibaba,315] := 0 
+[CustomerCmp3-3,Alibaba,316] := 0 
+[CustomerCmp3-3,Alibaba,317] := 0 
+[CustomerCmp3-3,Alibaba,318] := 0 
+[CustomerCmp3-3,Alibaba,319] := 0 
+[CustomerCmp3-3,Alibaba,320] := 0 
+[CustomerCmp3-3,Alibaba,321] := 0 
+[CustomerCmp3-3,Alibaba,322] := 0 
+[CustomerCmp3-3,Alibaba,323] := 0 
+[CustomerCmp3-3,Alibaba,324] := 0 
+[CustomerCmp3-3,Alibaba,325] := 0 
+[CustomerCmp3-3,Alibaba,326] := 0 
+[CustomerCmp3-3,Alibaba,327] := 0 
+[CustomerCmp3-3,Alibaba,328] := 0 
+[CustomerCmp3-3,Alibaba,329] := 0 
+[CustomerCmp3-3,Alibaba,330] := 0 
+[CustomerCmp3-3,Alibaba,331] := 0 
+[CustomerCmp3-3,Alibaba,332] := 0 
+[CustomerCmp3-3,Alibaba,333] := 0 
+[CustomerCmp3-3,Alibaba,334] := 0 
+[CustomerCmp3-3,Alibaba,335] := 0 
+[CustomerCmp3-3,Alibaba,336] := 0 
+[CustomerCmp3-3,Alibaba,337] := 0 
+[CustomerCmp3-3,Alibaba,338] := 0 
+[CustomerCmp3-3,Alibaba,339] := 0 
+[CustomerCmp3-3,Alibaba,340] := 0 
+[CustomerCmp3-3,Alibaba,341] := 0 
+[CustomerCmp3-3,Alibaba,342] := 0 
+[CustomerCmp3-3,Alibaba,343] := 0 
+[CustomerCmp3-3,Alibaba,344] := 1 
+[CustomerCmp3-3,Alibaba,345] := 1 
+[CustomerCmp3-3,Alibaba,346] := 0 
+[CustomerCmp3-3,Alibaba,347] := 0 
+[CustomerCmp3-3,Alibaba,348] := 0 
+[CustomerCmp3-3,Alibaba,349] := 0 
+[CustomerCmp3-3,Alibaba,350] := 0 
+[CustomerCmp3-3,Alibaba,351] := 0 
+[CustomerCmp3-3,Alibaba,352] := 0 
+[CustomerCmp3-3,Alibaba,353] := 0 
+[CustomerCmp3-3,Alibaba,354] := 0 
+[CustomerCmp3-3,Alibaba,355] := 0 
+[CustomerCmp3-3,Alibaba,356] := 0 
+[CustomerCmp3-3,Alibaba,357] := 0 
+[CustomerCmp3-3,Alibaba,358] := 0 
+[CustomerCmp3-3,Alibaba,359] := 0 
+[CustomerCmp3-3,Alibaba,360] := 0 
+[CustomerCmp3-3,Alibaba,361] := 0 
+[CustomerCmp3-3,Alibaba,362] := 0 
+[CustomerCmp3-3,Alibaba,363] := 0 
+[CustomerCmp3-3,Alibaba,364] := 0 
+[CustomerCmp3-3,Alibaba,365] := 0 
+[CustomerCmp3-3,Alibaba,366] := 0 
+[CustomerCmp3-3,Alibaba,367] := 0 
+[CustomerCmp3-3,Alibaba,368] := 0 
+[CustomerCmp3-3,Alibaba,369] := 0 
+[CustomerCmp3-3,Alibaba,370] := 0 
+[CustomerCmp3-3,Alibaba,371] := 0 
+[CustomerCmp3-3,Alibaba,372] := 0 
+[CustomerCmp3-3,Azure,1] := 0 
+[CustomerCmp3-3,Azure,2] := 0 
+[CustomerCmp3-3,Azure,3] := 0 
+[CustomerCmp3-3,Azure,4] := 0 
+[CustomerCmp3-3,Azure,5] := 0 
+[CustomerCmp3-3,Azure,6] := 0 
+[CustomerCmp3-3,Azure,7] := 0 
+[CustomerCmp3-3,Azure,8] := 0 
+[CustomerCmp3-3,Azure,9] := 0 
+[CustomerCmp3-3,Azure,10] := 0 
+[CustomerCmp3-3,Azure,11] := 0 
+[CustomerCmp3-3,Azure,12] := 0 
+[CustomerCmp3-3,Azure,13] := 0 
+[CustomerCmp3-3,Azure,14] := 0 
+[CustomerCmp3-3,Azure,15] := 0 
+[CustomerCmp3-3,Azure,16] := 0 
+[CustomerCmp3-3,Azure,17] := 0 
+[CustomerCmp3-3,Azure,18] := 1 
+[CustomerCmp3-3,Azure,19] := 0 
+[CustomerCmp3-3,Azure,20] := 0 
+[CustomerCmp3-3,Azure,21] := 0 
+[CustomerCmp3-3,Azure,22] := 0 
+[CustomerCmp3-3,Azure,23] := 0 
+[CustomerCmp3-3,Azure,24] := 0 
+[CustomerCmp3-3,Azure,25] := 0 
+[CustomerCmp3-3,Azure,26] := 0 
+[CustomerCmp3-3,Azure,27] := 0 
+[CustomerCmp3-3,Azure,28] := 0 
+[CustomerCmp3-3,Azure,29] := 0 
+[CustomerCmp3-7,Google,1] := 0 
+[CustomerCmp3-7,Google,2] := 0 
+[CustomerCmp3-7,Google,3] := 0 
+[CustomerCmp3-7,Google,4] := 0 
+[CustomerCmp3-7,Google,5] := 0 
+[CustomerCmp3-7,Google,6] := 0 
+[CustomerCmp3-7,Google,7] := 0 
+[CustomerCmp3-7,Google,8] := 0 
+[CustomerCmp3-7,Google,9] := 0 
+[CustomerCmp3-7,Google,10] := 0 
+[CustomerCmp3-7,Google,11] := 0 
+[CustomerCmp3-7,Google,12] := 0 
+[CustomerCmp3-7,Google,13] := 0 
+[CustomerCmp3-7,Google,14] := 0 
+[CustomerCmp3-7,Google,15] := 0 
+[CustomerCmp3-7,Google,16] := 0 
+[CustomerCmp3-7,Google,17] := 0 
+[CustomerCmp3-7,Google,18] := 0 
+[CustomerCmp3-7,Google,19] := 0 
+[CustomerCmp3-7,Google,20] := 0 
+[CustomerCmp3-7,Google,21] := 0 
+[CustomerCmp3-7,Google,22] := 0 
+[CustomerCmp3-7,Google,23] := 0 
+[CustomerCmp3-7,Google,24] := 0 
+[CustomerCmp3-7,Google,25] := 0 
+[CustomerCmp3-7,Google,26] := 0 
+[CustomerCmp3-7,Google,27] := 0 
+[CustomerCmp3-7,Google,28] := 0 
+[CustomerCmp3-7,Google,29] := 0 
+[CustomerCmp3-7,Google,30] := 0 
+[CustomerCmp3-7,Google,31] := 0 
+[CustomerCmp3-7,Google,32] := 0 
+[CustomerCmp3-7,Google,33] := 0 
+[CustomerCmp3-7,Google,34] := 0 
+[CustomerCmp3-7,Google,35] := 0 
+[CustomerCmp3-7,Google,36] := 1 
+[CustomerCmp3-7,Google,37] := 0 
+[CustomerCmp3-7,Google,38] := 0 
+[CustomerCmp3-7,Google,39] := 0 
+[CustomerCmp3-7,Google,40] := 0 
+[CustomerCmp3-7,Google,41] := 0 
+[CustomerCmp3-7,Google,42] := 0 
+[CustomerCmp3-7,Google,43] := 0 
+[CustomerCmp3-7,Google,44] := 0 
+[CustomerCmp3-7,Google,45] := 0 
+[CustomerCmp3-7,Google,46] := 0 
+[CustomerCmp3-7,Google,47] := 0 
+[CustomerCmp3-7,Google,48] := 0 
+[CustomerCmp3-7,Google,49] := 0 
+[CustomerCmp3-7,Google,50] := 0 
+[CustomerCmp3-7,Google,51] := 0 
+[CustomerCmp3-7,Google,52] := 0 
+[CustomerCmp3-7,Google,53] := 0 
+[CustomerCmp3-7,Google,54] := 0 
+[CustomerCmp3-7,Google,55] := 0 
+[CustomerCmp3-7,Google,56] := 0 
+[CustomerCmp3-7,Google,57] := 0 
+[CustomerCmp3-7,Google,58] := 0 
+[CustomerCmp3-7,Google,59] := 0 
+[CustomerCmp3-7,Google,60] := 0 
+[CustomerCmp3-7,Google,61] := 0 
+[CustomerCmp3-7,Google,62] := 0 
+[CustomerCmp3-7,Google,63] := 0 
+[CustomerCmp3-7,Google,64] := 0 
+[CustomerCmp3-7,Google,65] := 0 
+[CustomerCmp3-7,Google,66] := 0 
+[CustomerCmp3-7,Google,67] := 0 
+[CustomerCmp3-7,Google,68] := 0 
+[CustomerCmp3-7,Google,69] := 0 
+[CustomerCmp3-7,Google,70] := 0 
+[CustomerCmp3-7,Google,71] := 0 
+[CustomerCmp3-7,Google,72] := 0 
+[CustomerCmp3-7,Google,73] := 0 
+[CustomerCmp3-7,Google,74] := 0 
+[CustomerCmp3-7,Google,75] := 0 
+[CustomerCmp3-7,Google,76] := 0 
+[CustomerCmp3-7,Google,77] := 0 
+[CustomerCmp3-7,Google,78] := 0 
+[CustomerCmp3-7,Google,79] := 0 
+[CustomerCmp3-7,Google,80] := 0 
+[CustomerCmp3-7,Google,81] := 0 
+[CustomerCmp3-7,Google,82] := 0 
+[CustomerCmp3-7,Google,83] := 0 
+[CustomerCmp3-7,Google,84] := 0 
+[CustomerCmp3-7,Google,85] := 0 
+[CustomerCmp3-7,Google,86] := 0 
+[CustomerCmp3-7,Google,87] := 0 
+[CustomerCmp3-7,Google,88] := 0 
+[CustomerCmp3-7,Google,89] := 0 
+[CustomerCmp3-7,Amz,1] := 0 
+[CustomerCmp3-7,Amz,2] := 0 
+[CustomerCmp3-7,Amz,3] := 0 
+[CustomerCmp3-7,Amz,4] := 0 
+[CustomerCmp3-7,Amz,5] := 0 
+[CustomerCmp3-7,Amz,6] := 0 
+[CustomerCmp3-7,Amz,7] := 0 
+[CustomerCmp3-7,Amz,8] := 0 
+[CustomerCmp3-7,Amz,9] := 0 
+[CustomerCmp3-7,Amz,10] := 0 
+[CustomerCmp3-7,Amz,11] := 0 
+[CustomerCmp3-7,Amz,12] := 0 
+[CustomerCmp3-7,Amz,13] := 0 
+[CustomerCmp3-7,Amz,14] := 0 
+[CustomerCmp3-7,Amz,15] := 0 
+[CustomerCmp3-7,Amz,16] := 0 
+[CustomerCmp3-7,Amz,17] := 0 
+[CustomerCmp3-7,Amz,18] := 0 
+[CustomerCmp3-7,Amz,19] := 0 
+[CustomerCmp3-7,Amz,20] := 0 
+[CustomerCmp3-7,Amz,21] := 0 
+[CustomerCmp3-7,Amz,22] := 0 
+[CustomerCmp3-7,Amz,23] := 0 
+[CustomerCmp3-7,Amz,24] := 0 
+[CustomerCmp3-7,Amz,25] := 0 
+[CustomerCmp3-7,Amz,26] := 0 
+[CustomerCmp3-7,Amz,27] := 0 
+[CustomerCmp3-7,Amz,28] := 0 
+[CustomerCmp3-7,Amz,29] := 0 
+[CustomerCmp3-7,Amz,30] := 0 
+[CustomerCmp3-7,Amz,31] := 0 
+[CustomerCmp3-7,Amz,32] := 0 
+[CustomerCmp3-7,Amz,33] := 0 
+[CustomerCmp3-7,Amz,34] := 0 
+[CustomerCmp3-7,Amz,35] := 0 
+[CustomerCmp3-7,Amz,36] := 0 
+[CustomerCmp3-7,Amz,37] := 0 
+[CustomerCmp3-7,Amz,38] := 0 
+[CustomerCmp3-7,Amz,39] := 0 
+[CustomerCmp3-7,Amz,40] := 0 
+[CustomerCmp3-7,Amz,41] := 0 
+[CustomerCmp3-7,Amz,42] := 0 
+[CustomerCmp3-7,Amz,43] := 0 
+[CustomerCmp3-7,Amz,44] := 0 
+[CustomerCmp3-7,Amz,45] := 0 
+[CustomerCmp3-7,Amz,46] := 0 
+[CustomerCmp3-7,Amz,47] := 0 
+[CustomerCmp3-7,Amz,48] := 0 
+[CustomerCmp3-7,Amz,49] := 0 
+[CustomerCmp3-7,Amz,50] := 0 
+[CustomerCmp3-7,Amz,51] := 0 
+[CustomerCmp3-7,Amz,52] := 0 
+[CustomerCmp3-7,Amz,53] := 0 
+[CustomerCmp3-7,Amz,54] := 0 
+[CustomerCmp3-7,Amz,55] := 0 
+[CustomerCmp3-7,Amz,56] := 0 
+[CustomerCmp3-7,Amz,57] := 0 
+[CustomerCmp3-7,Amz,58] := 0 
+[CustomerCmp3-7,Amz,59] := 0 
+[CustomerCmp3-7,Amz,60] := 0 
+[CustomerCmp3-7,Amz,61] := 0 
+[CustomerCmp3-7,Amz,62] := 0 
+[CustomerCmp3-7,Amz,63] := 0 
+[CustomerCmp3-7,Amz,64] := 0 
+[CustomerCmp3-7,Amz,65] := 0 
+[CustomerCmp3-7,Amz,66] := 0 
+[CustomerCmp3-7,Amz,67] := 0 
+[CustomerCmp3-7,Amz,68] := 0 
+[CustomerCmp3-7,Amz,69] := 0 
+[CustomerCmp3-7,Amz,70] := 0 
+[CustomerCmp3-7,Amz,71] := 0 
+[CustomerCmp3-7,Amz,72] := 0 
+[CustomerCmp3-7,Amz,73] := 0 
+[CustomerCmp3-7,Amz,74] := 0 
+[CustomerCmp3-7,Amz,75] := 0 
+[CustomerCmp3-7,Amz,76] := 0 
+[CustomerCmp3-7,Amz,77] := 0 
+[CustomerCmp3-7,Amz,78] := 0 
+[CustomerCmp3-7,Amz,79] := 0 
+[CustomerCmp3-7,Amz,80] := 0 
+[CustomerCmp3-7,Amz,81] := 0 
+[CustomerCmp3-7,Amz,82] := 0 
+[CustomerCmp3-7,Amz,83] := 0 
+[CustomerCmp3-7,Amz,84] := 0 
+[CustomerCmp3-7,Amz,85] := 0 
+[CustomerCmp3-7,Amz,86] := 0 
+[CustomerCmp3-7,Amz,87] := 0 
+[CustomerCmp3-7,Amz,88] := 0 
+[CustomerCmp3-7,Amz,89] := 0 
+[CustomerCmp3-7,Amz,90] := 0 
+[CustomerCmp3-7,Amz,91] := 0 
+[CustomerCmp3-7,Amz,92] := 0 
+[CustomerCmp3-7,Amz,93] := 0 
+[CustomerCmp3-7,Amz,94] := 0 
+[CustomerCmp3-7,Alibaba,1] := 0 
+[CustomerCmp3-7,Alibaba,2] := 0 
+[CustomerCmp3-7,Alibaba,3] := 0 
+[CustomerCmp3-7,Alibaba,4] := 0 
+[CustomerCmp3-7,Alibaba,5] := 0 
+[CustomerCmp3-7,Alibaba,6] := 0 
+[CustomerCmp3-7,Alibaba,7] := 0 
+[CustomerCmp3-7,Alibaba,8] := 0 
+[CustomerCmp3-7,Alibaba,9] := 0 
+[CustomerCmp3-7,Alibaba,10] := 0 
+[CustomerCmp3-7,Alibaba,11] := 0 
+[CustomerCmp3-7,Alibaba,12] := 0 
+[CustomerCmp3-7,Alibaba,13] := 0 
+[CustomerCmp3-7,Alibaba,14] := 0 
+[CustomerCmp3-7,Alibaba,15] := 0 
+[CustomerCmp3-7,Alibaba,16] := 0 
+[CustomerCmp3-7,Alibaba,17] := 0 
+[CustomerCmp3-7,Alibaba,18] := 0 
+[CustomerCmp3-7,Alibaba,19] := 0 
+[CustomerCmp3-7,Alibaba,20] := 0 
+[CustomerCmp3-7,Alibaba,21] := 0 
+[CustomerCmp3-7,Alibaba,22] := 0 
+[CustomerCmp3-7,Alibaba,23] := 0 
+[CustomerCmp3-7,Alibaba,24] := 0 
+[CustomerCmp3-7,Alibaba,25] := 0 
+[CustomerCmp3-7,Alibaba,26] := 0 
+[CustomerCmp3-7,Alibaba,27] := 0 
+[CustomerCmp3-7,Alibaba,28] := 0 
+[CustomerCmp3-7,Alibaba,29] := 0 
+[CustomerCmp3-7,Alibaba,30] := 0 
+[CustomerCmp3-7,Alibaba,31] := 0 
+[CustomerCmp3-7,Alibaba,32] := 0 
+[CustomerCmp3-7,Alibaba,33] := 0 
+[CustomerCmp3-7,Alibaba,34] := 0 
+[CustomerCmp3-7,Alibaba,35] := 0 
+[CustomerCmp3-7,Alibaba,36] := 1 
+[CustomerCmp3-7,Alibaba,37] := 0 
+[CustomerCmp3-7,Alibaba,38] := 0 
+[CustomerCmp3-7,Alibaba,39] := 0 
+[CustomerCmp3-7,Alibaba,40] := 0 
+[CustomerCmp3-7,Alibaba,41] := 0 
+[CustomerCmp3-7,Alibaba,42] := 0 
+[CustomerCmp3-7,Alibaba,43] := 0 
+[CustomerCmp3-7,Alibaba,44] := 0 
+[CustomerCmp3-7,Alibaba,45] := 0 
+[CustomerCmp3-7,Alibaba,46] := 0 
+[CustomerCmp3-7,Alibaba,47] := 0 
+[CustomerCmp3-7,Alibaba,48] := 0 
+[CustomerCmp3-7,Alibaba,49] := 0 
+[CustomerCmp3-7,Alibaba,50] := 0 
+[CustomerCmp3-7,Alibaba,51] := 0 
+[CustomerCmp3-7,Alibaba,52] := 0 
+[CustomerCmp3-7,Alibaba,53] := 0 
+[CustomerCmp3-7,Alibaba,54] := 0 
+[CustomerCmp3-7,Alibaba,55] := 0 
+[CustomerCmp3-7,Alibaba,56] := 0 
+[CustomerCmp3-7,Alibaba,57] := 0 
+[CustomerCmp3-7,Alibaba,58] := 0 
+[CustomerCmp3-7,Alibaba,59] := 0 
+[CustomerCmp3-7,Alibaba,60] := 0 
+[CustomerCmp3-7,Alibaba,61] := 0 
+[CustomerCmp3-7,Alibaba,62] := 0 
+[CustomerCmp3-7,Alibaba,63] := 0 
+[CustomerCmp3-7,Alibaba,64] := 0 
+[CustomerCmp3-7,Alibaba,65] := 0 
+[CustomerCmp3-7,Alibaba,66] := 0 
+[CustomerCmp3-7,Alibaba,67] := 0 
+[CustomerCmp3-7,Alibaba,68] := 0 
+[CustomerCmp3-7,Alibaba,69] := 0 
+[CustomerCmp3-7,Alibaba,70] := 0 
+[CustomerCmp3-7,Alibaba,71] := 0 
+[CustomerCmp3-7,Alibaba,72] := 0 
+[CustomerCmp3-7,Alibaba,73] := 0 
+[CustomerCmp3-7,Alibaba,74] := 0 
+[CustomerCmp3-7,Alibaba,75] := 0 
+[CustomerCmp3-7,Alibaba,76] := 0 
+[CustomerCmp3-7,Alibaba,77] := 0 
+[CustomerCmp3-7,Alibaba,78] := 0 
+[CustomerCmp3-7,Alibaba,79] := 0 
+[CustomerCmp3-7,Alibaba,80] := 0 
+[CustomerCmp3-7,Alibaba,81] := 0 
+[CustomerCmp3-7,Alibaba,82] := 0 
+[CustomerCmp3-7,Alibaba,83] := 0 
+[CustomerCmp3-7,Alibaba,84] := 0 
+[CustomerCmp3-7,Alibaba,85] := 0 
+[CustomerCmp3-7,Alibaba,86] := 0 
+[CustomerCmp3-7,Alibaba,87] := 0 
+[CustomerCmp3-7,Alibaba,88] := 0 
+[CustomerCmp3-7,Alibaba,89] := 0 
+[CustomerCmp3-7,Alibaba,90] := 0 
+[CustomerCmp3-7,Alibaba,91] := 0 
+[CustomerCmp3-7,Alibaba,92] := 0 
+[CustomerCmp3-7,Alibaba,93] := 0 
+[CustomerCmp3-7,Alibaba,94] := 0 
+[CustomerCmp3-7,Alibaba,95] := 0 
+[CustomerCmp3-7,Alibaba,96] := 0 
+[CustomerCmp3-7,Alibaba,97] := 0 
+[CustomerCmp3-7,Alibaba,98] := 0 
+[CustomerCmp3-7,Alibaba,99] := 0 
+[CustomerCmp3-7,Alibaba,100] := 0 
+[CustomerCmp3-7,Alibaba,101] := 0 
+[CustomerCmp3-7,Alibaba,102] := 0 
+[CustomerCmp3-7,Alibaba,103] := 0 
+[CustomerCmp3-7,Alibaba,104] := 0 
+[CustomerCmp3-7,Alibaba,105] := 0 
+[CustomerCmp3-7,Alibaba,106] := 0 
+[CustomerCmp3-7,Alibaba,107] := 0 
+[CustomerCmp3-7,Alibaba,108] := 0 
+[CustomerCmp3-7,Alibaba,109] := 0 
+[CustomerCmp3-7,Alibaba,110] := 0 
+[CustomerCmp3-7,Alibaba,111] := 0 
+[CustomerCmp3-7,Alibaba,112] := 0 
+[CustomerCmp3-7,Alibaba,113] := 0 
+[CustomerCmp3-7,Alibaba,114] := 0 
+[CustomerCmp3-7,Alibaba,115] := 0 
+[CustomerCmp3-7,Alibaba,116] := 0 
+[CustomerCmp3-7,Alibaba,117] := 0 
+[CustomerCmp3-7,Alibaba,118] := 0 
+[CustomerCmp3-7,Alibaba,119] := 0 
+[CustomerCmp3-7,Alibaba,120] := 0 
+[CustomerCmp3-7,Alibaba,121] := 0 
+[CustomerCmp3-7,Alibaba,122] := 0 
+[CustomerCmp3-7,Alibaba,123] := 0 
+[CustomerCmp3-7,Alibaba,124] := 0 
+[CustomerCmp3-7,Alibaba,125] := 0 
+[CustomerCmp3-7,Alibaba,126] := 0 
+[CustomerCmp3-7,Alibaba,127] := 0 
+[CustomerCmp3-7,Alibaba,128] := 0 
+[CustomerCmp3-7,Alibaba,129] := 0 
+[CustomerCmp3-7,Alibaba,130] := 0 
+[CustomerCmp3-7,Alibaba,131] := 0 
+[CustomerCmp3-7,Alibaba,132] := 0 
+[CustomerCmp3-7,Alibaba,133] := 0 
+[CustomerCmp3-7,Alibaba,134] := 0 
+[CustomerCmp3-7,Alibaba,135] := 0 
+[CustomerCmp3-7,Alibaba,136] := 0 
+[CustomerCmp3-7,Alibaba,137] := 0 
+[CustomerCmp3-7,Alibaba,138] := 0 
+[CustomerCmp3-7,Alibaba,139] := 0 
+[CustomerCmp3-7,Alibaba,140] := 0 
+[CustomerCmp3-7,Alibaba,141] := 0 
+[CustomerCmp3-7,Alibaba,142] := 0 
+[CustomerCmp3-7,Alibaba,143] := 0 
+[CustomerCmp3-7,Alibaba,144] := 1 
+[CustomerCmp3-7,Alibaba,145] := 0 
+[CustomerCmp3-7,Alibaba,146] := 0 
+[CustomerCmp3-7,Alibaba,147] := 0 
+[CustomerCmp3-7,Alibaba,148] := 0 
+[CustomerCmp3-7,Alibaba,149] := 0 
+[CustomerCmp3-7,Alibaba,150] := 0 
+[CustomerCmp3-7,Alibaba,151] := 0 
+[CustomerCmp3-7,Alibaba,152] := 0 
+[CustomerCmp3-7,Alibaba,153] := 0 
+[CustomerCmp3-7,Alibaba,154] := 0 
+[CustomerCmp3-7,Alibaba,155] := 0 
+[CustomerCmp3-7,Alibaba,156] := 0 
+[CustomerCmp3-7,Alibaba,157] := 0 
+[CustomerCmp3-7,Alibaba,158] := 0 
+[CustomerCmp3-7,Alibaba,159] := 0 
+[CustomerCmp3-7,Alibaba,160] := 0 
+[CustomerCmp3-7,Alibaba,161] := 0 
+[CustomerCmp3-7,Alibaba,162] := 0 
+[CustomerCmp3-7,Alibaba,163] := 0 
+[CustomerCmp3-7,Alibaba,164] := 0 
+[CustomerCmp3-7,Alibaba,165] := 0 
+[CustomerCmp3-7,Alibaba,166] := 0 
+[CustomerCmp3-7,Alibaba,167] := 0 
+[CustomerCmp3-7,Alibaba,168] := 0 
+[CustomerCmp3-7,Alibaba,169] := 0 
+[CustomerCmp3-7,Alibaba,170] := 0 
+[CustomerCmp3-7,Alibaba,171] := 0 
+[CustomerCmp3-7,Alibaba,172] := 0 
+[CustomerCmp3-7,Alibaba,173] := 0 
+[CustomerCmp3-7,Alibaba,174] := 0 
+[CustomerCmp3-7,Alibaba,175] := 0 
+[CustomerCmp3-7,Alibaba,176] := 0 
+[CustomerCmp3-7,Alibaba,177] := 0 
+[CustomerCmp3-7,Alibaba,178] := 0 
+[CustomerCmp3-7,Alibaba,179] := 0 
+[CustomerCmp3-7,Alibaba,180] := 0 
+[CustomerCmp3-7,Alibaba,181] := 0 
+[CustomerCmp3-7,Alibaba,182] := 0 
+[CustomerCmp3-7,Alibaba,183] := 0 
+[CustomerCmp3-7,Alibaba,184] := 0 
+[CustomerCmp3-7,Alibaba,185] := 0 
+[CustomerCmp3-7,Alibaba,186] := 0 
+[CustomerCmp3-7,Alibaba,187] := 0 
+[CustomerCmp3-7,Alibaba,188] := 0 
+[CustomerCmp3-7,Alibaba,189] := 0 
+[CustomerCmp3-7,Alibaba,190] := 0 
+[CustomerCmp3-7,Alibaba,191] := 0 
+[CustomerCmp3-7,Alibaba,192] := 0 
+[CustomerCmp3-7,Alibaba,193] := 0 
+[CustomerCmp3-7,Alibaba,194] := 0 
+[CustomerCmp3-7,Alibaba,195] := 0 
+[CustomerCmp3-7,Alibaba,196] := 0 
+[CustomerCmp3-7,Alibaba,197] := 0 
+[CustomerCmp3-7,Alibaba,198] := 0 
+[CustomerCmp3-7,Alibaba,199] := 0 
+[CustomerCmp3-7,Alibaba,200] := 0 
+[CustomerCmp3-7,Alibaba,201] := 0 
+[CustomerCmp3-7,Alibaba,202] := 0 
+[CustomerCmp3-7,Alibaba,203] := 0 
+[CustomerCmp3-7,Alibaba,204] := 0 
+[CustomerCmp3-7,Alibaba,205] := 0 
+[CustomerCmp3-7,Alibaba,206] := 0 
+[CustomerCmp3-7,Alibaba,207] := 0 
+[CustomerCmp3-7,Alibaba,208] := 0 
+[CustomerCmp3-7,Alibaba,209] := 0 
+[CustomerCmp3-7,Alibaba,210] := 1 
+[CustomerCmp3-7,Alibaba,211] := 0 
+[CustomerCmp3-7,Alibaba,212] := 0 
+[CustomerCmp3-7,Alibaba,213] := 0 
+[CustomerCmp3-7,Alibaba,214] := 0 
+[CustomerCmp3-7,Alibaba,215] := 0 
+[CustomerCmp3-7,Alibaba,216] := 0 
+[CustomerCmp3-7,Alibaba,217] := 0 
+[CustomerCmp3-7,Alibaba,218] := 0 
+[CustomerCmp3-7,Alibaba,219] := 0 
+[CustomerCmp3-7,Alibaba,220] := 0 
+[CustomerCmp3-7,Alibaba,221] := 0 
+[CustomerCmp3-7,Alibaba,222] := 0 
+[CustomerCmp3-7,Alibaba,223] := 0 
+[CustomerCmp3-7,Alibaba,224] := 0 
+[CustomerCmp3-7,Alibaba,225] := 0 
+[CustomerCmp3-7,Alibaba,226] := 0 
+[CustomerCmp3-7,Alibaba,227] := 0 
+[CustomerCmp3-7,Alibaba,228] := 0 
+[CustomerCmp3-7,Alibaba,229] := 0 
+[CustomerCmp3-7,Alibaba,230] := 0 
+[CustomerCmp3-7,Alibaba,231] := 1 
+[CustomerCmp3-7,Alibaba,232] := 0 
+[CustomerCmp3-7,Alibaba,233] := 0 
+[CustomerCmp3-7,Alibaba,234] := 0 
+[CustomerCmp3-7,Alibaba,235] := 0 
+[CustomerCmp3-7,Alibaba,236] := 0 
+[CustomerCmp3-7,Alibaba,237] := 0 
+[CustomerCmp3-7,Alibaba,238] := 0 
+[CustomerCmp3-7,Alibaba,239] := 0 
+[CustomerCmp3-7,Alibaba,240] := 0 
+[CustomerCmp3-7,Alibaba,241] := 0 
+[CustomerCmp3-7,Alibaba,242] := 0 
+[CustomerCmp3-7,Alibaba,243] := 0 
+[CustomerCmp3-7,Alibaba,244] := 0 
+[CustomerCmp3-7,Alibaba,245] := 0 
+[CustomerCmp3-7,Alibaba,246] := 0 
+[CustomerCmp3-7,Alibaba,247] := 0 
+[CustomerCmp3-7,Alibaba,248] := 0 
+[CustomerCmp3-7,Alibaba,249] := 0 
+[CustomerCmp3-7,Alibaba,250] := 0 
+[CustomerCmp3-7,Alibaba,251] := 0 
+[CustomerCmp3-7,Alibaba,252] := 0 
+[CustomerCmp3-7,Alibaba,253] := 0 
+[CustomerCmp3-7,Alibaba,254] := 0 
+[CustomerCmp3-7,Alibaba,255] := 0 
+[CustomerCmp3-7,Alibaba,256] := 0 
+[CustomerCmp3-7,Alibaba,257] := 0 
+[CustomerCmp3-7,Alibaba,258] := 0 
+[CustomerCmp3-7,Alibaba,259] := 0 
+[CustomerCmp3-7,Alibaba,260] := 0 
+[CustomerCmp3-7,Alibaba,261] := 0 
+[CustomerCmp3-7,Alibaba,262] := 0 
+[CustomerCmp3-7,Alibaba,263] := 0 
+[CustomerCmp3-7,Alibaba,264] := 1 
+[CustomerCmp3-7,Alibaba,265] := 0 
+[CustomerCmp3-7,Alibaba,266] := 0 
+[CustomerCmp3-7,Alibaba,267] := 0 
+[CustomerCmp3-7,Alibaba,268] := 0 
+[CustomerCmp3-7,Alibaba,269] := 0 
+[CustomerCmp3-7,Alibaba,270] := 0 
+[CustomerCmp3-7,Alibaba,271] := 0 
+[CustomerCmp3-7,Alibaba,272] := 0 
+[CustomerCmp3-7,Alibaba,273] := 0 
+[CustomerCmp3-7,Alibaba,274] := 0 
+[CustomerCmp3-7,Alibaba,275] := 0 
+[CustomerCmp3-7,Alibaba,276] := 0 
+[CustomerCmp3-7,Alibaba,277] := 0 
+[CustomerCmp3-7,Alibaba,278] := 0 
+[CustomerCmp3-7,Alibaba,279] := 0 
+[CustomerCmp3-7,Alibaba,280] := 0 
+[CustomerCmp3-7,Alibaba,281] := 0 
+[CustomerCmp3-7,Alibaba,282] := 0 
+[CustomerCmp3-7,Alibaba,283] := 0 
+[CustomerCmp3-7,Alibaba,284] := 0 
+[CustomerCmp3-7,Alibaba,285] := 0 
+[CustomerCmp3-7,Alibaba,286] := 0 
+[CustomerCmp3-7,Alibaba,287] := 0 
+[CustomerCmp3-7,Alibaba,288] := 1 
+[CustomerCmp3-7,Alibaba,289] := 0 
+[CustomerCmp3-7,Alibaba,290] := 0 
+[CustomerCmp3-7,Alibaba,291] := 0 
+[CustomerCmp3-7,Alibaba,292] := 0 
+[CustomerCmp3-7,Alibaba,293] := 0 
+[CustomerCmp3-7,Alibaba,294] := 0 
+[CustomerCmp3-7,Alibaba,295] := 0 
+[CustomerCmp3-7,Alibaba,296] := 0 
+[CustomerCmp3-7,Alibaba,297] := 0 
+[CustomerCmp3-7,Alibaba,298] := 0 
+[CustomerCmp3-7,Alibaba,299] := 0 
+[CustomerCmp3-7,Alibaba,300] := 0 
+[CustomerCmp3-7,Alibaba,301] := 0 
+[CustomerCmp3-7,Alibaba,302] := 0 
+[CustomerCmp3-7,Alibaba,303] := 0 
+[CustomerCmp3-7,Alibaba,304] := 0 
+[CustomerCmp3-7,Alibaba,305] := 0 
+[CustomerCmp3-7,Alibaba,306] := 0 
+[CustomerCmp3-7,Alibaba,307] := 0 
+[CustomerCmp3-7,Alibaba,308] := 0 
+[CustomerCmp3-7,Alibaba,309] := 0 
+[CustomerCmp3-7,Alibaba,310] := 0 
+[CustomerCmp3-7,Alibaba,311] := 0 
+[CustomerCmp3-7,Alibaba,312] := 0 
+[CustomerCmp3-7,Alibaba,313] := 0 
+[CustomerCmp3-7,Alibaba,314] := 0 
+[CustomerCmp3-7,Alibaba,315] := 0 
+[CustomerCmp3-7,Alibaba,316] := 0 
+[CustomerCmp3-7,Alibaba,317] := 0 
+[CustomerCmp3-7,Alibaba,318] := 0 
+[CustomerCmp3-7,Alibaba,319] := 0 
+[CustomerCmp3-7,Alibaba,320] := 0 
+[CustomerCmp3-7,Alibaba,321] := 0 
+[CustomerCmp3-7,Alibaba,322] := 0 
+[CustomerCmp3-7,Alibaba,323] := 0 
+[CustomerCmp3-7,Alibaba,324] := 0 
+[CustomerCmp3-7,Alibaba,325] := 0 
+[CustomerCmp3-7,Alibaba,326] := 0 
+[CustomerCmp3-7,Alibaba,327] := 0 
+[CustomerCmp3-7,Alibaba,328] := 0 
+[CustomerCmp3-7,Alibaba,329] := 0 
+[CustomerCmp3-7,Alibaba,330] := 0 
+[CustomerCmp3-7,Alibaba,331] := 0 
+[CustomerCmp3-7,Alibaba,332] := 0 
+[CustomerCmp3-7,Alibaba,333] := 0 
+[CustomerCmp3-7,Alibaba,334] := 0 
+[CustomerCmp3-7,Alibaba,335] := 0 
+[CustomerCmp3-7,Alibaba,336] := 0 
+[CustomerCmp3-7,Alibaba,337] := 0 
+[CustomerCmp3-7,Alibaba,338] := 0 
+[CustomerCmp3-7,Alibaba,339] := 0 
+[CustomerCmp3-7,Alibaba,340] := 0 
+[CustomerCmp3-7,Alibaba,341] := 0 
+[CustomerCmp3-7,Alibaba,342] := 0 
+[CustomerCmp3-7,Alibaba,343] := 0 
+[CustomerCmp3-7,Alibaba,344] := 0 
+[CustomerCmp3-7,Alibaba,345] := 0 
+[CustomerCmp3-7,Alibaba,346] := 0 
+[CustomerCmp3-7,Alibaba,347] := 0 
+[CustomerCmp3-7,Alibaba,348] := 0 
+[CustomerCmp3-7,Alibaba,349] := 0 
+[CustomerCmp3-7,Alibaba,350] := 1 
+[CustomerCmp3-7,Alibaba,351] := 0 
+[CustomerCmp3-7,Alibaba,352] := 0 
+[CustomerCmp3-7,Alibaba,353] := 0 
+[CustomerCmp3-7,Alibaba,354] := 0 
+[CustomerCmp3-7,Alibaba,355] := 0 
+[CustomerCmp3-7,Alibaba,356] := 0 
+[CustomerCmp3-7,Alibaba,357] := 0 
+[CustomerCmp3-7,Alibaba,358] := 0 
+[CustomerCmp3-7,Alibaba,359] := 0 
+[CustomerCmp3-7,Alibaba,360] := 0 
+[CustomerCmp3-7,Alibaba,361] := 0 
+[CustomerCmp3-7,Alibaba,362] := 0 
+[CustomerCmp3-7,Alibaba,363] := 0 
+[CustomerCmp3-7,Alibaba,364] := 0 
+[CustomerCmp3-7,Alibaba,365] := 0 
+[CustomerCmp3-7,Alibaba,366] := 0 
+[CustomerCmp3-7,Alibaba,367] := 0 
+[CustomerCmp3-7,Alibaba,368] := 0 
+[CustomerCmp3-7,Alibaba,369] := 0 
+[CustomerCmp3-7,Alibaba,370] := 0 
+[CustomerCmp3-7,Alibaba,371] := 0 
+[CustomerCmp3-7,Alibaba,372] := 0 
+[CustomerCmp3-7,Azure,1] := 0 
+[CustomerCmp3-7,Azure,2] := 0 
+[CustomerCmp3-7,Azure,3] := 0 
+[CustomerCmp3-7,Azure,4] := 0 
+[CustomerCmp3-7,Azure,5] := 0 
+[CustomerCmp3-7,Azure,6] := 0 
+[CustomerCmp3-7,Azure,7] := 0 
+[CustomerCmp3-7,Azure,8] := 0 
+[CustomerCmp3-7,Azure,9] := 0 
+[CustomerCmp3-7,Azure,10] := 0 
+[CustomerCmp3-7,Azure,11] := 0 
+[CustomerCmp3-7,Azure,12] := 0 
+[CustomerCmp3-7,Azure,13] := 0 
+[CustomerCmp3-7,Azure,14] := 0 
+[CustomerCmp3-7,Azure,15] := 0 
+[CustomerCmp3-7,Azure,16] := 0 
+[CustomerCmp3-7,Azure,17] := 0 
+[CustomerCmp3-7,Azure,18] := 0 
+[CustomerCmp3-7,Azure,19] := 0 
+[CustomerCmp3-7,Azure,20] := 0 
+[CustomerCmp3-7,Azure,21] := 0 
+[CustomerCmp3-7,Azure,22] := 0 
+[CustomerCmp3-7,Azure,23] := 1 
+[CustomerCmp3-7,Azure,24] := 0 
+[CustomerCmp3-7,Azure,25] := 0 
+[CustomerCmp3-7,Azure,26] := 0 
+[CustomerCmp3-7,Azure,27] := 0 
+[CustomerCmp3-7,Azure,28] := 0 
+[CustomerCmp3-7,Azure,29] := 0 
+[CustomerCmp3-2,Google,1] := 0 
+[CustomerCmp3-2,Google,2] := 0 
+[CustomerCmp3-2,Google,3] := 0 
+[CustomerCmp3-2,Google,4] := 0 
+[CustomerCmp3-2,Google,5] := 0 
+[CustomerCmp3-2,Google,6] := 0 
+[CustomerCmp3-2,Google,7] := 0 
+[CustomerCmp3-2,Google,8] := 0 
+[CustomerCmp3-2,Google,9] := 1 
+[CustomerCmp3-2,Google,10] := 1 
+[CustomerCmp3-2,Google,11] := 0 
+[CustomerCmp3-2,Google,12] := 0 
+[CustomerCmp3-2,Google,13] := 0 
+[CustomerCmp3-2,Google,14] := 0 
+[CustomerCmp3-2,Google,15] := 0 
+[CustomerCmp3-2,Google,16] := 0 
+[CustomerCmp3-2,Google,17] := 0 
+[CustomerCmp3-2,Google,18] := 0 
+[CustomerCmp3-2,Google,19] := 0 
+[CustomerCmp3-2,Google,20] := 0 
+[CustomerCmp3-2,Google,21] := 0 
+[CustomerCmp3-2,Google,22] := 0 
+[CustomerCmp3-2,Google,23] := 0 
+[CustomerCmp3-2,Google,24] := 0 
+[CustomerCmp3-2,Google,25] := 0 
+[CustomerCmp3-2,Google,26] := 0 
+[CustomerCmp3-2,Google,27] := 0 
+[CustomerCmp3-2,Google,28] := 0 
+[CustomerCmp3-2,Google,29] := 0 
+[CustomerCmp3-2,Google,30] := 0 
+[CustomerCmp3-2,Google,31] := 0 
+[CustomerCmp3-2,Google,32] := 0 
+[CustomerCmp3-2,Google,33] := 0 
+[CustomerCmp3-2,Google,34] := 0 
+[CustomerCmp3-2,Google,35] := 0 
+[CustomerCmp3-2,Google,36] := 0 
+[CustomerCmp3-2,Google,37] := 1 
+[CustomerCmp3-2,Google,38] := 1 
+[CustomerCmp3-2,Google,39] := 0 
+[CustomerCmp3-2,Google,40] := 0 
+[CustomerCmp3-2,Google,41] := 0 
+[CustomerCmp3-2,Google,42] := 0 
+[CustomerCmp3-2,Google,43] := 0 
+[CustomerCmp3-2,Google,44] := 0 
+[CustomerCmp3-2,Google,45] := 0 
+[CustomerCmp3-2,Google,46] := 0 
+[CustomerCmp3-2,Google,47] := 0 
+[CustomerCmp3-2,Google,48] := 0 
+[CustomerCmp3-2,Google,49] := 0 
+[CustomerCmp3-2,Google,50] := 0 
+[CustomerCmp3-2,Google,51] := 0 
+[CustomerCmp3-2,Google,52] := 0 
+[CustomerCmp3-2,Google,53] := 0 
+[CustomerCmp3-2,Google,54] := 0 
+[CustomerCmp3-2,Google,55] := 0 
+[CustomerCmp3-2,Google,56] := 0 
+[CustomerCmp3-2,Google,57] := 0 
+[CustomerCmp3-2,Google,58] := 0 
+[CustomerCmp3-2,Google,59] := 0 
+[CustomerCmp3-2,Google,60] := 0 
+[CustomerCmp3-2,Google,61] := 0 
+[CustomerCmp3-2,Google,62] := 0 
+[CustomerCmp3-2,Google,63] := 0 
+[CustomerCmp3-2,Google,64] := 0 
+[CustomerCmp3-2,Google,65] := 0 
+[CustomerCmp3-2,Google,66] := 0 
+[CustomerCmp3-2,Google,67] := 0 
+[CustomerCmp3-2,Google,68] := 0 
+[CustomerCmp3-2,Google,69] := 0 
+[CustomerCmp3-2,Google,70] := 0 
+[CustomerCmp3-2,Google,71] := 0 
+[CustomerCmp3-2,Google,72] := 0 
+[CustomerCmp3-2,Google,73] := 0 
+[CustomerCmp3-2,Google,74] := 0 
+[CustomerCmp3-2,Google,75] := 0 
+[CustomerCmp3-2,Google,76] := 0 
+[CustomerCmp3-2,Google,77] := 0 
+[CustomerCmp3-2,Google,78] := 0 
+[CustomerCmp3-2,Google,79] := 0 
+[CustomerCmp3-2,Google,80] := 0 
+[CustomerCmp3-2,Google,81] := 0 
+[CustomerCmp3-2,Google,82] := 0 
+[CustomerCmp3-2,Google,83] := 0 
+[CustomerCmp3-2,Google,84] := 0 
+[CustomerCmp3-2,Google,85] := 0 
+[CustomerCmp3-2,Google,86] := 0 
+[CustomerCmp3-2,Google,87] := 0 
+[CustomerCmp3-2,Google,88] := 0 
+[CustomerCmp3-2,Google,89] := 0 
+[CustomerCmp3-2,Amz,1] := 0 
+[CustomerCmp3-2,Amz,2] := 0 
+[CustomerCmp3-2,Amz,3] := 0 
+[CustomerCmp3-2,Amz,4] := 0 
+[CustomerCmp3-2,Amz,5] := 0 
+[CustomerCmp3-2,Amz,6] := 0 
+[CustomerCmp3-2,Amz,7] := 0 
+[CustomerCmp3-2,Amz,8] := 0 
+[CustomerCmp3-2,Amz,9] := 0 
+[CustomerCmp3-2,Amz,10] := 0 
+[CustomerCmp3-2,Amz,11] := 0 
+[CustomerCmp3-2,Amz,12] := 0 
+[CustomerCmp3-2,Amz,13] := 0 
+[CustomerCmp3-2,Amz,14] := 0 
+[CustomerCmp3-2,Amz,15] := 0 
+[CustomerCmp3-2,Amz,16] := 0 
+[CustomerCmp3-2,Amz,17] := 0 
+[CustomerCmp3-2,Amz,18] := 0 
+[CustomerCmp3-2,Amz,19] := 0 
+[CustomerCmp3-2,Amz,20] := 0 
+[CustomerCmp3-2,Amz,21] := 0 
+[CustomerCmp3-2,Amz,22] := 0 
+[CustomerCmp3-2,Amz,23] := 0 
+[CustomerCmp3-2,Amz,24] := 0 
+[CustomerCmp3-2,Amz,25] := 0 
+[CustomerCmp3-2,Amz,26] := 0 
+[CustomerCmp3-2,Amz,27] := 0 
+[CustomerCmp3-2,Amz,28] := 0 
+[CustomerCmp3-2,Amz,29] := 0 
+[CustomerCmp3-2,Amz,30] := 0 
+[CustomerCmp3-2,Amz,31] := 0 
+[CustomerCmp3-2,Amz,32] := 0 
+[CustomerCmp3-2,Amz,33] := 0 
+[CustomerCmp3-2,Amz,34] := 0 
+[CustomerCmp3-2,Amz,35] := 0 
+[CustomerCmp3-2,Amz,36] := 0 
+[CustomerCmp3-2,Amz,37] := 0 
+[CustomerCmp3-2,Amz,38] := 0 
+[CustomerCmp3-2,Amz,39] := 0 
+[CustomerCmp3-2,Amz,40] := 0 
+[CustomerCmp3-2,Amz,41] := 0 
+[CustomerCmp3-2,Amz,42] := 0 
+[CustomerCmp3-2,Amz,43] := 0 
+[CustomerCmp3-2,Amz,44] := 0 
+[CustomerCmp3-2,Amz,45] := 0 
+[CustomerCmp3-2,Amz,46] := 0 
+[CustomerCmp3-2,Amz,47] := 0 
+[CustomerCmp3-2,Amz,48] := 0 
+[CustomerCmp3-2,Amz,49] := 0 
+[CustomerCmp3-2,Amz,50] := 0 
+[CustomerCmp3-2,Amz,51] := 0 
+[CustomerCmp3-2,Amz,52] := 0 
+[CustomerCmp3-2,Amz,53] := 0 
+[CustomerCmp3-2,Amz,54] := 0 
+[CustomerCmp3-2,Amz,55] := 0 
+[CustomerCmp3-2,Amz,56] := 0 
+[CustomerCmp3-2,Amz,57] := 0 
+[CustomerCmp3-2,Amz,58] := 0 
+[CustomerCmp3-2,Amz,59] := 0 
+[CustomerCmp3-2,Amz,60] := 0 
+[CustomerCmp3-2,Amz,61] := 0 
+[CustomerCmp3-2,Amz,62] := 0 
+[CustomerCmp3-2,Amz,63] := 0 
+[CustomerCmp3-2,Amz,64] := 0 
+[CustomerCmp3-2,Amz,65] := 0 
+[CustomerCmp3-2,Amz,66] := 0 
+[CustomerCmp3-2,Amz,67] := 0 
+[CustomerCmp3-2,Amz,68] := 0 
+[CustomerCmp3-2,Amz,69] := 0 
+[CustomerCmp3-2,Amz,70] := 0 
+[CustomerCmp3-2,Amz,71] := 0 
+[CustomerCmp3-2,Amz,72] := 0 
+[CustomerCmp3-2,Amz,73] := 0 
+[CustomerCmp3-2,Amz,74] := 0 
+[CustomerCmp3-2,Amz,75] := 0 
+[CustomerCmp3-2,Amz,76] := 0 
+[CustomerCmp3-2,Amz,77] := 0 
+[CustomerCmp3-2,Amz,78] := 0 
+[CustomerCmp3-2,Amz,79] := 0 
+[CustomerCmp3-2,Amz,80] := 0 
+[CustomerCmp3-2,Amz,81] := 0 
+[CustomerCmp3-2,Amz,82] := 0 
+[CustomerCmp3-2,Amz,83] := 0 
+[CustomerCmp3-2,Amz,84] := 0 
+[CustomerCmp3-2,Amz,85] := 0 
+[CustomerCmp3-2,Amz,86] := 0 
+[CustomerCmp3-2,Amz,87] := 0 
+[CustomerCmp3-2,Amz,88] := 0 
+[CustomerCmp3-2,Amz,89] := 0 
+[CustomerCmp3-2,Amz,90] := 0 
+[CustomerCmp3-2,Amz,91] := 0 
+[CustomerCmp3-2,Amz,92] := 0 
+[CustomerCmp3-2,Amz,93] := 0 
+[CustomerCmp3-2,Amz,94] := 0 
+[CustomerCmp3-2,Alibaba,1] := 0 
+[CustomerCmp3-2,Alibaba,2] := 0 
+[CustomerCmp3-2,Alibaba,3] := 0 
+[CustomerCmp3-2,Alibaba,4] := 0 
+[CustomerCmp3-2,Alibaba,5] := 0 
+[CustomerCmp3-2,Alibaba,6] := 0 
+[CustomerCmp3-2,Alibaba,7] := 0 
+[CustomerCmp3-2,Alibaba,8] := 0 
+[CustomerCmp3-2,Alibaba,9] := 1 
+[CustomerCmp3-2,Alibaba,10] := 1 
+[CustomerCmp3-2,Alibaba,11] := 0 
+[CustomerCmp3-2,Alibaba,12] := 0 
+[CustomerCmp3-2,Alibaba,13] := 0 
+[CustomerCmp3-2,Alibaba,14] := 0 
+[CustomerCmp3-2,Alibaba,15] := 0 
+[CustomerCmp3-2,Alibaba,16] := 0 
+[CustomerCmp3-2,Alibaba,17] := 0 
+[CustomerCmp3-2,Alibaba,18] := 0 
+[CustomerCmp3-2,Alibaba,19] := 0 
+[CustomerCmp3-2,Alibaba,20] := 0 
+[CustomerCmp3-2,Alibaba,21] := 0 
+[CustomerCmp3-2,Alibaba,22] := 0 
+[CustomerCmp3-2,Alibaba,23] := 0 
+[CustomerCmp3-2,Alibaba,24] := 0 
+[CustomerCmp3-2,Alibaba,25] := 0 
+[CustomerCmp3-2,Alibaba,26] := 0 
+[CustomerCmp3-2,Alibaba,27] := 0 
+[CustomerCmp3-2,Alibaba,28] := 0 
+[CustomerCmp3-2,Alibaba,29] := 0 
+[CustomerCmp3-2,Alibaba,30] := 0 
+[CustomerCmp3-2,Alibaba,31] := 0 
+[CustomerCmp3-2,Alibaba,32] := 0 
+[CustomerCmp3-2,Alibaba,33] := 0 
+[CustomerCmp3-2,Alibaba,34] := 0 
+[CustomerCmp3-2,Alibaba,35] := 0 
+[CustomerCmp3-2,Alibaba,36] := 0 
+[CustomerCmp3-2,Alibaba,37] := 1 
+[CustomerCmp3-2,Alibaba,38] := 1 
+[CustomerCmp3-2,Alibaba,39] := 0 
+[CustomerCmp3-2,Alibaba,40] := 0 
+[CustomerCmp3-2,Alibaba,41] := 0 
+[CustomerCmp3-2,Alibaba,42] := 0 
+[CustomerCmp3-2,Alibaba,43] := 0 
+[CustomerCmp3-2,Alibaba,44] := 0 
+[CustomerCmp3-2,Alibaba,45] := 0 
+[CustomerCmp3-2,Alibaba,46] := 0 
+[CustomerCmp3-2,Alibaba,47] := 0 
+[CustomerCmp3-2,Alibaba,48] := 0 
+[CustomerCmp3-2,Alibaba,49] := 0 
+[CustomerCmp3-2,Alibaba,50] := 0 
+[CustomerCmp3-2,Alibaba,51] := 0 
+[CustomerCmp3-2,Alibaba,52] := 0 
+[CustomerCmp3-2,Alibaba,53] := 0 
+[CustomerCmp3-2,Alibaba,54] := 0 
+[CustomerCmp3-2,Alibaba,55] := 0 
+[CustomerCmp3-2,Alibaba,56] := 0 
+[CustomerCmp3-2,Alibaba,57] := 0 
+[CustomerCmp3-2,Alibaba,58] := 0 
+[CustomerCmp3-2,Alibaba,59] := 0 
+[CustomerCmp3-2,Alibaba,60] := 0 
+[CustomerCmp3-2,Alibaba,61] := 0 
+[CustomerCmp3-2,Alibaba,62] := 0 
+[CustomerCmp3-2,Alibaba,63] := 0 
+[CustomerCmp3-2,Alibaba,64] := 0 
+[CustomerCmp3-2,Alibaba,65] := 0 
+[CustomerCmp3-2,Alibaba,66] := 0 
+[CustomerCmp3-2,Alibaba,67] := 0 
+[CustomerCmp3-2,Alibaba,68] := 0 
+[CustomerCmp3-2,Alibaba,69] := 0 
+[CustomerCmp3-2,Alibaba,70] := 0 
+[CustomerCmp3-2,Alibaba,71] := 0 
+[CustomerCmp3-2,Alibaba,72] := 0 
+[CustomerCmp3-2,Alibaba,73] := 0 
+[CustomerCmp3-2,Alibaba,74] := 0 
+[CustomerCmp3-2,Alibaba,75] := 0 
+[CustomerCmp3-2,Alibaba,76] := 0 
+[CustomerCmp3-2,Alibaba,77] := 0 
+[CustomerCmp3-2,Alibaba,78] := 0 
+[CustomerCmp3-2,Alibaba,79] := 0 
+[CustomerCmp3-2,Alibaba,80] := 0 
+[CustomerCmp3-2,Alibaba,81] := 0 
+[CustomerCmp3-2,Alibaba,82] := 0 
+[CustomerCmp3-2,Alibaba,83] := 0 
+[CustomerCmp3-2,Alibaba,84] := 0 
+[CustomerCmp3-2,Alibaba,85] := 0 
+[CustomerCmp3-2,Alibaba,86] := 0 
+[CustomerCmp3-2,Alibaba,87] := 0 
+[CustomerCmp3-2,Alibaba,88] := 0 
+[CustomerCmp3-2,Alibaba,89] := 0 
+[CustomerCmp3-2,Alibaba,90] := 0 
+[CustomerCmp3-2,Alibaba,91] := 0 
+[CustomerCmp3-2,Alibaba,92] := 0 
+[CustomerCmp3-2,Alibaba,93] := 0 
+[CustomerCmp3-2,Alibaba,94] := 0 
+[CustomerCmp3-2,Alibaba,95] := 0 
+[CustomerCmp3-2,Alibaba,96] := 0 
+[CustomerCmp3-2,Alibaba,97] := 0 
+[CustomerCmp3-2,Alibaba,98] := 0 
+[CustomerCmp3-2,Alibaba,99] := 0 
+[CustomerCmp3-2,Alibaba,100] := 0 
+[CustomerCmp3-2,Alibaba,101] := 0 
+[CustomerCmp3-2,Alibaba,102] := 0 
+[CustomerCmp3-2,Alibaba,103] := 0 
+[CustomerCmp3-2,Alibaba,104] := 0 
+[CustomerCmp3-2,Alibaba,105] := 0 
+[CustomerCmp3-2,Alibaba,106] := 0 
+[CustomerCmp3-2,Alibaba,107] := 0 
+[CustomerCmp3-2,Alibaba,108] := 0 
+[CustomerCmp3-2,Alibaba,109] := 0 
+[CustomerCmp3-2,Alibaba,110] := 0 
+[CustomerCmp3-2,Alibaba,111] := 0 
+[CustomerCmp3-2,Alibaba,112] := 0 
+[CustomerCmp3-2,Alibaba,113] := 0 
+[CustomerCmp3-2,Alibaba,114] := 0 
+[CustomerCmp3-2,Alibaba,115] := 0 
+[CustomerCmp3-2,Alibaba,116] := 0 
+[CustomerCmp3-2,Alibaba,117] := 1 
+[CustomerCmp3-2,Alibaba,118] := 1 
+[CustomerCmp3-2,Alibaba,119] := 0 
+[CustomerCmp3-2,Alibaba,120] := 0 
+[CustomerCmp3-2,Alibaba,121] := 0 
+[CustomerCmp3-2,Alibaba,122] := 0 
+[CustomerCmp3-2,Alibaba,123] := 0 
+[CustomerCmp3-2,Alibaba,124] := 0 
+[CustomerCmp3-2,Alibaba,125] := 0 
+[CustomerCmp3-2,Alibaba,126] := 0 
+[CustomerCmp3-2,Alibaba,127] := 0 
+[CustomerCmp3-2,Alibaba,128] := 0 
+[CustomerCmp3-2,Alibaba,129] := 0 
+[CustomerCmp3-2,Alibaba,130] := 0 
+[CustomerCmp3-2,Alibaba,131] := 0 
+[CustomerCmp3-2,Alibaba,132] := 0 
+[CustomerCmp3-2,Alibaba,133] := 0 
+[CustomerCmp3-2,Alibaba,134] := 0 
+[CustomerCmp3-2,Alibaba,135] := 0 
+[CustomerCmp3-2,Alibaba,136] := 0 
+[CustomerCmp3-2,Alibaba,137] := 0 
+[CustomerCmp3-2,Alibaba,138] := 0 
+[CustomerCmp3-2,Alibaba,139] := 0 
+[CustomerCmp3-2,Alibaba,140] := 0 
+[CustomerCmp3-2,Alibaba,141] := 0 
+[CustomerCmp3-2,Alibaba,142] := 0 
+[CustomerCmp3-2,Alibaba,143] := 0 
+[CustomerCmp3-2,Alibaba,144] := 0 
+[CustomerCmp3-2,Alibaba,145] := 0 
+[CustomerCmp3-2,Alibaba,146] := 0 
+[CustomerCmp3-2,Alibaba,147] := 0 
+[CustomerCmp3-2,Alibaba,148] := 0 
+[CustomerCmp3-2,Alibaba,149] := 0 
+[CustomerCmp3-2,Alibaba,150] := 0 
+[CustomerCmp3-2,Alibaba,151] := 0 
+[CustomerCmp3-2,Alibaba,152] := 0 
+[CustomerCmp3-2,Alibaba,153] := 0 
+[CustomerCmp3-2,Alibaba,154] := 0 
+[CustomerCmp3-2,Alibaba,155] := 0 
+[CustomerCmp3-2,Alibaba,156] := 0 
+[CustomerCmp3-2,Alibaba,157] := 0 
+[CustomerCmp3-2,Alibaba,158] := 0 
+[CustomerCmp3-2,Alibaba,159] := 0 
+[CustomerCmp3-2,Alibaba,160] := 0 
+[CustomerCmp3-2,Alibaba,161] := 0 
+[CustomerCmp3-2,Alibaba,162] := 0 
+[CustomerCmp3-2,Alibaba,163] := 0 
+[CustomerCmp3-2,Alibaba,164] := 0 
+[CustomerCmp3-2,Alibaba,165] := 0 
+[CustomerCmp3-2,Alibaba,166] := 0 
+[CustomerCmp3-2,Alibaba,167] := 0 
+[CustomerCmp3-2,Alibaba,168] := 0 
+[CustomerCmp3-2,Alibaba,169] := 0 
+[CustomerCmp3-2,Alibaba,170] := 0 
+[CustomerCmp3-2,Alibaba,171] := 0 
+[CustomerCmp3-2,Alibaba,172] := 0 
+[CustomerCmp3-2,Alibaba,173] := 0 
+[CustomerCmp3-2,Alibaba,174] := 0 
+[CustomerCmp3-2,Alibaba,175] := 0 
+[CustomerCmp3-2,Alibaba,176] := 0 
+[CustomerCmp3-2,Alibaba,177] := 0 
+[CustomerCmp3-2,Alibaba,178] := 0 
+[CustomerCmp3-2,Alibaba,179] := 0 
+[CustomerCmp3-2,Alibaba,180] := 0 
+[CustomerCmp3-2,Alibaba,181] := 0 
+[CustomerCmp3-2,Alibaba,182] := 0 
+[CustomerCmp3-2,Alibaba,183] := 0 
+[CustomerCmp3-2,Alibaba,184] := 0 
+[CustomerCmp3-2,Alibaba,185] := 0 
+[CustomerCmp3-2,Alibaba,186] := 0 
+[CustomerCmp3-2,Alibaba,187] := 0 
+[CustomerCmp3-2,Alibaba,188] := 0 
+[CustomerCmp3-2,Alibaba,189] := 0 
+[CustomerCmp3-2,Alibaba,190] := 0 
+[CustomerCmp3-2,Alibaba,191] := 0 
+[CustomerCmp3-2,Alibaba,192] := 0 
+[CustomerCmp3-2,Alibaba,193] := 0 
+[CustomerCmp3-2,Alibaba,194] := 0 
+[CustomerCmp3-2,Alibaba,195] := 0 
+[CustomerCmp3-2,Alibaba,196] := 0 
+[CustomerCmp3-2,Alibaba,197] := 0 
+[CustomerCmp3-2,Alibaba,198] := 0 
+[CustomerCmp3-2,Alibaba,199] := 0 
+[CustomerCmp3-2,Alibaba,200] := 0 
+[CustomerCmp3-2,Alibaba,201] := 0 
+[CustomerCmp3-2,Alibaba,202] := 0 
+[CustomerCmp3-2,Alibaba,203] := 0 
+[CustomerCmp3-2,Alibaba,204] := 0 
+[CustomerCmp3-2,Alibaba,205] := 0 
+[CustomerCmp3-2,Alibaba,206] := 0 
+[CustomerCmp3-2,Alibaba,207] := 0 
+[CustomerCmp3-2,Alibaba,208] := 0 
+[CustomerCmp3-2,Alibaba,209] := 0 
+[CustomerCmp3-2,Alibaba,210] := 0 
+[CustomerCmp3-2,Alibaba,211] := 0 
+[CustomerCmp3-2,Alibaba,212] := 0 
+[CustomerCmp3-2,Alibaba,213] := 0 
+[CustomerCmp3-2,Alibaba,214] := 0 
+[CustomerCmp3-2,Alibaba,215] := 0 
+[CustomerCmp3-2,Alibaba,216] := 0 
+[CustomerCmp3-2,Alibaba,217] := 1 
+[CustomerCmp3-2,Alibaba,218] := 0 
+[CustomerCmp3-2,Alibaba,219] := 0 
+[CustomerCmp3-2,Alibaba,220] := 0 
+[CustomerCmp3-2,Alibaba,221] := 0 
+[CustomerCmp3-2,Alibaba,222] := 0 
+[CustomerCmp3-2,Alibaba,223] := 0 
+[CustomerCmp3-2,Alibaba,224] := 0 
+[CustomerCmp3-2,Alibaba,225] := 0 
+[CustomerCmp3-2,Alibaba,226] := 0 
+[CustomerCmp3-2,Alibaba,227] := 0 
+[CustomerCmp3-2,Alibaba,228] := 0 
+[CustomerCmp3-2,Alibaba,229] := 0 
+[CustomerCmp3-2,Alibaba,230] := 0 
+[CustomerCmp3-2,Alibaba,231] := 0 
+[CustomerCmp3-2,Alibaba,232] := 0 
+[CustomerCmp3-2,Alibaba,233] := 0 
+[CustomerCmp3-2,Alibaba,234] := 0 
+[CustomerCmp3-2,Alibaba,235] := 0 
+[CustomerCmp3-2,Alibaba,236] := 0 
+[CustomerCmp3-2,Alibaba,237] := 0 
+[CustomerCmp3-2,Alibaba,238] := 0 
+[CustomerCmp3-2,Alibaba,239] := 0 
+[CustomerCmp3-2,Alibaba,240] := 0 
+[CustomerCmp3-2,Alibaba,241] := 0 
+[CustomerCmp3-2,Alibaba,242] := 0 
+[CustomerCmp3-2,Alibaba,243] := 0 
+[CustomerCmp3-2,Alibaba,244] := 0 
+[CustomerCmp3-2,Alibaba,245] := 0 
+[CustomerCmp3-2,Alibaba,246] := 0 
+[CustomerCmp3-2,Alibaba,247] := 0 
+[CustomerCmp3-2,Alibaba,248] := 0 
+[CustomerCmp3-2,Alibaba,249] := 0 
+[CustomerCmp3-2,Alibaba,250] := 0 
+[CustomerCmp3-2,Alibaba,251] := 0 
+[CustomerCmp3-2,Alibaba,252] := 0 
+[CustomerCmp3-2,Alibaba,253] := 0 
+[CustomerCmp3-2,Alibaba,254] := 0 
+[CustomerCmp3-2,Alibaba,255] := 0 
+[CustomerCmp3-2,Alibaba,256] := 0 
+[CustomerCmp3-2,Alibaba,257] := 0 
+[CustomerCmp3-2,Alibaba,258] := 0 
+[CustomerCmp3-2,Alibaba,259] := 0 
+[CustomerCmp3-2,Alibaba,260] := 0 
+[CustomerCmp3-2,Alibaba,261] := 0 
+[CustomerCmp3-2,Alibaba,262] := 0 
+[CustomerCmp3-2,Alibaba,263] := 0 
+[CustomerCmp3-2,Alibaba,264] := 0 
+[CustomerCmp3-2,Alibaba,265] := 1 
+[CustomerCmp3-2,Alibaba,266] := 0 
+[CustomerCmp3-2,Alibaba,267] := 0 
+[CustomerCmp3-2,Alibaba,268] := 0 
+[CustomerCmp3-2,Alibaba,269] := 0 
+[CustomerCmp3-2,Alibaba,270] := 1 
+[CustomerCmp3-2,Alibaba,271] := 0 
+[CustomerCmp3-2,Alibaba,272] := 0 
+[CustomerCmp3-2,Alibaba,273] := 0 
+[CustomerCmp3-2,Alibaba,274] := 0 
+[CustomerCmp3-2,Alibaba,275] := 0 
+[CustomerCmp3-2,Alibaba,276] := 0 
+[CustomerCmp3-2,Alibaba,277] := 0 
+[CustomerCmp3-2,Alibaba,278] := 0 
+[CustomerCmp3-2,Alibaba,279] := 0 
+[CustomerCmp3-2,Alibaba,280] := 0 
+[CustomerCmp3-2,Alibaba,281] := 0 
+[CustomerCmp3-2,Alibaba,282] := 0 
+[CustomerCmp3-2,Alibaba,283] := 0 
+[CustomerCmp3-2,Alibaba,284] := 0 
+[CustomerCmp3-2,Alibaba,285] := 0 
+[CustomerCmp3-2,Alibaba,286] := 0 
+[CustomerCmp3-2,Alibaba,287] := 0 
+[CustomerCmp3-2,Alibaba,288] := 0 
+[CustomerCmp3-2,Alibaba,289] := 0 
+[CustomerCmp3-2,Alibaba,290] := 0 
+[CustomerCmp3-2,Alibaba,291] := 0 
+[CustomerCmp3-2,Alibaba,292] := 0 
+[CustomerCmp3-2,Alibaba,293] := 0 
+[CustomerCmp3-2,Alibaba,294] := 0 
+[CustomerCmp3-2,Alibaba,295] := 0 
+[CustomerCmp3-2,Alibaba,296] := 0 
+[CustomerCmp3-2,Alibaba,297] := 0 
+[CustomerCmp3-2,Alibaba,298] := 0 
+[CustomerCmp3-2,Alibaba,299] := 0 
+[CustomerCmp3-2,Alibaba,300] := 0 
+[CustomerCmp3-2,Alibaba,301] := 0 
+[CustomerCmp3-2,Alibaba,302] := 0 
+[CustomerCmp3-2,Alibaba,303] := 0 
+[CustomerCmp3-2,Alibaba,304] := 0 
+[CustomerCmp3-2,Alibaba,305] := 0 
+[CustomerCmp3-2,Alibaba,306] := 0 
+[CustomerCmp3-2,Alibaba,307] := 0 
+[CustomerCmp3-2,Alibaba,308] := 0 
+[CustomerCmp3-2,Alibaba,309] := 0 
+[CustomerCmp3-2,Alibaba,310] := 0 
+[CustomerCmp3-2,Alibaba,311] := 0 
+[CustomerCmp3-2,Alibaba,312] := 0 
+[CustomerCmp3-2,Alibaba,313] := 0 
+[CustomerCmp3-2,Alibaba,314] := 0 
+[CustomerCmp3-2,Alibaba,315] := 0 
+[CustomerCmp3-2,Alibaba,316] := 0 
+[CustomerCmp3-2,Alibaba,317] := 0 
+[CustomerCmp3-2,Alibaba,318] := 0 
+[CustomerCmp3-2,Alibaba,319] := 0 
+[CustomerCmp3-2,Alibaba,320] := 0 
+[CustomerCmp3-2,Alibaba,321] := 0 
+[CustomerCmp3-2,Alibaba,322] := 0 
+[CustomerCmp3-2,Alibaba,323] := 0 
+[CustomerCmp3-2,Alibaba,324] := 0 
+[CustomerCmp3-2,Alibaba,325] := 0 
+[CustomerCmp3-2,Alibaba,326] := 0 
+[CustomerCmp3-2,Alibaba,327] := 0 
+[CustomerCmp3-2,Alibaba,328] := 0 
+[CustomerCmp3-2,Alibaba,329] := 0 
+[CustomerCmp3-2,Alibaba,330] := 1 
+[CustomerCmp3-2,Alibaba,331] := 1 
+[CustomerCmp3-2,Alibaba,332] := 0 
+[CustomerCmp3-2,Alibaba,333] := 0 
+[CustomerCmp3-2,Alibaba,334] := 0 
+[CustomerCmp3-2,Alibaba,335] := 0 
+[CustomerCmp3-2,Alibaba,336] := 0 
+[CustomerCmp3-2,Alibaba,337] := 0 
+[CustomerCmp3-2,Alibaba,338] := 0 
+[CustomerCmp3-2,Alibaba,339] := 0 
+[CustomerCmp3-2,Alibaba,340] := 0 
+[CustomerCmp3-2,Alibaba,341] := 0 
+[CustomerCmp3-2,Alibaba,342] := 0 
+[CustomerCmp3-2,Alibaba,343] := 0 
+[CustomerCmp3-2,Alibaba,344] := 0 
+[CustomerCmp3-2,Alibaba,345] := 0 
+[CustomerCmp3-2,Alibaba,346] := 0 
+[CustomerCmp3-2,Alibaba,347] := 0 
+[CustomerCmp3-2,Alibaba,348] := 0 
+[CustomerCmp3-2,Alibaba,349] := 0 
+[CustomerCmp3-2,Alibaba,350] := 0 
+[CustomerCmp3-2,Alibaba,351] := 0 
+[CustomerCmp3-2,Alibaba,352] := 0 
+[CustomerCmp3-2,Alibaba,353] := 0 
+[CustomerCmp3-2,Alibaba,354] := 0 
+[CustomerCmp3-2,Alibaba,355] := 0 
+[CustomerCmp3-2,Alibaba,356] := 0 
+[CustomerCmp3-2,Alibaba,357] := 0 
+[CustomerCmp3-2,Alibaba,358] := 0 
+[CustomerCmp3-2,Alibaba,359] := 0 
+[CustomerCmp3-2,Alibaba,360] := 0 
+[CustomerCmp3-2,Alibaba,361] := 0 
+[CustomerCmp3-2,Alibaba,362] := 0 
+[CustomerCmp3-2,Alibaba,363] := 0 
+[CustomerCmp3-2,Alibaba,364] := 0 
+[CustomerCmp3-2,Alibaba,365] := 0 
+[CustomerCmp3-2,Alibaba,366] := 0 
+[CustomerCmp3-2,Alibaba,367] := 0 
+[CustomerCmp3-2,Alibaba,368] := 0 
+[CustomerCmp3-2,Alibaba,369] := 0 
+[CustomerCmp3-2,Alibaba,370] := 0 
+[CustomerCmp3-2,Alibaba,371] := 0 
+[CustomerCmp3-2,Alibaba,372] := 0 
+[CustomerCmp3-2,Azure,1] := 0 
+[CustomerCmp3-2,Azure,2] := 0 
+[CustomerCmp3-2,Azure,3] := 0 
+[CustomerCmp3-2,Azure,4] := 0 
+[CustomerCmp3-2,Azure,5] := 0 
+[CustomerCmp3-2,Azure,6] := 0 
+[CustomerCmp3-2,Azure,7] := 0 
+[CustomerCmp3-2,Azure,8] := 0 
+[CustomerCmp3-2,Azure,9] := 0 
+[CustomerCmp3-2,Azure,10] := 0 
+[CustomerCmp3-2,Azure,11] := 0 
+[CustomerCmp3-2,Azure,12] := 0 
+[CustomerCmp3-2,Azure,13] := 0 
+[CustomerCmp3-2,Azure,14] := 0 
+[CustomerCmp3-2,Azure,15] := 0 
+[CustomerCmp3-2,Azure,16] := 0 
+[CustomerCmp3-2,Azure,17] := 0 
+[CustomerCmp3-2,Azure,18] := 0 
+[CustomerCmp3-2,Azure,19] := 0 
+[CustomerCmp3-2,Azure,20] := 0 
+[CustomerCmp3-2,Azure,21] := 0 
+[CustomerCmp3-2,Azure,22] := 0 
+[CustomerCmp3-2,Azure,23] := 0 
+[CustomerCmp3-2,Azure,24] := 1 
+[CustomerCmp3-2,Azure,25] := 0 
+[CustomerCmp3-2,Azure,26] := 0 
+[CustomerCmp3-2,Azure,27] := 0 
+[CustomerCmp3-2,Azure,28] := 0 
+[CustomerCmp3-2,Azure,29] := 0 
+[CustomerCmp3-6,Google,1] := 0 
+[CustomerCmp3-6,Google,2] := 0 
+[CustomerCmp3-6,Google,3] := 0 
+[CustomerCmp3-6,Google,4] := 0 
+[CustomerCmp3-6,Google,5] := 0 
+[CustomerCmp3-6,Google,6] := 0 
+[CustomerCmp3-6,Google,7] := 0 
+[CustomerCmp3-6,Google,8] := 0 
+[CustomerCmp3-6,Google,9] := 0 
+[CustomerCmp3-6,Google,10] := 0 
+[CustomerCmp3-6,Google,11] := 0 
+[CustomerCmp3-6,Google,12] := 0 
+[CustomerCmp3-6,Google,13] := 0 
+[CustomerCmp3-6,Google,14] := 0 
+[CustomerCmp3-6,Google,15] := 0 
+[CustomerCmp3-6,Google,16] := 0 
+[CustomerCmp3-6,Google,17] := 0 
+[CustomerCmp3-6,Google,18] := 0 
+[CustomerCmp3-6,Google,19] := 0 
+[CustomerCmp3-6,Google,20] := 0 
+[CustomerCmp3-6,Google,21] := 0 
+[CustomerCmp3-6,Google,22] := 0 
+[CustomerCmp3-6,Google,23] := 0 
+[CustomerCmp3-6,Google,24] := 0 
+[CustomerCmp3-6,Google,25] := 0 
+[CustomerCmp3-6,Google,26] := 0 
+[CustomerCmp3-6,Google,27] := 0 
+[CustomerCmp3-6,Google,28] := 0 
+[CustomerCmp3-6,Google,29] := 0 
+[CustomerCmp3-6,Google,30] := 0 
+[CustomerCmp3-6,Google,31] := 0 
+[CustomerCmp3-6,Google,32] := 0 
+[CustomerCmp3-6,Google,33] := 0 
+[CustomerCmp3-6,Google,34] := 0 
+[CustomerCmp3-6,Google,35] := 0 
+[CustomerCmp3-6,Google,36] := 1 
+[CustomerCmp3-6,Google,37] := 0 
+[CustomerCmp3-6,Google,38] := 0 
+[CustomerCmp3-6,Google,39] := 0 
+[CustomerCmp3-6,Google,40] := 0 
+[CustomerCmp3-6,Google,41] := 0 
+[CustomerCmp3-6,Google,42] := 0 
+[CustomerCmp3-6,Google,43] := 0 
+[CustomerCmp3-6,Google,44] := 0 
+[CustomerCmp3-6,Google,45] := 0 
+[CustomerCmp3-6,Google,46] := 0 
+[CustomerCmp3-6,Google,47] := 0 
+[CustomerCmp3-6,Google,48] := 0 
+[CustomerCmp3-6,Google,49] := 0 
+[CustomerCmp3-6,Google,50] := 0 
+[CustomerCmp3-6,Google,51] := 0 
+[CustomerCmp3-6,Google,52] := 0 
+[CustomerCmp3-6,Google,53] := 0 
+[CustomerCmp3-6,Google,54] := 0 
+[CustomerCmp3-6,Google,55] := 0 
+[CustomerCmp3-6,Google,56] := 0 
+[CustomerCmp3-6,Google,57] := 0 
+[CustomerCmp3-6,Google,58] := 0 
+[CustomerCmp3-6,Google,59] := 0 
+[CustomerCmp3-6,Google,60] := 0 
+[CustomerCmp3-6,Google,61] := 0 
+[CustomerCmp3-6,Google,62] := 0 
+[CustomerCmp3-6,Google,63] := 0 
+[CustomerCmp3-6,Google,64] := 0 
+[CustomerCmp3-6,Google,65] := 0 
+[CustomerCmp3-6,Google,66] := 0 
+[CustomerCmp3-6,Google,67] := 0 
+[CustomerCmp3-6,Google,68] := 0 
+[CustomerCmp3-6,Google,69] := 0 
+[CustomerCmp3-6,Google,70] := 0 
+[CustomerCmp3-6,Google,71] := 0 
+[CustomerCmp3-6,Google,72] := 0 
+[CustomerCmp3-6,Google,73] := 0 
+[CustomerCmp3-6,Google,74] := 0 
+[CustomerCmp3-6,Google,75] := 0 
+[CustomerCmp3-6,Google,76] := 0 
+[CustomerCmp3-6,Google,77] := 0 
+[CustomerCmp3-6,Google,78] := 0 
+[CustomerCmp3-6,Google,79] := 0 
+[CustomerCmp3-6,Google,80] := 0 
+[CustomerCmp3-6,Google,81] := 0 
+[CustomerCmp3-6,Google,82] := 0 
+[CustomerCmp3-6,Google,83] := 0 
+[CustomerCmp3-6,Google,84] := 0 
+[CustomerCmp3-6,Google,85] := 0 
+[CustomerCmp3-6,Google,86] := 0 
+[CustomerCmp3-6,Google,87] := 0 
+[CustomerCmp3-6,Google,88] := 0 
+[CustomerCmp3-6,Google,89] := 0 
+[CustomerCmp3-6,Amz,1] := 0 
+[CustomerCmp3-6,Amz,2] := 0 
+[CustomerCmp3-6,Amz,3] := 0 
+[CustomerCmp3-6,Amz,4] := 0 
+[CustomerCmp3-6,Amz,5] := 0 
+[CustomerCmp3-6,Amz,6] := 0 
+[CustomerCmp3-6,Amz,7] := 0 
+[CustomerCmp3-6,Amz,8] := 0 
+[CustomerCmp3-6,Amz,9] := 0 
+[CustomerCmp3-6,Amz,10] := 0 
+[CustomerCmp3-6,Amz,11] := 0 
+[CustomerCmp3-6,Amz,12] := 0 
+[CustomerCmp3-6,Amz,13] := 0 
+[CustomerCmp3-6,Amz,14] := 0 
+[CustomerCmp3-6,Amz,15] := 0 
+[CustomerCmp3-6,Amz,16] := 0 
+[CustomerCmp3-6,Amz,17] := 0 
+[CustomerCmp3-6,Amz,18] := 0 
+[CustomerCmp3-6,Amz,19] := 0 
+[CustomerCmp3-6,Amz,20] := 0 
+[CustomerCmp3-6,Amz,21] := 0 
+[CustomerCmp3-6,Amz,22] := 0 
+[CustomerCmp3-6,Amz,23] := 0 
+[CustomerCmp3-6,Amz,24] := 0 
+[CustomerCmp3-6,Amz,25] := 0 
+[CustomerCmp3-6,Amz,26] := 0 
+[CustomerCmp3-6,Amz,27] := 0 
+[CustomerCmp3-6,Amz,28] := 0 
+[CustomerCmp3-6,Amz,29] := 0 
+[CustomerCmp3-6,Amz,30] := 0 
+[CustomerCmp3-6,Amz,31] := 0 
+[CustomerCmp3-6,Amz,32] := 0 
+[CustomerCmp3-6,Amz,33] := 0 
+[CustomerCmp3-6,Amz,34] := 0 
+[CustomerCmp3-6,Amz,35] := 0 
+[CustomerCmp3-6,Amz,36] := 0 
+[CustomerCmp3-6,Amz,37] := 0 
+[CustomerCmp3-6,Amz,38] := 0 
+[CustomerCmp3-6,Amz,39] := 0 
+[CustomerCmp3-6,Amz,40] := 0 
+[CustomerCmp3-6,Amz,41] := 0 
+[CustomerCmp3-6,Amz,42] := 0 
+[CustomerCmp3-6,Amz,43] := 0 
+[CustomerCmp3-6,Amz,44] := 0 
+[CustomerCmp3-6,Amz,45] := 0 
+[CustomerCmp3-6,Amz,46] := 0 
+[CustomerCmp3-6,Amz,47] := 0 
+[CustomerCmp3-6,Amz,48] := 0 
+[CustomerCmp3-6,Amz,49] := 0 
+[CustomerCmp3-6,Amz,50] := 0 
+[CustomerCmp3-6,Amz,51] := 0 
+[CustomerCmp3-6,Amz,52] := 0 
+[CustomerCmp3-6,Amz,53] := 0 
+[CustomerCmp3-6,Amz,54] := 0 
+[CustomerCmp3-6,Amz,55] := 0 
+[CustomerCmp3-6,Amz,56] := 0 
+[CustomerCmp3-6,Amz,57] := 0 
+[CustomerCmp3-6,Amz,58] := 0 
+[CustomerCmp3-6,Amz,59] := 0 
+[CustomerCmp3-6,Amz,60] := 0 
+[CustomerCmp3-6,Amz,61] := 0 
+[CustomerCmp3-6,Amz,62] := 0 
+[CustomerCmp3-6,Amz,63] := 0 
+[CustomerCmp3-6,Amz,64] := 0 
+[CustomerCmp3-6,Amz,65] := 0 
+[CustomerCmp3-6,Amz,66] := 0 
+[CustomerCmp3-6,Amz,67] := 0 
+[CustomerCmp3-6,Amz,68] := 0 
+[CustomerCmp3-6,Amz,69] := 0 
+[CustomerCmp3-6,Amz,70] := 0 
+[CustomerCmp3-6,Amz,71] := 0 
+[CustomerCmp3-6,Amz,72] := 0 
+[CustomerCmp3-6,Amz,73] := 0 
+[CustomerCmp3-6,Amz,74] := 0 
+[CustomerCmp3-6,Amz,75] := 0 
+[CustomerCmp3-6,Amz,76] := 0 
+[CustomerCmp3-6,Amz,77] := 0 
+[CustomerCmp3-6,Amz,78] := 0 
+[CustomerCmp3-6,Amz,79] := 0 
+[CustomerCmp3-6,Amz,80] := 0 
+[CustomerCmp3-6,Amz,81] := 0 
+[CustomerCmp3-6,Amz,82] := 0 
+[CustomerCmp3-6,Amz,83] := 0 
+[CustomerCmp3-6,Amz,84] := 0 
+[CustomerCmp3-6,Amz,85] := 0 
+[CustomerCmp3-6,Amz,86] := 0 
+[CustomerCmp3-6,Amz,87] := 0 
+[CustomerCmp3-6,Amz,88] := 0 
+[CustomerCmp3-6,Amz,89] := 0 
+[CustomerCmp3-6,Amz,90] := 0 
+[CustomerCmp3-6,Amz,91] := 0 
+[CustomerCmp3-6,Amz,92] := 0 
+[CustomerCmp3-6,Amz,93] := 0 
+[CustomerCmp3-6,Amz,94] := 0 
+[CustomerCmp3-6,Alibaba,1] := 0 
+[CustomerCmp3-6,Alibaba,2] := 0 
+[CustomerCmp3-6,Alibaba,3] := 0 
+[CustomerCmp3-6,Alibaba,4] := 0 
+[CustomerCmp3-6,Alibaba,5] := 0 
+[CustomerCmp3-6,Alibaba,6] := 0 
+[CustomerCmp3-6,Alibaba,7] := 0 
+[CustomerCmp3-6,Alibaba,8] := 0 
+[CustomerCmp3-6,Alibaba,9] := 0 
+[CustomerCmp3-6,Alibaba,10] := 0 
+[CustomerCmp3-6,Alibaba,11] := 0 
+[CustomerCmp3-6,Alibaba,12] := 0 
+[CustomerCmp3-6,Alibaba,13] := 0 
+[CustomerCmp3-6,Alibaba,14] := 0 
+[CustomerCmp3-6,Alibaba,15] := 0 
+[CustomerCmp3-6,Alibaba,16] := 0 
+[CustomerCmp3-6,Alibaba,17] := 0 
+[CustomerCmp3-6,Alibaba,18] := 0 
+[CustomerCmp3-6,Alibaba,19] := 0 
+[CustomerCmp3-6,Alibaba,20] := 0 
+[CustomerCmp3-6,Alibaba,21] := 0 
+[CustomerCmp3-6,Alibaba,22] := 0 
+[CustomerCmp3-6,Alibaba,23] := 0 
+[CustomerCmp3-6,Alibaba,24] := 0 
+[CustomerCmp3-6,Alibaba,25] := 0 
+[CustomerCmp3-6,Alibaba,26] := 0 
+[CustomerCmp3-6,Alibaba,27] := 0 
+[CustomerCmp3-6,Alibaba,28] := 0 
+[CustomerCmp3-6,Alibaba,29] := 0 
+[CustomerCmp3-6,Alibaba,30] := 0 
+[CustomerCmp3-6,Alibaba,31] := 0 
+[CustomerCmp3-6,Alibaba,32] := 0 
+[CustomerCmp3-6,Alibaba,33] := 0 
+[CustomerCmp3-6,Alibaba,34] := 0 
+[CustomerCmp3-6,Alibaba,35] := 0 
+[CustomerCmp3-6,Alibaba,36] := 1 
+[CustomerCmp3-6,Alibaba,37] := 0 
+[CustomerCmp3-6,Alibaba,38] := 0 
+[CustomerCmp3-6,Alibaba,39] := 0 
+[CustomerCmp3-6,Alibaba,40] := 0 
+[CustomerCmp3-6,Alibaba,41] := 0 
+[CustomerCmp3-6,Alibaba,42] := 0 
+[CustomerCmp3-6,Alibaba,43] := 0 
+[CustomerCmp3-6,Alibaba,44] := 0 
+[CustomerCmp3-6,Alibaba,45] := 0 
+[CustomerCmp3-6,Alibaba,46] := 0 
+[CustomerCmp3-6,Alibaba,47] := 0 
+[CustomerCmp3-6,Alibaba,48] := 0 
+[CustomerCmp3-6,Alibaba,49] := 0 
+[CustomerCmp3-6,Alibaba,50] := 0 
+[CustomerCmp3-6,Alibaba,51] := 0 
+[CustomerCmp3-6,Alibaba,52] := 0 
+[CustomerCmp3-6,Alibaba,53] := 0 
+[CustomerCmp3-6,Alibaba,54] := 0 
+[CustomerCmp3-6,Alibaba,55] := 0 
+[CustomerCmp3-6,Alibaba,56] := 0 
+[CustomerCmp3-6,Alibaba,57] := 0 
+[CustomerCmp3-6,Alibaba,58] := 0 
+[CustomerCmp3-6,Alibaba,59] := 0 
+[CustomerCmp3-6,Alibaba,60] := 0 
+[CustomerCmp3-6,Alibaba,61] := 0 
+[CustomerCmp3-6,Alibaba,62] := 0 
+[CustomerCmp3-6,Alibaba,63] := 0 
+[CustomerCmp3-6,Alibaba,64] := 0 
+[CustomerCmp3-6,Alibaba,65] := 0 
+[CustomerCmp3-6,Alibaba,66] := 0 
+[CustomerCmp3-6,Alibaba,67] := 0 
+[CustomerCmp3-6,Alibaba,68] := 0 
+[CustomerCmp3-6,Alibaba,69] := 0 
+[CustomerCmp3-6,Alibaba,70] := 0 
+[CustomerCmp3-6,Alibaba,71] := 0 
+[CustomerCmp3-6,Alibaba,72] := 0 
+[CustomerCmp3-6,Alibaba,73] := 0 
+[CustomerCmp3-6,Alibaba,74] := 0 
+[CustomerCmp3-6,Alibaba,75] := 0 
+[CustomerCmp3-6,Alibaba,76] := 0 
+[CustomerCmp3-6,Alibaba,77] := 0 
+[CustomerCmp3-6,Alibaba,78] := 0 
+[CustomerCmp3-6,Alibaba,79] := 0 
+[CustomerCmp3-6,Alibaba,80] := 0 
+[CustomerCmp3-6,Alibaba,81] := 0 
+[CustomerCmp3-6,Alibaba,82] := 0 
+[CustomerCmp3-6,Alibaba,83] := 0 
+[CustomerCmp3-6,Alibaba,84] := 0 
+[CustomerCmp3-6,Alibaba,85] := 0 
+[CustomerCmp3-6,Alibaba,86] := 0 
+[CustomerCmp3-6,Alibaba,87] := 0 
+[CustomerCmp3-6,Alibaba,88] := 0 
+[CustomerCmp3-6,Alibaba,89] := 0 
+[CustomerCmp3-6,Alibaba,90] := 0 
+[CustomerCmp3-6,Alibaba,91] := 0 
+[CustomerCmp3-6,Alibaba,92] := 0 
+[CustomerCmp3-6,Alibaba,93] := 0 
+[CustomerCmp3-6,Alibaba,94] := 0 
+[CustomerCmp3-6,Alibaba,95] := 0 
+[CustomerCmp3-6,Alibaba,96] := 0 
+[CustomerCmp3-6,Alibaba,97] := 0 
+[CustomerCmp3-6,Alibaba,98] := 0 
+[CustomerCmp3-6,Alibaba,99] := 0 
+[CustomerCmp3-6,Alibaba,100] := 0 
+[CustomerCmp3-6,Alibaba,101] := 0 
+[CustomerCmp3-6,Alibaba,102] := 0 
+[CustomerCmp3-6,Alibaba,103] := 0 
+[CustomerCmp3-6,Alibaba,104] := 0 
+[CustomerCmp3-6,Alibaba,105] := 0 
+[CustomerCmp3-6,Alibaba,106] := 0 
+[CustomerCmp3-6,Alibaba,107] := 0 
+[CustomerCmp3-6,Alibaba,108] := 0 
+[CustomerCmp3-6,Alibaba,109] := 0 
+[CustomerCmp3-6,Alibaba,110] := 0 
+[CustomerCmp3-6,Alibaba,111] := 0 
+[CustomerCmp3-6,Alibaba,112] := 0 
+[CustomerCmp3-6,Alibaba,113] := 0 
+[CustomerCmp3-6,Alibaba,114] := 0 
+[CustomerCmp3-6,Alibaba,115] := 0 
+[CustomerCmp3-6,Alibaba,116] := 0 
+[CustomerCmp3-6,Alibaba,117] := 0 
+[CustomerCmp3-6,Alibaba,118] := 0 
+[CustomerCmp3-6,Alibaba,119] := 0 
+[CustomerCmp3-6,Alibaba,120] := 0 
+[CustomerCmp3-6,Alibaba,121] := 0 
+[CustomerCmp3-6,Alibaba,122] := 0 
+[CustomerCmp3-6,Alibaba,123] := 0 
+[CustomerCmp3-6,Alibaba,124] := 0 
+[CustomerCmp3-6,Alibaba,125] := 0 
+[CustomerCmp3-6,Alibaba,126] := 0 
+[CustomerCmp3-6,Alibaba,127] := 0 
+[CustomerCmp3-6,Alibaba,128] := 0 
+[CustomerCmp3-6,Alibaba,129] := 0 
+[CustomerCmp3-6,Alibaba,130] := 0 
+[CustomerCmp3-6,Alibaba,131] := 0 
+[CustomerCmp3-6,Alibaba,132] := 0 
+[CustomerCmp3-6,Alibaba,133] := 0 
+[CustomerCmp3-6,Alibaba,134] := 0 
+[CustomerCmp3-6,Alibaba,135] := 0 
+[CustomerCmp3-6,Alibaba,136] := 0 
+[CustomerCmp3-6,Alibaba,137] := 0 
+[CustomerCmp3-6,Alibaba,138] := 0 
+[CustomerCmp3-6,Alibaba,139] := 0 
+[CustomerCmp3-6,Alibaba,140] := 0 
+[CustomerCmp3-6,Alibaba,141] := 0 
+[CustomerCmp3-6,Alibaba,142] := 0 
+[CustomerCmp3-6,Alibaba,143] := 0 
+[CustomerCmp3-6,Alibaba,144] := 1 
+[CustomerCmp3-6,Alibaba,145] := 0 
+[CustomerCmp3-6,Alibaba,146] := 0 
+[CustomerCmp3-6,Alibaba,147] := 0 
+[CustomerCmp3-6,Alibaba,148] := 0 
+[CustomerCmp3-6,Alibaba,149] := 0 
+[CustomerCmp3-6,Alibaba,150] := 0 
+[CustomerCmp3-6,Alibaba,151] := 0 
+[CustomerCmp3-6,Alibaba,152] := 0 
+[CustomerCmp3-6,Alibaba,153] := 0 
+[CustomerCmp3-6,Alibaba,154] := 0 
+[CustomerCmp3-6,Alibaba,155] := 0 
+[CustomerCmp3-6,Alibaba,156] := 0 
+[CustomerCmp3-6,Alibaba,157] := 0 
+[CustomerCmp3-6,Alibaba,158] := 0 
+[CustomerCmp3-6,Alibaba,159] := 0 
+[CustomerCmp3-6,Alibaba,160] := 0 
+[CustomerCmp3-6,Alibaba,161] := 0 
+[CustomerCmp3-6,Alibaba,162] := 0 
+[CustomerCmp3-6,Alibaba,163] := 0 
+[CustomerCmp3-6,Alibaba,164] := 0 
+[CustomerCmp3-6,Alibaba,165] := 0 
+[CustomerCmp3-6,Alibaba,166] := 0 
+[CustomerCmp3-6,Alibaba,167] := 0 
+[CustomerCmp3-6,Alibaba,168] := 0 
+[CustomerCmp3-6,Alibaba,169] := 0 
+[CustomerCmp3-6,Alibaba,170] := 0 
+[CustomerCmp3-6,Alibaba,171] := 0 
+[CustomerCmp3-6,Alibaba,172] := 0 
+[CustomerCmp3-6,Alibaba,173] := 0 
+[CustomerCmp3-6,Alibaba,174] := 0 
+[CustomerCmp3-6,Alibaba,175] := 0 
+[CustomerCmp3-6,Alibaba,176] := 0 
+[CustomerCmp3-6,Alibaba,177] := 0 
+[CustomerCmp3-6,Alibaba,178] := 0 
+[CustomerCmp3-6,Alibaba,179] := 0 
+[CustomerCmp3-6,Alibaba,180] := 0 
+[CustomerCmp3-6,Alibaba,181] := 0 
+[CustomerCmp3-6,Alibaba,182] := 0 
+[CustomerCmp3-6,Alibaba,183] := 0 
+[CustomerCmp3-6,Alibaba,184] := 0 
+[CustomerCmp3-6,Alibaba,185] := 0 
+[CustomerCmp3-6,Alibaba,186] := 0 
+[CustomerCmp3-6,Alibaba,187] := 0 
+[CustomerCmp3-6,Alibaba,188] := 0 
+[CustomerCmp3-6,Alibaba,189] := 0 
+[CustomerCmp3-6,Alibaba,190] := 0 
+[CustomerCmp3-6,Alibaba,191] := 0 
+[CustomerCmp3-6,Alibaba,192] := 0 
+[CustomerCmp3-6,Alibaba,193] := 0 
+[CustomerCmp3-6,Alibaba,194] := 0 
+[CustomerCmp3-6,Alibaba,195] := 0 
+[CustomerCmp3-6,Alibaba,196] := 0 
+[CustomerCmp3-6,Alibaba,197] := 0 
+[CustomerCmp3-6,Alibaba,198] := 0 
+[CustomerCmp3-6,Alibaba,199] := 0 
+[CustomerCmp3-6,Alibaba,200] := 0 
+[CustomerCmp3-6,Alibaba,201] := 0 
+[CustomerCmp3-6,Alibaba,202] := 0 
+[CustomerCmp3-6,Alibaba,203] := 0 
+[CustomerCmp3-6,Alibaba,204] := 0 
+[CustomerCmp3-6,Alibaba,205] := 0 
+[CustomerCmp3-6,Alibaba,206] := 0 
+[CustomerCmp3-6,Alibaba,207] := 0 
+[CustomerCmp3-6,Alibaba,208] := 0 
+[CustomerCmp3-6,Alibaba,209] := 0 
+[CustomerCmp3-6,Alibaba,210] := 1 
+[CustomerCmp3-6,Alibaba,211] := 0 
+[CustomerCmp3-6,Alibaba,212] := 0 
+[CustomerCmp3-6,Alibaba,213] := 0 
+[CustomerCmp3-6,Alibaba,214] := 0 
+[CustomerCmp3-6,Alibaba,215] := 0 
+[CustomerCmp3-6,Alibaba,216] := 0 
+[CustomerCmp3-6,Alibaba,217] := 0 
+[CustomerCmp3-6,Alibaba,218] := 0 
+[CustomerCmp3-6,Alibaba,219] := 0 
+[CustomerCmp3-6,Alibaba,220] := 0 
+[CustomerCmp3-6,Alibaba,221] := 0 
+[CustomerCmp3-6,Alibaba,222] := 0 
+[CustomerCmp3-6,Alibaba,223] := 0 
+[CustomerCmp3-6,Alibaba,224] := 0 
+[CustomerCmp3-6,Alibaba,225] := 0 
+[CustomerCmp3-6,Alibaba,226] := 0 
+[CustomerCmp3-6,Alibaba,227] := 0 
+[CustomerCmp3-6,Alibaba,228] := 0 
+[CustomerCmp3-6,Alibaba,229] := 0 
+[CustomerCmp3-6,Alibaba,230] := 0 
+[CustomerCmp3-6,Alibaba,231] := 1 
+[CustomerCmp3-6,Alibaba,232] := 0 
+[CustomerCmp3-6,Alibaba,233] := 0 
+[CustomerCmp3-6,Alibaba,234] := 0 
+[CustomerCmp3-6,Alibaba,235] := 0 
+[CustomerCmp3-6,Alibaba,236] := 0 
+[CustomerCmp3-6,Alibaba,237] := 0 
+[CustomerCmp3-6,Alibaba,238] := 0 
+[CustomerCmp3-6,Alibaba,239] := 0 
+[CustomerCmp3-6,Alibaba,240] := 0 
+[CustomerCmp3-6,Alibaba,241] := 0 
+[CustomerCmp3-6,Alibaba,242] := 0 
+[CustomerCmp3-6,Alibaba,243] := 0 
+[CustomerCmp3-6,Alibaba,244] := 0 
+[CustomerCmp3-6,Alibaba,245] := 0 
+[CustomerCmp3-6,Alibaba,246] := 0 
+[CustomerCmp3-6,Alibaba,247] := 0 
+[CustomerCmp3-6,Alibaba,248] := 0 
+[CustomerCmp3-6,Alibaba,249] := 0 
+[CustomerCmp3-6,Alibaba,250] := 0 
+[CustomerCmp3-6,Alibaba,251] := 0 
+[CustomerCmp3-6,Alibaba,252] := 0 
+[CustomerCmp3-6,Alibaba,253] := 0 
+[CustomerCmp3-6,Alibaba,254] := 0 
+[CustomerCmp3-6,Alibaba,255] := 0 
+[CustomerCmp3-6,Alibaba,256] := 0 
+[CustomerCmp3-6,Alibaba,257] := 0 
+[CustomerCmp3-6,Alibaba,258] := 0 
+[CustomerCmp3-6,Alibaba,259] := 0 
+[CustomerCmp3-6,Alibaba,260] := 0 
+[CustomerCmp3-6,Alibaba,261] := 0 
+[CustomerCmp3-6,Alibaba,262] := 0 
+[CustomerCmp3-6,Alibaba,263] := 0 
+[CustomerCmp3-6,Alibaba,264] := 1 
+[CustomerCmp3-6,Alibaba,265] := 0 
+[CustomerCmp3-6,Alibaba,266] := 0 
+[CustomerCmp3-6,Alibaba,267] := 0 
+[CustomerCmp3-6,Alibaba,268] := 0 
+[CustomerCmp3-6,Alibaba,269] := 0 
+[CustomerCmp3-6,Alibaba,270] := 0 
+[CustomerCmp3-6,Alibaba,271] := 0 
+[CustomerCmp3-6,Alibaba,272] := 0 
+[CustomerCmp3-6,Alibaba,273] := 0 
+[CustomerCmp3-6,Alibaba,274] := 0 
+[CustomerCmp3-6,Alibaba,275] := 0 
+[CustomerCmp3-6,Alibaba,276] := 0 
+[CustomerCmp3-6,Alibaba,277] := 0 
+[CustomerCmp3-6,Alibaba,278] := 0 
+[CustomerCmp3-6,Alibaba,279] := 0 
+[CustomerCmp3-6,Alibaba,280] := 0 
+[CustomerCmp3-6,Alibaba,281] := 0 
+[CustomerCmp3-6,Alibaba,282] := 0 
+[CustomerCmp3-6,Alibaba,283] := 0 
+[CustomerCmp3-6,Alibaba,284] := 0 
+[CustomerCmp3-6,Alibaba,285] := 0 
+[CustomerCmp3-6,Alibaba,286] := 0 
+[CustomerCmp3-6,Alibaba,287] := 0 
+[CustomerCmp3-6,Alibaba,288] := 1 
+[CustomerCmp3-6,Alibaba,289] := 0 
+[CustomerCmp3-6,Alibaba,290] := 0 
+[CustomerCmp3-6,Alibaba,291] := 0 
+[CustomerCmp3-6,Alibaba,292] := 0 
+[CustomerCmp3-6,Alibaba,293] := 0 
+[CustomerCmp3-6,Alibaba,294] := 0 
+[CustomerCmp3-6,Alibaba,295] := 0 
+[CustomerCmp3-6,Alibaba,296] := 0 
+[CustomerCmp3-6,Alibaba,297] := 0 
+[CustomerCmp3-6,Alibaba,298] := 0 
+[CustomerCmp3-6,Alibaba,299] := 0 
+[CustomerCmp3-6,Alibaba,300] := 0 
+[CustomerCmp3-6,Alibaba,301] := 0 
+[CustomerCmp3-6,Alibaba,302] := 0 
+[CustomerCmp3-6,Alibaba,303] := 0 
+[CustomerCmp3-6,Alibaba,304] := 0 
+[CustomerCmp3-6,Alibaba,305] := 0 
+[CustomerCmp3-6,Alibaba,306] := 0 
+[CustomerCmp3-6,Alibaba,307] := 0 
+[CustomerCmp3-6,Alibaba,308] := 0 
+[CustomerCmp3-6,Alibaba,309] := 0 
+[CustomerCmp3-6,Alibaba,310] := 0 
+[CustomerCmp3-6,Alibaba,311] := 0 
+[CustomerCmp3-6,Alibaba,312] := 0 
+[CustomerCmp3-6,Alibaba,313] := 0 
+[CustomerCmp3-6,Alibaba,314] := 0 
+[CustomerCmp3-6,Alibaba,315] := 0 
+[CustomerCmp3-6,Alibaba,316] := 0 
+[CustomerCmp3-6,Alibaba,317] := 0 
+[CustomerCmp3-6,Alibaba,318] := 0 
+[CustomerCmp3-6,Alibaba,319] := 0 
+[CustomerCmp3-6,Alibaba,320] := 0 
+[CustomerCmp3-6,Alibaba,321] := 0 
+[CustomerCmp3-6,Alibaba,322] := 0 
+[CustomerCmp3-6,Alibaba,323] := 0 
+[CustomerCmp3-6,Alibaba,324] := 0 
+[CustomerCmp3-6,Alibaba,325] := 0 
+[CustomerCmp3-6,Alibaba,326] := 0 
+[CustomerCmp3-6,Alibaba,327] := 0 
+[CustomerCmp3-6,Alibaba,328] := 0 
+[CustomerCmp3-6,Alibaba,329] := 0 
+[CustomerCmp3-6,Alibaba,330] := 0 
+[CustomerCmp3-6,Alibaba,331] := 0 
+[CustomerCmp3-6,Alibaba,332] := 0 
+[CustomerCmp3-6,Alibaba,333] := 0 
+[CustomerCmp3-6,Alibaba,334] := 0 
+[CustomerCmp3-6,Alibaba,335] := 0 
+[CustomerCmp3-6,Alibaba,336] := 0 
+[CustomerCmp3-6,Alibaba,337] := 0 
+[CustomerCmp3-6,Alibaba,338] := 0 
+[CustomerCmp3-6,Alibaba,339] := 0 
+[CustomerCmp3-6,Alibaba,340] := 0 
+[CustomerCmp3-6,Alibaba,341] := 0 
+[CustomerCmp3-6,Alibaba,342] := 0 
+[CustomerCmp3-6,Alibaba,343] := 0 
+[CustomerCmp3-6,Alibaba,344] := 0 
+[CustomerCmp3-6,Alibaba,345] := 0 
+[CustomerCmp3-6,Alibaba,346] := 0 
+[CustomerCmp3-6,Alibaba,347] := 0 
+[CustomerCmp3-6,Alibaba,348] := 0 
+[CustomerCmp3-6,Alibaba,349] := 0 
+[CustomerCmp3-6,Alibaba,350] := 1 
+[CustomerCmp3-6,Alibaba,351] := 0 
+[CustomerCmp3-6,Alibaba,352] := 0 
+[CustomerCmp3-6,Alibaba,353] := 0 
+[CustomerCmp3-6,Alibaba,354] := 0 
+[CustomerCmp3-6,Alibaba,355] := 0 
+[CustomerCmp3-6,Alibaba,356] := 0 
+[CustomerCmp3-6,Alibaba,357] := 0 
+[CustomerCmp3-6,Alibaba,358] := 0 
+[CustomerCmp3-6,Alibaba,359] := 0 
+[CustomerCmp3-6,Alibaba,360] := 0 
+[CustomerCmp3-6,Alibaba,361] := 0 
+[CustomerCmp3-6,Alibaba,362] := 0 
+[CustomerCmp3-6,Alibaba,363] := 0 
+[CustomerCmp3-6,Alibaba,364] := 0 
+[CustomerCmp3-6,Alibaba,365] := 0 
+[CustomerCmp3-6,Alibaba,366] := 0 
+[CustomerCmp3-6,Alibaba,367] := 0 
+[CustomerCmp3-6,Alibaba,368] := 0 
+[CustomerCmp3-6,Alibaba,369] := 0 
+[CustomerCmp3-6,Alibaba,370] := 0 
+[CustomerCmp3-6,Alibaba,371] := 0 
+[CustomerCmp3-6,Alibaba,372] := 0 
+[CustomerCmp3-6,Azure,1] := 0 
+[CustomerCmp3-6,Azure,2] := 0 
+[CustomerCmp3-6,Azure,3] := 0 
+[CustomerCmp3-6,Azure,4] := 0 
+[CustomerCmp3-6,Azure,5] := 0 
+[CustomerCmp3-6,Azure,6] := 0 
+[CustomerCmp3-6,Azure,7] := 0 
+[CustomerCmp3-6,Azure,8] := 0 
+[CustomerCmp3-6,Azure,9] := 0 
+[CustomerCmp3-6,Azure,10] := 0 
+[CustomerCmp3-6,Azure,11] := 0 
+[CustomerCmp3-6,Azure,12] := 0 
+[CustomerCmp3-6,Azure,13] := 0 
+[CustomerCmp3-6,Azure,14] := 0 
+[CustomerCmp3-6,Azure,15] := 0 
+[CustomerCmp3-6,Azure,16] := 0 
+[CustomerCmp3-6,Azure,17] := 0 
+[CustomerCmp3-6,Azure,18] := 0 
+[CustomerCmp3-6,Azure,19] := 0 
+[CustomerCmp3-6,Azure,20] := 0 
+[CustomerCmp3-6,Azure,21] := 0 
+[CustomerCmp3-6,Azure,22] := 0 
+[CustomerCmp3-6,Azure,23] := 1 
+[CustomerCmp3-6,Azure,24] := 0 
+[CustomerCmp3-6,Azure,25] := 0 
+[CustomerCmp3-6,Azure,26] := 0 
+[CustomerCmp3-6,Azure,27] := 0 
+[CustomerCmp3-6,Azure,28] := 0 
+[CustomerCmp3-6,Azure,29] := 0 
+; 
+end;

@@ -1,0 +1,85 @@
+NComp = 22;
+NMachine = 10;
+NLocalisations=4;
+NOS=2;
+NAlone=0;
+NFlow = 0;
+NFourn = 2;
+NMoisLocation = 1;
+NConcurrence =0;
+
+%Rapport localisation et os / entier
+Localisations = ["Suisse","France","Etats-Unis","Italie"];
+OS = ["Windows","Linux"];
+Fournisseurs = ["Microsoft","Amazon"];
+
+%Spec Composant
+%Array des OS array[1..NComp, 1..NOS] of int
+CompOs = [| 1,0, | 1,0, | 1,0, | 1,0, | 1,0, 
+          | 1,0, | 1,0, | 1,0, | 1,0, | 1,0, 
+          | 0,1, | 0,1, | 0,1, | 0,1, | 0,1, 
+          | 0,1, | 0,1, | 0,1, | 0,1, | 0,1, | 0,1, | 0,1, |]; 
+
+%Array des localisations array[1..NComp, 1..NLocalisations] of int          
+CompLoc = [| 1,0,0,0, | 1,0,0,0, | 1,0,0,0, | 1,0,0,0, | 1,0,0,0, 
+           | 0,1,0,0, | 0,1,0,0, | 0,1,0,0, | 0,1,0,0, | 0,1,0,0, 
+           | 0,0,1,0, | 0,0,1,0, | 0,0,1,0, | 0,0,1,0, | 0,0,1,0, 
+           | 0,0,0,1, | 0,0,0,1, | 0,0,0,1, | 0,0,0,1, | 0,0,0,1, | 0,0,0,1, | 0,0,0,1, |];
+
+%Array des memoires array[1..Ncomp] of int
+CompMem = [8,8,16,32,64,
+          8,8,16,32,64,
+          8,8,16,32,64,
+          8,16,16,16,32,32,64];
+
+%Array des processeurs array[1..Ncomp] of int
+CompProc = [1,2,4,4,8,
+            1,2,4,4,8,
+            1,2,4,4,8,
+            1,2,4,4,8,16,32];
+
+
+
+%contrainte Alone
+CompAlone = [];
+
+%Liste des composants soumis à Flow
+CompFlow = [];
+%Liste des composants soumis à Concurrence
+CompConcurrence=[];
+
+%Spec Machine
+%Array des OS array[1..NMachine] of int
+VMOs = [1,1,1,1,1,
+        2,2,2,2,2];
+
+%Array des localisations array[1..NMachine] of int
+VMLoc = [1,1,2,2,2,
+        3,3,4,4,4];
+
+%Array des memoires array[1..NMachine] of int
+VMMem = [16,112,66,40,26,
+        64,64,128,48,6];
+
+%Array des processeurs array[1..NMachine] of int
+VMProc = [16,3,16,1,1,
+          8,12,100,50,20];
+
+
+
+%Array dess cout array[1..NMachine] of int
+VMCout = [100,50,60,30,40,
+          78,32,40,100,120];
+
+%Liste des fournisseurs des VM (exemple : 1 = Microsoft, 2 = Amazon)
+VMFourn = [1,2,1,2,1,2,1,2,1,2];
+
+% Prix des liens entre fournisseurs 
+VMPrixLien = [| 1, 2,
+              | 2, 1|];
+
+
+% Résultat attendu
+% UNSATISFIABLE
+
+

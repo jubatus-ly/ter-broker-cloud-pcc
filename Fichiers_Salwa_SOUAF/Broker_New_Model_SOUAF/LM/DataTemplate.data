@@ -1,0 +1,87 @@
+/*****************************************************************************/
+/*                                                                           */
+/*                       Problem Data                                        */
+/*                                                                           */
+/*****************************************************************************/
+
+data;
+
+param nbinstances := 
+param nbcomp := 
+param nbp := 
+set P := 
+param nbti := 
+param idti :=
+	
+
+set Comp := 
+set Alone := 
+set Concur := 
+set Flow := 
+
+param Alpha:=
+   [a, Amazon, 1] := 0.5
+   [a, Amazon, 2] := 1.5
+   [a, Amazon, 3] := 2
+   [b, Amazon, 1] := 1
+   [b, Amazon, 2] := 1.5
+   [b, Amazon, 3] := 0.5
+   [c, Amazon, 1] := 0.25
+   [c, Amazon, 2] := 1.25
+   [c, Amazon, 3] := 4
+   [d, Amazon, 1] := 0.67
+   [d, Amazon, 2] := 1.5
+   [d, Amazon, 3] := 3
+
+   [a, Google, 1] := 0.5
+   [a, Google, 2] := 1.5
+   [a, Google, 3] := 2
+   [a, Google, 4] := 0.75
+   [b, Google, 1] := 1
+   [b, Google, 2] := 1.5
+   [b, Google, 3] := 0.5
+   [b, Google, 4] := 1.5
+   [c, Google, 1] := 0.25
+   [c, Google, 2] := 1.25
+   [c, Google, 3] := 4
+   [c, Google, 4] := 1.6
+   [d, Google, 1] := 0.67
+   [d, Google, 2] := 1.5
+   [d, Google, 3] := 3
+   [d, Google, 4] := 2
+
+   [a, AliBaba, 1] := 1.5
+   [a, AliBaba, 2] := 0.5
+   [b, AliBaba, 1] := 1
+   [b, AliBaba, 2] := 1.5
+   [c, AliBaba, 1] := 2.25
+   [c, AliBaba, 2] := 1.25
+   [d, AliBaba, 1] := 1.67
+   [d, AliBaba, 2] := 1.5;
+
+/* pricing here are per VM */
+
+param VPC := Amazon 0.005
+             Google 0.004
+             AliBaba 0.005;
+
+/* pricing here are per amount of data transfered transfered */
+param VPT := Amazon 0.05
+             Google 0.05
+             AliBaba 0.05;
+
+param InstancesPrices := 
+  Amazon 1 0.052
+  Amazon 2 0.106
+  Amazon 3 0.225
+  Google 1 0.049
+  Google 2 0.082
+  Google 3 0.120
+  Google 4 0.406
+  AliBaba 1 0.042
+  AliBaba 2 0.084
+        ;
+
+param CEL := 6;
+param CIL := 3;
+end;

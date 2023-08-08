@@ -1,0 +1,32 @@
+NComp = 7;
+NAlone= 4;
+NFlow = 3;
+NConcurrence =3;
+NMoisLocation = 12;        
+              
+
+%Spec Composant
+%Array des OS array[1..NComp, 1..NOS] of int
+CompOs = [|1,1,1,1,1,1,1,1,1, | 1,1,0,0,1,0,0,0,1, | 1,1,0,0,1,1,1,0,1, | 1,1,0,0,0,0,0,0,0,
+          |0,0,0,0,1,1,1,1,0, | 0,0,0,0,1,1,1,1,1, | 0,0,0,0,1,1,1,1,1, |];
+
+%Array des localisations array[1..NComp, 1..NLocalisations] of int
+CompLoc = [|1,1,1,1,1,1,1,1,1,1, |0,0,1,0,0,0,0,0,0,0, |0,0,1,0,0,1,0,0,0,1, |0,0,1,0,0,1,0,0,0,1, 
+           |0,0,0,0,0,1,0,0,0,0, |0,1,0,0,0,0,0,0,0,0, |0,0,1,0,0,0,0,0,0,0, |];
+
+%Array des memoires array[1..Ncomp] of int
+CompMem = [16,8,8,8,4,4,4];
+
+%Array des processeurs array[1..Ncomp] of int
+CompProc = [8,4,4,4,2,2,2];
+
+%contrainte Alone
+CompAlone = [5,6,7,1];
+
+%Liste des composants soumis à Flow
+CompFlow = [|1,5, |1,6, | 1,7, |];
+
+CompConcurrence = [|3,1, |2,1, |4,1, |];
+
+
+
